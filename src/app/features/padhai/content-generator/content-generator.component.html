@@ -1,0 +1,111 @@
+
+   <!-- <div class="titleHeaderContainer">
+    <div *ngIf="licenceData" class="licenceSection">
+       <mat-card class="licenceBlock">
+          <h3 class="licenceTitle"><mat-icon>create_new_folder</mat-icon>Courses generated</h3>
+          <span class="licenceCount">{{licenceData.totalAssetCourses || 0}} / {{licenceData.courseGeneratedLimit}}</span>
+       </mat-card>
+        <mat-card class="licenceBlock">
+          <h3 class="licenceTitle"><mat-icon>publish</mat-icon>Courses published</h3>
+          <span class="licenceCount">{{licenceData.totalPublishedCourses || 0}} / {{licenceData.courseApprovedLimit}}</span>
+       </mat-card>
+        <mat-card class="licenceBlock">
+          <h3 class="licenceTitle"><mat-icon>delete</mat-icon>Courses deleted</h3>
+          <span class="licenceCount">{{licenceData.totalDeletedCourses}}</span>
+       </mat-card>
+    </div>
+ </div> -->
+
+<mat-card id='course_list'>
+    <mat-card-header>
+        <span class="search-container example-form">
+            <mat-form-field id="search_user_form" appearance="fill" class="height">
+              <mat-label>Search by</mat-label>
+              <input id="search_user_input" autocomplete="off" autocomplete="off" (keydown.enter)="onFilter(search_user_input.value)" matInput matInput
+              #search_user_input aria-label="Search for a user">
+              <button id="do_search_button" mat-button matSuffix mat-icon-button aria-label="Search"
+              (click)="onFilter(search_user_input.value)">
+                <mat-icon>search</mat-icon>
+              </button>
+              <button id="clear_search_button" mat-button matSuffix *ngIf="search_user_input.value !==''"
+                mat-icon-button aria-label="Clear" (click)="onFilter(''); search_user_input.value=''">
+                <mat-icon>close</mat-icon>               
+              </button>
+            </mat-form-field>
+          </span>
+        <span class="spacer"></span>
+        <div class="sortAddContainer">
+        <!-- <span class="search-container"> -->
+            <mat-form-field class="search_by_lr search_by_lr_sort right sortWidth height" >
+                <mat-label class="searchLabel" aria-label="Sort by">Sort by</mat-label>
+                <mat-select placeholder="Sort by" mat-select-placeholder ><mat-label aria-label="Sort by"><p class="SortByText">Sort by</p></mat-label>
+                    <mat-divider></mat-divider>
+                  <mat-option value="Created date" (click)="onNameSort('createdDate,desc')">Created Date</mat-option>
+                  <mat-option value="Course name" (click)="onNameSort('topic,asc')">Course Name</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button id="add_course_request_button" mat-stroked-button class="right" color="primary"
+         
+              [routerLink]="['./add']">Generate Course</button>
+            <!-- </span>   -->
+
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="card-container">
+            <div *ngFor="let course of dataSource.data;let i = index;" class="padhaiCardSection mat-elevation-z2">
+            <div (click)="goToEdit(course)">
+                <div class="heroImageSection">
+                    <img [src]="getImagePath(course)" alt="Course Image" (error)="img.src = '../../../../assets/images/Padhai.jpg'" #img>
+                </div>
+                <div class="headerSection flexRow">
+                    <div class="titleSection flexColumn">
+                        <div class="flexRow spaceBetween">
+                            <div class="overflowHidden">
+                                <h3 matTooltip="{{course.topic}}">{{course.topic}}</h3>
+                            </div>   
+                        </div>
+                        <p class="level">{{course.courseLevel}}</p>
+                        <div class="flexRow spaceBetween">
+                            <p>By {{course.createdBy}}</p>
+                            <p>{{course.createdDate | customMonthFormat}}</p>
+                        </div>
+                       
+                    </div>                   
+                   
+                </div>
+                <div class="progress-bar-container">
+                    <div class="step-progress">
+                      <div class="step-progress-bar">
+                        <ul class="bars">
+                          <li class="bar-default"></li>
+                          <li id="activeProgress" [style.width]="course.progress"  class="bar-active"></li>
+                        </ul>
+                        <ul class="markers">
+                          <li  [ngClass]="true ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+                          <li  [ngClass]="course.status == 'outlinegenerated' || course.status == 'lessongenerated' || course.status == 'assetgenerated' || course.status == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+                          <li  [ngClass]="course.status == 'lessongenerated' || course.status == 'assetgenerated' || course.status == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+                          <li  [ngClass]="course.status == 'assetgenerated' || course.status == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+                          <li  [ngClass]="course.status == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="actionSection">
+                    <mat-chip-list><mat-chip [appChangeColor]="course">{{course | statusFilter }}</mat-chip></mat-chip-list>
+                    <div class="actionButtons">
+                        <button  *ngIf="isAuthorized(78,4)" id="delete_course_list_button_{{course.id}}" disabled="{{course | disableFilter : 'delete'}}"
+                        mat-icon-button color="primary" attr.aria-label="Delete {{course.fullName}}" (click)="$event.stopPropagation(); onDelete(course)">
+                        <mat-icon class="actionIcon" matTooltip="Delete">delete</mat-icon>
+                    </button>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div>
+        <mat-paginator id="pagination" [pageSize]="pageSize" (page)='resolveCourseRequests($event)' [showFirstLastButtons]='true'
+            [hidePageSize]='true'>
+        </mat-paginator>
+    </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,115 @@
+.page-nav {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    margin: 0 0 42px 0;
+}
+
+.page-title {
+    font-size: 1.8em;
+    font-weight: 100;
+    margin: 0;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.87);
+    word-wrap: break-word;
+    width: 100%;
+}
+.breadcrumb {
+    order: -1;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+    padding: 0;
+    margin-right: 32px;
+
+    a, a:active, a:visited {
+        font-size: 14px;
+        text-decoration: none;
+
+    }
+
+    a:nth-of-type(2):before {
+        content: "/";
+        margin: 0 6px;
+    }
+
+    a:nth-of-type(3):before {
+        content: "/";
+        margin: 0 6px;
+    }
+}
+
+.breadcrumbHeaderContainer{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    .imageContainer{
+        position: relative; 
+        text-align: center;
+        .imageStyle{
+            height: 90px;
+            width: 90px;
+            // border-radius: 50%;
+            transition: filter 0.4s ease-in-out;
+        }
+
+        .edit-icon {
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color : #FFF;
+            transition: opacity 0.4s ease-in-out;
+          }
+    }
+
+    .imageContainer:hover .imageStyle {
+        filter: brightness(50%) blur(1px); 
+      }
+      
+      .imageContainer:hover .edit-icon {
+        opacity: 1;
+      }
+}
+
+.staticImg{
+    height: 90px;
+    width: 90px;
+}
+
+@media screen and (max-width: 768px) {
+    .breadcrumb {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    .page-nav {
+        align-items: flex-start;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+        margin: 0 0 24px 0;
+    }
+
+    .breadcrumb {
+        margin: 0 0 8px 0;
+
+        order: -1;
+        a, a:active, a:visited {
+            font-size: 12px;
+        }
+    }
+
+    #padhaiBreadCrumbTitle{
+        margin-bottom: 0;
+    }
+}
+
+.failed{
+    color: red;
+}

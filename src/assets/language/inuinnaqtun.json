@@ -1,0 +1,22 @@
+{
+    "flashcard": "Ilaulukaarniq Piutigiyauyuq",
+    "doesnotsupportaudioelement": "Qiniqhiayutit ikayuutaungituq nipiliuqhimayuq.",
+    "resetquiz": "Reset Quiz",
+    "submit": "Tuyuq",
+    "correct": "Ihuaqtuq!",
+    "incorrecttryagain": "Ihuittumik piiqtauyuq. Uuktuffaagin.",
+    "exit": "Anivinga",
+    "exportlabel": "Export",
+    "canyouanswer": "Kiuttaaqqit hapkua apiqhuutit?",
+    "question": "Apiqqut",
+    "youranswer": "Kiudjutitit",
+    "check": "Naunaiklugu",
+    "pdfforstudent": "PDF Ilihaqtuq",
+    "pdfforstaff": "PDF Havaktinut",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Ahinungaqtitauniq Moodle-mun",
+    "quiz": "Quiz",
+    "learningOutcomes": "Iliharnirmi Qanurilinigit"
+}

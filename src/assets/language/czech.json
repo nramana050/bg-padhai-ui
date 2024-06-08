@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktivní datový zdroj",
+    "doesnotsupportaudioelement": "Váš prohlížeč nepodporuje zvukový prvek.",
+    "resetquiz": "Resetovat kvíz",
+    "submit": "Podat",
+    "correct": "Správný!",
+    "incorrecttryagain": "Nesprávný. Zkuste to znovu.",
+    "exit": "Východ",
+    "exportlabel": "Vývoz",
+    "canyouanswer": "Můžete odpovědět na následující otázky?",
+    "question": "Otázka",
+    "youranswer": "Vaše odpověď",
+    "check": "Kontrolovat",
+    "pdfforstudent": "PDF pro studenty",
+    "pdfforstaff": "PDF pro zaměstnance",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Export do Moodle",
+    "quiz": "Kvíz",
+    "learningOutcomes": "Výstupy z učení"
+}

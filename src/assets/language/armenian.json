@@ -1,0 +1,22 @@
+{
+    "flashcard": "Ինտերակտիվ ունեցվածք",
+    "doesnotsupportaudioelement": "Ձեր բրաուզերը չի աջակցում աուդիո տարրին:",
+    "resetquiz": "Ռեսեթ Քվիզ",
+    "submit": "Ներկայացնել",
+    "correct": "Ճիշտ է!",
+    "incorrecttryagain": "Անճշտություն: Կրկին փորձիր.",
+    "exit": "Ելք",
+    "exportlabel": "Արտադրություն",
+    "canyouanswer": "Կարո՞ղ եք պատասխանել հետեւյալ հարցերին:",
+    "question": "Հարցում",
+    "youranswer": "Ձեր պատասխանը",
+    "check": "Ստուգեք",
+    "pdfforstudent": "Ուսանողի համար PDF",
+    "pdfforstaff": "PDF-ը Staff-ի համար",
+    "htmlzip": "HTML Zip",
+    "scorm": "ՍԿՈՐՄ",
+    "epub": "ePub",
+    "exporttomoodle": "Արտահանումը Moodle",
+    "quiz": "Քուիզ",
+    "learningOutcomes": "Ուսումնական ելքեր"
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "インタラクティブアセット",
+    "doesnotsupportaudioelement": "お使いのブラウザはaudio要素をサポートしていません。",
+    "resetquiz": "リセットクイズ",
+    "submit": "送信",
+    "correct": "そうです！",
+    "incorrecttryagain": "間違った。もう一度やり直してください。",
+    "exit": "出口",
+    "exportlabel": "輸出",
+    "canyouanswer": "次の質問に答えていただけますか?",
+    "question": "質問",
+    "youranswer": "あなたの回答",
+    "check": "小切手",
+    "pdfforstudent": "学生向けPDF",
+    "pdfforstaff": "スタッフ向けPDF",
+    "htmlzip": "HTMLのZipファイル",
+    "scorm": "SCORMの",
+    "epub": "ePubの",
+    "exporttomoodle": "Moodleへのエクスポート",
+    "quiz": "クイズ",
+    "learningOutcomes": "学習の成果"
+}

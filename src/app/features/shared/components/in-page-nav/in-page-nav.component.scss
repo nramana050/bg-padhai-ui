@@ -1,0 +1,216 @@
+.in-page-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(#fff, 0.9);
+  margin-bottom: 40px;
+  z-index: 900;
+  flex-grow: 1;
+  border-radius: 2px 2px 0 0;
+}
+
+.in-page-nav.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 55px;
+  left: calc(258px + 40px);
+  z-index: 200;
+  background: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+
+
+  .drop-down-button {
+    background: transparent;
+  }
+}
+
+.section-button {
+  border-radius: 0px;
+  padding: 8px;
+  background: transparent;
+}
+
+.dropdown {
+  // position: relative;
+  display: inline-block;
+
+  .drop-down-button {
+    flex-grow: 1;
+    border-radius: 0px;
+    padding: 8px;
+    padding-left: 16px;
+    background: transparent;
+
+    .mat-icon {
+      color: rgba(#000, 0.6);
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown:hover .drop-down-button {
+  color: var(--primary-color);
+  background: rgba(0, 0, 0, 0.04);
+  transition: opacity 0.6s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.6s cubic-bezier(0.35, 0, 0.25, 1);
+  border-radius: 2px 2px 0 0;
+
+  .mat-icon {
+    color: var(--primary-color);
+  }
+}
+.drop-down-button.active {
+  color: var(--primary-color);
+}
+
+.dropdown-content {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  font-size: 14px;
+  background-color: #fff;
+  min-width: 250px;
+  border-radius: 2px;
+  z-index: 1;
+
+  cursor: pointer;
+
+  a {
+    color: rgba(#000, 0.87);
+    padding: 12px 16px;
+    margin: 4px;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover {
+    color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.04);
+    transition: opacity 0.6s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.6s cubic-bezier(0.35, 0, 0.25, 1);
+  }
+
+  a.active {
+    color: var(--secondary-color);
+    background: rgba(0, 0, 0, 0.04);
+    margin: 4px;
+    border-radius: 2px;
+    transition: opacity 0.6s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.6s cubic-bezier(0.35, 0, 0.25, 1);
+  }
+}
+
+.section-button {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .in-page-nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 64px;
+    background: #fff;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .in-page-nav {
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 100;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .section-button {
+    display: inline-block;
+
+    .section-icon.mat-icon {
+      margin-right: 10px;
+    }
+
+    .arrow-icon.mat-icon {
+      color: rgba(#000, 0.6);
+    }
+  }
+
+  .in-page-nav.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .dropdown {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      .drop-down-button {
+        cursor: unset;
+        padding-left: 18px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.04);
+        text-align: left;
+
+        .mat-icon {
+          display: none;
+        }
+      }
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+      opacity: 1;
+      box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      opacity: 1;
+
+      a {
+        padding: 12px 36px;
+      }
+      a.active {
+        background: transparent;
+      }
+    }
+
+    .dropdown-container {
+      display: block;
+      min-width: 250px;
+    }
+  }
+
+  .in-page-nav.sticky.responsive {
+    .dropdown {
+      width: 100%;
+    }
+  }
+
+  .dropdown-container {
+    display: none;
+    position: absolute;
+    height: auto;
+    overflow: scroll;
+    top: 56px;
+    z-index: 200;
+    background: #fff;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+}

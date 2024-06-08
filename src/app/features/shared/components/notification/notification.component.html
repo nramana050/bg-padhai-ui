@@ -1,0 +1,13 @@
+<div *ngIf="notification" class="error-summary" id="error-summary"
+  attr.aria-labelledby="error-summary-heading" role="alert" tabindex="-1">
+  <h2 *ngIf="notification?.type==='error'" class="error-summary-title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="error-summary-body">
+    <ul class="list error-summary-list">
+      <li *ngFor="let message of notification?.message">
+        <a href="javascript:void(0)">{{ message }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

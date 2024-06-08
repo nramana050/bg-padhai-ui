@@ -1,0 +1,22 @@
+{
+    "flashcard": "इंटरॅक्टिव्ह असेट",
+    "doesnotsupportaudioelement": "आपला ब्राउझर ऑडिओ घटकास समर्थन देत नाही.",
+    "resetquiz": "प्रश्नमंजुषा पुन्हा सेट करा",
+    "submit": "प्रस्तुत करा",
+    "correct": "बरोबर!",
+    "incorrecttryagain": "चुकीचे आहे. पुन्हा प्रयत्न करा।",
+    "exit": "बाहेर जाणे",
+    "exportlabel": "निर्यात",
+    "canyouanswer": "खालील प्रश्नांची उत्तरे देऊ शकाल का?",
+    "question": "प्रश्न",
+    "youranswer": "तुमचे उत्तर",
+    "check": "तपासा",
+    "pdfforstudent": "विद्यार्थ्यासाठी पीडीएफ",
+    "pdfforstaff": "स्टाफसाठी पीडीएफ",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "मूडलला निर्यात करा",
+    "quiz": "प्रश्नमंजुषा",
+    "learningOutcomes": "शिकण्याचे परिणाम"
+}

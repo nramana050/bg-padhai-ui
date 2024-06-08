@@ -1,0 +1,22 @@
+{
+    "flashcard": "ᐱᖁᑎᑦ ᐊᑐᖅᑕᐅᔪᓐᓇᕋᔭᖅᑐᑦ",
+    "doesnotsupportaudioelement": "ᕿᓂᕈᑏᑦ ᐃᑲᔪᖅᑐᐃᙱᓚᖅ ᓂᐱᐅᑉ ᐃᓗᓕᖏᓐᓂᒃ.",
+    "resetquiz": "ᐋᖅᑭᒋᐊᒃᑲᓐᓂᕆᐊᓕᑦ ᐊᐱᖅᓲᑎᑦ",
+    "submit": "ᑐᓂᓯᓂᖅ",
+    "correct": "ᑕᐃᒫᑦᑎᐊᖅ!",
+    "incorrecttryagain": "ᑕᒻᒪᖅᓯᒪᔪᖅ. ᐆᒃᑐᒃᑲᓐᓂᕆᑦ.",
+    "exit": "ᐊᓂᕝᕕᒃ",
+    "exportlabel": "ᑲᓇᑕᐅᑉ ᓯᓚᑖᓂᙶᖅᑐᑦ",
+    "canyouanswer": "ᐅᑯᐊ ᐊᐱᖅᑯᑎᑦ ᑭᐅᔪᓐᓇᖅᐱᒋᑦ?",
+    "question": "ᐊᐱᖅᑯᑎ",
+    "youranswer": "ᑭᐅᔾᔪᑎᑎᑦ",
+    "check": "ᑎᑎᕐᓗᒍ",
+    "pdfforstudent": "PDF ᐃᓕᓐᓂᐊᖅᑎᒧᑦ",
+    "pdfforstaff": "PDF ᐃᖅᑲᓇᐃᔭᖅᑎᓄᑦ",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "ᓅᑎᑦᑎᓂᖅ Moodle−ᒧᑦ",
+    "quiz": "ᐊᐱᖅᓲᑎᑦ",
+    "learningOutcomes": "ᐃᓕᑦᑎᓂᕐᒧᑦ ᖃᓄᐃᖓᓂᐅᔪᑦ"
+}

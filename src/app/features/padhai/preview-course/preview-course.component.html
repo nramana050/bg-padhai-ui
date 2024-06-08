@@ -1,0 +1,150 @@
+<mat-card id='course_list'>
+    <mat-card-header class="matHeader">
+      <p class="activeLesson" *ngIf="showCourseDetails && courseName">Course : {{courseName}}</p>
+      <div class="buttonContainer">
+        <mat-form-field  class="language search_by_lr search_by_lr_sort right">
+          <mat-label></mat-label>
+          <mat-select [(value)]="defaultLangOption" placeholder="Select language" mat-select-placeholder class="heightclass" (selectionChange)="changeLanguage($event)">
+            <mat-option *ngFor="let language of languageList" [value]="language.languageName">
+              {{language.languageName}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-stroked-button color="primary" type="button" [matMenuTriggerFor]="menu"><div class="export">
+          <mat-icon>cloud_download</mat-icon> Export
+        </div></button>
+        <mat-menu  #menu="matMenu"  >
+          <mat-option *ngFor="let type of exportTypeList" (click)="selectExportType(type.description)">
+            {{type.description}}</mat-option>
+        </mat-menu>
+        <button id="exit_button" mat-stroked-button class="right" color="primary"
+        [routerLink]="['/padhai']">Exit</button>
+      </div>
+    </mat-card-header>
+    
+    <mat-card-content>
+         <div class="editLessonContainer" *ngIf="showCourseDetails">
+            <button class="courseMenu" mat-stroked-button color="primary" type="button" [matMenuTriggerFor]="courseMenu"><div class="export">
+              <mat-icon class="mat-icon-rtl-mirror">
+                expand_more
+              </mat-icon> Course list menu</div>
+            </button>
+            <mat-menu #courseMenu="matMenu" xPosition="before">
+              <div class="matTree">
+                <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                    <!-- <button mat-icon-button disabled></button> -->
+                    <span [ngClass]="{ 'active': activeLesson.title === node.name }" 
+                    [ngStyle]="{'color' : activeLesson.title === node.name ? primaryColor : '#000'}" 
+                    (click)="selectLesson(node.name)">{{node.name}} </span>
+                  </mat-tree-node>
+                  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle>
+                    <button  mat-icon-button
+                            [attr.aria-label]="'Toggle ' + node.name" >
+                      <mat-icon class="mat-icon-rtl-mirror">
+                        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                      </mat-icon>
+                    </button>
+                   <span [ngClass]="{ 'active': activeModule.title === node.name }" 
+                   [ngStyle]="{'color' : activeModule.title === node.name ? primaryColor : '#000'}">{{node.name}}</span>
+                  </mat-tree-node>
+                </mat-tree>
+              </div>
+            </mat-menu>
+            <div class="lessonMenusSection">
+              <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                  <!-- <button mat-icon-button disabled></button> -->
+                  <span [ngClass]="{ 'active': activeLesson.title === node.name }" 
+                  [ngStyle]="{'color' : activeLesson.title === node.name ? primaryColor : '#000'}" 
+                  (click)="selectLesson(node.name)">{{node.name}} </span>
+                </mat-tree-node>
+                <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle>
+                  <button  mat-icon-button
+                          [attr.aria-label]="'Toggle ' + node.name" >
+                    <mat-icon class="mat-icon-rtl-mirror">
+                      {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                    </mat-icon>
+                  </button>
+                 <span [ngClass]="{ 'active': activeModule.title === node.name }" 
+                 [ngStyle]="{'color' : activeModule.title === node.name ? primaryColor : '#000'}">{{node.name}}</span>
+                </mat-tree-node>
+              </mat-tree>
+            </div>
+            <div class="editLessonSection">
+                <h4 class="lessonHeading">Lesson : {{activeLessonName}}</h4>
+                <div class="lessonContainer">
+                    <div *ngFor="let asset of activeLesson.asset">
+                        <div [ngSwitch]="asset.type">
+                            <div class="heroImage" *ngSwitchCase="'image'">
+                                <img [src]="asset.path" alt="">
+                            </div>
+                            <div class="audioContainer" *ngSwitchCase="'audio'">
+                                <audio [src]="asset.path" controls>Your browser does not support the audio element.</audio>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lessonDescriptionContainwer">
+                      <pre class="lessonDescriptionSection"> {{ activeLesson.page }} </pre>
+                    </div>
+                    <div class="quizAndH5p">
+                        <mat-accordion>
+                            <mat-expansion-panel class="expantionPanel">
+                              <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Interactive Asset
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+                              <div id="h5p-container"></div>
+                            </mat-expansion-panel>
+                          </mat-accordion>
+                          <mat-accordion>
+                            <mat-expansion-panel class="expantionPanel">
+                              <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    {{activeLesson.quiz.name}}
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+                                    <div class="quizContainer">
+                                      <div class="quizHeader">
+                                        <p class="headerTitle">Can you answer the following questions?</p>
+                                        <button class="resetQuiz" mat-stroked-button color="primary" type="button" (click)="resetQuiz()">Reset Quiz</button>
+                                      </div>
+                                        <div class="questionSection" *ngFor="let question of activeLesson.quiz.questions;let i = index">
+                                            <p class="question">Q {{i+1}}. {{question.questionText}}</p>
+                                            <mat-radio-group required name="optionGroup-{{i}}" [(ngModel)]="questionAnswer[i].answer">
+                                                  <mat-radio-button *ngFor="let option of question.answers;let j = index" value="{{option.text}}" labelPosition="after" id="option-{{i}}-{{j}}" >{{option.text}}</mat-radio-button>
+                                            </mat-radio-group>
+                                            <button class="submitAnswer" [disabled]="!questionAnswer[i].answer" mat-stroked-button color="primary" type="button" (click)="checkAnswer(i)">Submit</button>
+                                            <p *ngIf="isAnswerCorrect[i] != null" class="feedback" [ngClass]="isAnswerCorrect[i] ? 'correct': 'incorrect'">{{isAnswerCorrect[i] ? "Correct!" : "Incorrect, try again!"}}</p>
+                                        </div>
+                                    </div>
+                            </mat-expansion-panel>
+                          </mat-accordion>
+
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="editLessonContainer" *ngIf="!showCourseDetails">
+            <h4 class="note"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+             <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+               <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+               <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+               <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+             </rect>
+             <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+               <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+               <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+               <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+             </rect>
+             <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+               <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+               <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+               <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+             </rect>
+           </svg>Course details feaching...</h4>
+          </div>
+    </mat-card-content>
+</mat-card>
+

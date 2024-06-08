@@ -1,0 +1,22 @@
+{
+    "flashcard": "Интерактив актив",
+    "doesnotsupportaudioelement": "Браузерығыҙ аудио элементты хупламай.",
+    "resetquiz": "Ысырыу квизы",
+    "submit": "Тапшырырға",
+    "correct": "Дөрөҫ!",
+    "incorrecttryagain": "Дөрөҫ түгел. Яңынан эшләп ҡара.",
+    "exit": "Сығыуы",
+    "exportlabel": "Экспорт",
+    "canyouanswer": "Түбәндәге һорауҙарға яуап ала алаһығыҙмы?",
+    "question": "Һорау",
+    "youranswer": "Яуап",
+    "check": "Тикшереү",
+    "pdfforstudent": "Студент өсөн ПДФ",
+    "pdfforstaff": "Персонал өсөн ПДФ",
+    "htmlzip": "Зип HTML",
+    "scorm": "СКОРМ",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle'ға экспорт",
+    "quiz": "Викторина",
+    "learningOutcomes": "Өйрәнеү һөҙөмтәләре"
+}

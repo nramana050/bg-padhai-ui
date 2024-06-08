@@ -1,0 +1,22 @@
+{
+    "flashcard": "Интерактивдүү актив",
+    "doesnotsupportaudioelement": "Сиздин браузер аудио элементин колдобойт.",
+    "resetquiz": "Викторинаны калыбына келтирүү",
+    "submit": "Тапшыруу",
+    "correct": "Туура!",
+    "incorrecttryagain": "Туура эмес. Кайра аракет кыл.",
+    "exit": "Чыгуу",
+    "exportlabel": "Экспорт",
+    "canyouanswer": "Төмөнкү суроолорго жооп бере аласызбы?",
+    "question": "Суроо",
+    "youranswer": "Жоопторуңуз",
+    "check": "Текшерүү",
+    "pdfforstudent": "Студент үчүн ПДФ",
+    "pdfforstaff": "Персонал үчүн ПДФ",
+    "htmlzip": "HTML Zip",
+    "scorm": "СКОРМ",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle-ге экспорттоо",
+    "quiz": "Викторина",
+    "learningOutcomes": "Үйрөнүүнүн натыйжасы"
+}

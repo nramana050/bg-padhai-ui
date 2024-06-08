@@ -1,0 +1,948 @@
+@import "~src/styles/helpers/mixins/grid";
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'helvetica_bold';
+    src: url('../fonts/Helvetica-Bold-Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+.alignRight {
+    text-align: right;
+}
+.alignLeft {
+    text-align: left;
+}
+// tabs start //
+@media all and (min-width: 768px ){
+.govuk-tabs {
+    padding: 30px;
+    .govuk-tabs__title {
+        display: none;
+    }
+    ul.govuk-tabs__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 49px;
+        border-bottom: 1px solid #bfc1c3;
+        li.govuk-tabs__list-item {
+            position: relative;
+            margin: 0 5px 0 0;
+            padding: 10px 20px 1px;
+            float: left;
+            background-color: #f3f2f1;
+            text-align: center;
+            cursor: pointer;
+            display: block;
+            height: 29px;
+            border-bottom: 4px solid transparent;
+            line-height: 1.21579;
+            &.govuk-tabs__list-item--selected {
+                margin-top: -5px;
+                margin-bottom: -1px;
+                padding: 14px 19px 11px 19px;
+                border: 1px solid #bfc1c3;
+                border-bottom: 0;
+                background-color: #fff;
+                a.govuk-tabs__tab {
+                    text-decoration: none;
+                }
+            }
+            a.govuk-tabs__tab {
+                font-family: 'helvetica';
+                margin-right: 3px;
+                float: left;
+                color: #0b0c0c;
+                text-align: center;
+                line-height: 1.21579;
+                &:focus {
+                    outline: 3px solid transparent;
+                    background-color: #fd0;
+                    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+                    text-decoration: none;
+                    text-decoration-thickness: 0;
+                }
+                &:hover {
+                    color: rgba(11,12,12,0.99);
+                    text-decoration-thickness: 3px;
+                }
+            }
+        }
+    }
+    .govuk-tabs__panel {
+        margin-top: 0;
+        padding: 30px 20px;
+        border: 1px solid #b1b4b6;
+        border-top: 0;
+        &.govuk-tabs__panel--hidden {
+            display: none;
+        }
+    }
+}
+}
+@media all and (max-width: 767px) {
+    .govuk-tabs {
+        padding: 30px 20px;
+        .govuk-tabs__title {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        .govuk-tabs__list {
+            border-bottom: 0 !important;
+            padding: 0;
+            margin: 0 0 20px 0;
+            .govuk-tabs__list-item {
+                margin-left: 25px;
+                list-style: none;
+                &:before {
+                    color: #0b0c0c;
+                    content: "\2014 ";
+                    margin-left: -25px;
+                    padding-right: 5px;
+                }
+                .govuk-tabs__tab {
+                    text-decoration: underline;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    &:link {
+                        color: #1d70b8;
+                    }
+                }
+            }
+        }
+    }
+}
+// tabs end //
+
+// ul li start
+ul.govuk-dash-list-item {
+    list-style: none;
+    padding-left: 20px;
+    li {
+        font-size: 19px;
+        margin-bottom: 15px;
+        font-family: 'helvetica';
+        &:before {
+            content: "-";
+            width: 5px;
+            margin-left: -20px;
+            margin-right: 5px;
+            font-weight: 700;
+        }
+    }
+}
+ul.govuk-dot-list-item {
+    list-style: disc;
+    padding-left: 20px;
+    li {
+        font-size: 19px;
+        margin-bottom: 15px;
+        font-family: 'helvetica';
+    }
+}
+
+@media all and (max-width: 767px) {
+    ul.govuk-dash-list-item,
+    ul.govuk-dot-list-item {
+        li {
+            font-size: 16px;
+            word-break: break-word;
+        }
+    }
+}
+// ul li end
+
+// button start
+.gds-button {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.106;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: auto;
+    margin: 0 0 22px 0;
+    padding: 8px 10px 7px;
+    border: 2px solid transparent;
+    border-radius: 0;
+    color: #fff;
+    background-color: #00703c;
+    -webkit-box-shadow: 0 2px 0 #002d18;
+    box-shadow: 0 2px 0 #002d18;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-family: 'helvetica';
+    &:hover {
+        background-color: #005a30;
+    }
+    &:active {
+        top: 2px;
+    }
+    &:focus {
+        border-color: #fd0;
+        outline: 3px solid transparent;
+        -webkit-box-shadow: inset 0 0 0 1px #fd0;
+        box-shadow: inset 0 0 0 1px #fd0;
+    }
+    &:focus:not(:active):not(:hover) {
+        border-color: #fd0;
+        color: #0b0c0c;
+        background-color: #fd0;
+        -webkit-box-shadow: 0 2px 0 #0b0c0c;
+        box-shadow: 0 2px 0 #0b0c0c;
+    }
+    &.button-start {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 32px;
+        @media all and (max-width: 767px) {
+            font-size: 19px;
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            bottom: -4px;
+            left: -2px;
+            background: transparent;
+        }
+    }
+    &.button-secondary {
+        background-color: #f3f2f1;
+        color: #0b0c0c;
+        -webkit-box-shadow: 0 2px 0 #929191;
+       box-shadow: 0 2px 0 #929191;
+        &:hover {
+            background-color: #dbdad9;
+        }
+    }
+    &.button-primary {
+        margin-right: 15px;
+    }
+    &.button-warning {
+        background-color: #d4351c;
+        margin-right: 15px;
+        &:hover {
+            background-color: #aa2a16;
+        }
+    }
+    @media all and (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+// button end
+
+// fonts start //
+.mt0 {
+    margin-top: 0 !important;
+}
+.mb0 {
+    margin-bottom: 0 !important;
+}
+.mb10 {
+    margin-bottom: 10px !important;
+}
+.mb30 {
+    margin-bottom: 30px !important;
+}
+.govuk-tabs__list-item {
+    font-size: 19px;
+}
+.govuk-heading-xl {
+    font-size: 48px;
+    margin-bottom: 50px;
+    font-family: 'helvetica_bold';
+}
+.govuk-heading-l {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-family: 'helvetica_bold';
+}
+.govuk-heading-m {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'helvetica_bold';
+}
+.govuk-heading-s {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+.govuk-caption-xl {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+.govuk-caption-l {
+    font-size: 24px;
+}
+.govuk-caption-m {
+    font-size: 19px;
+}
+p {
+    //font-family: 'helvetica';
+    margin-top: 0.3125em;
+    &.govuk-body {
+        font-size: 19px;
+        margin-bottom: 20px;
+    }
+    &.govuk-body-l {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    &.govuk-body-s {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+@media all and (max-width: 767px) {
+    .govuk-heading-xl {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .govuk-heading-l {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .govuk-heading-m {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .govuk-heading-s {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .govuk-caption-xl,
+    .govuk-caption-l {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .govuk-caption-m {
+        font-size: 16px;
+    }
+    .govuk-tabs__list-item {
+        font-size: 16px;
+    }
+    p {
+        &.govuk-body {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        &.govuk-body-l {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        &.govuk-body-s {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    }
+}
+// fonts end //
+
+// back link start //
+.link-back { 
+    font-family: 'helvetica';
+    display:  inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 0 15px 0 !important;
+    margin-top: 15px;
+    color: #000000;
+    
+    &:link,
+    &:visited,
+    &:hover {
+      color: #000000
+    }
+    a#{&}:focus,
+    &:active {
+      color: #000000;
+      outline: 3px solid transparent;
+      background-color: #fd0;
+      -webkit-box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+      box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+      text-decoration: none;
+    }
+  
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+  
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-right: 6px solid #000000;
+      border-bottom: 5px solid transparent;
+      margin-right: 5px;
+    }
+  }
+// back link start //
+
+// popup CSS starts 
+body {
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+.gds-modal{
+    height: 100%;
+    background: rgba(0,0,0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    overflow-y: hidden;
+}
+.gds-modal-dialog{
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 4px solid #000;
+    min-width: 500px;
+    button{
+      margin: 0 10px 0 0;
+    }
+    p {
+      font-size: 19px;
+    }
+}
+@media all and (max-width: 767px) {
+    .gds-modal-dialog {
+        min-width: 80vw !important;
+        width: 80vw !important;
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+// popup CSS ends
+
+// warning text CSS starts
+.gds-warning {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    .gds-warning-icon {
+        box-sizing: border-box;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        min-width: 35px;
+        min-height: 35px;
+        margin-top: -7px;
+        border: 3px solid #0b0c0c;
+        border-radius: 50%;
+        color: #fff;
+        background: #0b0c0c;
+        line-height: 26px;
+        padding: 3px 0 0 0;
+        font-size: 28px;
+        text-align: center;
+        font-family: 'helvetica_bold';
+    }
+    .gds-warning-text{
+        font-size: 16px;
+        font-family: 'helvetica_bold';
+        line-height: 1.25;
+        color: #0b0c0c;
+        display: block;
+        padding-left: 45px;
+    }
+}
+// warning text CSS ends
+
+// select box CSS starts
+.gds-select-wrapper {
+    .gds-select-label {
+        color: #0b0c0c;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 19px;
+    }
+    .gds-select {
+        width: 50%;
+        line-height: 1.3;
+        padding: 5px;
+        font-size: 19px;
+        font-family: 'helvetica';
+        border: 2px solid #0b0c0c;
+        margin-bottom: 30px;
+        display: block;
+        &:focus, &:active {
+            outline: 3px solid #fd0;
+            outline-offset: 0;
+            box-shadow: inset 0 0 0 2px;
+        }
+        option {
+            font-size: 19px;
+        }
+    }
+}
+// select box CSS ends
+
+// <a> anchor CSS starts
+.gds-anchor {
+    font-family: "Helvetica" !important;
+    font-size: 16px !important;
+    line-height: 1.25;
+    padding: 2px 0;
+    text-decoration: underline;
+    &:hover {
+        text-decoration-thickness: 3px;
+    }
+    &:active {
+        color: #0b0c0c;
+    }
+    &:link {
+        color: #1d70b8;
+    }
+    &:focus {
+        outline: 3px solid transparent;
+        color: #0b0c0c;
+        background-color: #fd0;
+        box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+        text-decoration: none;
+    }
+}
+// <a> anchor CSS ends
+
+// status tag CSS starts
+.gds-status-tag {
+    display: inline-block !important;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    color: #fff;
+    background-color: #0b0c0c;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 5px 8px 1px 8px;
+    font-size: 16px;
+    margin: 2px;
+    font-family: "helvetica_bold";
+    width: auto;
+    text-align: center;
+    &.red {
+        background-color: #d4351c;
+    }
+    &.orange {
+        background-color: #f47738;
+    }
+    &.green {
+        background-color: #00703c;
+    }
+    &.lightBlue {
+        background-color: #45b3bb;
+    }
+    &.yellow {
+        background-color: #ffbf47;
+    }
+}
+// status tag CSS end
+
+// History popup CSS starts
+@media all and (max-width: 767px) {
+    .gds-modal-dialog {
+        .quesWrapper {
+            font-size: 16px !important;
+        }
+        p.tableQuestion {
+            font-size: 16px;
+        }
+    }
+}
+// History popup CSS end
+
+// General CSS starts //
+.number-of-pages{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #626a6e;
+    margin-bottom: 15px;
+    margin-top: 0;
+    @media all and (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+.care-plan-questions-list{
+    margin-top: 25px;
+    label {
+        font-family: 'helvetica';
+    }
+    .question {
+        font-size: 24px;
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: 'helvetica_bold';
+        &:focus-visible {
+            outline: 0;
+        }
+    }
+    .gds-form-group {
+        margin: 0 0 30px 0;
+        font-size: 19px;
+        font-family: 'helvetica';
+
+    }
+    // Radio button CSS
+    .radioContainer {
+        display: flex;
+        &.inlineRadioButtons {
+            display: inline-block;
+            margin: 0 20px 0 0;
+        }
+    }
+    .gds-radio-wrapper {
+        position: relative;
+        padding: 0 0 0 38px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        input[type=radio] {
+            cursor: pointer;
+            position: absolute;
+            z-index: 1;
+            top: -2px;
+            left: -2px;
+            width: 44px;
+            height: 44px;
+            margin: 0;
+            opacity: 0;
+            &:focus + label::before {
+                border-width: 4px;
+                box-shadow: 0 0 0 4px #fd0;
+            }
+        }
+        input[type=radio] ~ label {
+            padding: 7px 10px 7px 12px;
+            font-weight: 400;
+            font-size: 19px;
+            display: inline-block;
+            cursor: pointer;
+            @media all and (max-width: 767px) {
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 400;
+                font-family: Helvetica;
+                padding: 8px 15px 5px;
+            }
+            &:before {
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #000000;
+                border-radius: 50%;
+                background: 0 0;
+            }
+            &:after {
+                content: "";
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 0;
+                height: 0;
+                border: 10px solid #000000;
+                border-radius: 50%;
+                opacity: 0;
+                background: #000000;
+            }
+        }
+        input[type="radio"]:checked ~ label {
+            &::after {
+              zoom: 1;
+              opacity: 1;
+            }
+        }
+    }
+
+
+    // Form control - checkbox
+    .checkbox-wrapper {
+        position: relative;
+        display: block;
+        min-height: 40px;
+        margin-bottom: 10px;
+        padding-left: 40px;
+        clear: left;
+      
+        input[type="checkbox"] {
+          cursor: pointer;
+          position: absolute;
+          z-index: 1;
+          top: -2px;
+          left: -2px;
+          width: 44px;
+          height: 44px;
+          margin: 0;
+          opacity: 0;
+          &:focus + label::before {
+                border-width: 4px;
+                box-shadow: 0 0 0 4px #fd0;
+            }
+        }
+      
+        input[type="checkbox"] ~ label {
+            padding: 7px 10px 7px 12px;
+            font-weight: normal;
+            font-size: 19px;
+            display: inline-block;
+            cursor: pointer;
+            @media all and (max-width: 767px) {
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 400;
+                font-family: Helvetica;
+                padding: 8px 15px 5px;
+            }
+            &::before {
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #000;
+                background: transparent;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 11px;
+                left: 9px;
+                width: 18px;
+                height: 7px;
+                transform: rotate(-45deg);
+                border: solid;
+                border-width: 0 0 5px 5px;
+                border-top-color: transparent;
+                opacity: 0;
+                background: transparent;
+            }
+            &.form-label-b19 {
+                font-size: 19px;
+                font-family: 'helvetica_bold';
+                span {
+                    font-size: 16px;
+                    font-family: 'helvetica';
+                }
+            }
+        }
+      
+        input[type="checkbox"]:checked ~ label {
+          &::after {
+                zoom: 1;
+                opacity: 1;
+            }
+        }
+        label{
+          .vc-visually-hidden{
+                position: absolute !important;
+                width: 1px !important;
+                height: 1px !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                clip: rect(0 0 0 0) !important;
+                -webkit-clip-path: inset(50%) !important;
+                clip-path: inset(50%) !important;
+                border: 0 !important;
+                white-space: nowrap !important;
+            }
+        }
+    }
+    .radio-conditional {
+        margin-left: 17px;
+        margin-bottom: 20px;
+        padding-left: 33px;
+        border-left: 10px solid #b1b4b6;
+    }
+
+    // textarea 
+    .gds-textarea {
+        border: 2px solid #000;
+        font-family: 'helvetica';
+        font-size: 19px;
+        font-weight: normal;
+        color: #0b0c0c;
+        line-height: 1.25;
+        padding: 5px;
+        background-image: none;
+        width: 98.5% !important;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        @media all and (max-width: 767px) {
+            font-size: 16px;
+        }
+        &:focus{
+            border: 2px solid #0b0c0c !important;
+            outline: 3px solid #fd0 !important;
+            outline-offset: 0;
+            -webkit-box-shadow: inset 0 0 0 2px;
+            box-shadow: inset 0 0 0 2px;
+        }
+    }
+    .radio-conditional {
+        .gds-textarea {
+            width: 92% !important;
+        }
+    }
+
+    .form-group-error {
+        border-left: 5px solid #d4351c;
+        padding-left: 15px;
+        textarea,
+        input {
+          border: 2px solid #d4351c;
+          outline-offset: 0;
+          box-shadow: none;
+        }
+      }
+
+    .error-message {
+        font-family: 'helvetica_bold';
+        font-size: 19px;
+        line-height: 1.3;
+        color: #d4351c;
+        padding: 0;
+        margin: 0 0 15px 0;
+        @media all and (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+    
+    .form-label-count {
+        color: #6f777b;
+        padding: 0;
+        line-height: 1.3;
+        margin: 0;
+        font-size: 19px;
+        font-family: 'helvetica';
+        @media all and (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+    // input type=text CSS starts
+    .gds-input {
+        font-size: 19px;
+        font-family: 'helvetica';
+        line-height: 1.3;
+        margin-top: 0;
+        padding: 5px;
+        border: 2px solid #0b0c0c;
+        border-radius: 0;
+        &.widthDate {
+            width: 35px;
+        }
+        &.full-width {
+            width: 100%;
+        }
+        &.three-quarters {
+            width: 75%;
+        }
+        &.two-third-quarters {
+            width: 66.66%;
+        }
+        &.one-half {
+            width: 50%;
+        }
+        &.one-third {
+            width: 33.33%;
+        }
+        &.one-quarter {
+            width: 25%;
+        }
+        &:focus {
+            outline: 3px solid #fd0;
+            outline-offset: 0;
+            box-shadow: inset 0 0 0 2px;
+        }
+    }
+    @media all and (max-width: 767px) {
+        .gds-input {
+            &.full-width,
+            &.three-quarters,
+            &.two-third-quarters,
+            &.one-half,
+            &.one-third,
+            &.one-quarter {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .gds-form-group,
+    .hasTableForm > .gds-form-group {
+        margin-bottom: 15px;
+    }
+}
+// General CSS ends //
+.govuk-warning-text {
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 56px;
+    .govuk-warning-icon {
+      font-weight: 700;
+      box-sizing: border-box;
+      display: inline-block;
+      position: absolute;
+      left: 65px;
+      min-width: 35px;
+      min-height: 35px;
+      margin-top: -3px;
+      border: 3px solid #0b0c0c;
+      border-radius: 50%;
+      color: #fff;
+      background: #0b0c0c;
+      font-size: 30px;
+      line-height: 29px;
+      text-align: center;
+    }
+    strong.govuk-warning-text {
+      font-size: 19px;
+      line-height: 1.3157894737;
+      padding-left: 55px;
+      @include media(mobile) {
+        font-size: 16px;
+      }
+    }
+    .govuk-warning-text-warning {
+      position: relative !important;
+    }
+  }

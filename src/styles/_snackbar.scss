@@ -1,0 +1,87 @@
+.seq-theme {
+  $arrow-size: 12px;
+  $arrow-color: #fff;
+
+  %arrow {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      right: 12px;
+      box-sizing: border-box;
+      border: $arrow-size solid;
+      border-color: transparent transparent $arrow-color $arrow-color;
+      transform-origin: 0 0;
+      transform: rotate(-225deg);
+      border-radius: 1px;
+      box-shadow: -1px 1px 2px -1px rgba(0, 0, 0, 0.14);
+      -moz-box-shadow: -1px 1px 2px -1px rgba(0, 0, 0, 0.14);
+    }
+  }
+
+  .top-snackbar {
+    margin-left: calc(250px + 24px);
+    background: #fff;
+    color: rgba($color: #000000, $alpha: 0.87);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    padding: 24px;
+    border-radius: 1px;
+    max-width: 40vw;
+    min-width: 400px;
+
+    @extend %arrow;
+
+    .mat-button {
+      min-width: auto;
+      line-height: normal;
+      padding: 0 6px;
+
+      .mat-button-wrapper {
+        font-size: 20px;
+        color: rgba($color: #000000, $alpha: 0.54);
+      }
+    }
+  }
+  .mat-snack-bar-handset .top-snackbar {
+    margin: 8px 12px;
+
+    &:before {
+      right: 24px;
+    }
+  }
+
+  .mat-snack-bar-container {
+    background: var(--secondary-color);
+    color: rgba($color: #fff, $alpha: 0.97);
+    padding: 24px;
+    border-radius: 4px;
+    margin: 12px;
+  }
+
+
+  .success-snackbar {
+    background: var(--primary-color);
+    color: rgba($color: #fff, $alpha: 0.97);
+
+    .mat-button-wrapper {
+      font-size: 18px;
+      color: rgba($color: #fff, $alpha: 0.84);
+    }
+  }
+
+  .error-snackbar {
+    background: var(--primary-color);
+    color: rgba($color: #fff, $alpha: 0.97);
+
+    .mat-button-wrapper {
+      font-size: 18px;
+      color: rgba($color: #fff, $alpha: 0.84);
+    }
+  }
+
+}

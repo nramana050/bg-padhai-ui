@@ -1,0 +1,70 @@
+<mat-toolbar id="top-nav"  id="top-nav">
+
+    <button type="button" mat-icon-button class="visible-md" (click)="toggleSidebar()" id="toggle_menu">
+            <mat-icon aria-label="Open side menu">menu</mat-icon>
+    </button>
+
+    <mat-icon id="toggle_desktop_menu" (click)="toggleDesktop()" aria-label="Open side menu">menu</mat-icon>
+    <div class="nav-brand" >
+        <a [routerLink]="[getBaseUrl()]" class="text"><img [src]="[logo]" alt="app-logo"  class="app-logo" ></a>
+    </div>
+    <!-- <h1 class="page_title">{{pageTitle}}</h1> -->
+    <span class="nav-spacer"></span>
+
+    <div class="switch-establishments-container" *ngIf="userOrganizations.length > 1">
+        <span class="top-nav-info">{{currentEstablismentName}}</span>
+        <button
+            mat-icon-button id="establishment-trigger-button"
+            *ngIf="currentOrganizationId"
+            [matMenuTriggerFor]="changeEstablishment"
+            title="Change establishment"
+        >
+            <mat-icon>business</mat-icon>
+        </button>
+
+        <mat-menu
+            #changeEstablishment="matMenu"
+            class="change-establishment-drop-menu"
+            xPosition="before"
+        >
+            <button
+                id="establishment-button"
+                mat-menu-item
+                *ngFor="let organization of userOrganizations"
+                (click)="onChangeEstablishment(organization)"
+                id="organization.id"
+                [ngClass]="{'display-none': organization.id === currentOrganizationId}"
+            >
+                <span>{{ organization.orgName }}</span>
+                <mat-icon color="accent" [ngStyle]="{'margin': '0 0 0 10px'}">business</mat-icon>
+            </button>
+        </mat-menu>
+    </div>
+
+    <button *ngIf="srmFlag" mat-button id="ChatButton" [matMenuTriggerFor]="menuPopup.menu" title="Messages"
+        [ngClass]="getRoute()">
+        <span class="top-nav-info mr8">Messages</span>
+        <mat-icon class="posRel" matBadgeColor="warn" id="chat_icon">comments</mat-icon>
+    </button>
+    <!-- <app-chatnotification #menuPopup="menuChatNotificationComponent"></app-chatnotification> -->
+
+    <span class="top-nav-info">{{username}}</span>
+
+    <button mat-icon-button [matMenuTriggerFor]="profile" title="Go to profile and sign out">
+        <mat-icon class="posRel">portrait
+            <mat-icon *ngIf="passwordToExpire" class="colorClass alertSize">notification_important</mat-icon>
+        </mat-icon>
+    </button>
+
+    <mat-menu #profile="matMenu">
+        <button  *ngIf="!isoAuthRequired" mat-menu-item (click)="changePassword()" id="changePassword">
+            <mat-icon color="accent">lock_open</mat-icon>
+            <span class="posRel" >{{ 'Change password' }}</span>
+        </button>
+        <button mat-menu-item (click)="onLoggedOut()" id="logout">
+            <mat-icon color="accent">exit_to_app</mat-icon>
+            <span>{{ 'Sign out'}}</span>
+        </button>
+    </mat-menu>
+
+</mat-toolbar>

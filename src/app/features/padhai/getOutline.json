@@ -1,0 +1,378 @@
+{"outlineData":{
+    "id": "6622596f307f99089222e97e",
+    "courseRequestId": 4860,
+    "isFailed": false,
+    "topic": "Preventing School Violence",
+    "languages": [
+        {
+            "name": "ENGLISH",
+            "voiceName": "en-GB-SoniaNeural"
+        },
+        {
+            "name": "HINDI",
+            "voiceName": "hi-IN-MadhurNeural"
+        },
+        {
+            "name": "ARABIC",
+            "voiceName": "ar-SA-HamedNeural"
+        },
+        {
+            "name": "FRENCH",
+            "voiceName": "fr-FR-AlainNeural"
+        }
+    ],
+    "keylevel": "Postgraduate",
+    "countryName": "United Kingdom",
+    "age": null,
+    "courseOutLine": {
+        "modules": [
+            {
+                "title": "Understanding School Violence",
+                "summary": "Overview of school violence, identification of risk factors, and understanding the impact on students and the community",
+                "lessons": [
+                    {
+                        "title": "Recognising Early Warning Signs",
+                        "summary": "Identifying behavioural and environmental indicators of potential violence in schools",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Impact on Students",
+                        "summary": "Understanding the psychological and emotional effects of school violence on students",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Community Intervention",
+                        "summary": "Exploring the role of communities in preventing and addressing school violence",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    }
+                ]
+            },
+            {
+                "title": "Creating a Safe School Environment",
+                "summary": "Strategies for establishing a safe and inclusive school culture, conflict resolution, and fostering positive relationships",
+                "lessons": [
+                    {
+                        "title": "Promoting Inclusivity",
+                        "summary": "Implementing policies and practices that promote a culture of inclusivity and respect",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Conflict Resolution",
+                        "summary": "Developing skills to manage conflicts and prevent escalation towards violence",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Building Positive Relationships",
+                        "summary": "Fostering positive connections between students and staff to enhance school safety",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    }
+                ]
+            },
+            {
+                "title": "Preventive Measures and Policies",
+                "summary": "Exploration of proactive measures, policies, and legal aspects related to preventing school violence",
+                "lessons": [
+                    {
+                        "title": "Implementing Preventive Policies",
+                        "summary": "Understanding and implementing policies to prevent violence and ensure a secure environment",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Legal Framework",
+                        "summary": "Exploring the legal implications and frameworks related to school violence prevention",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Educating Stakeholders",
+                        "summary": "Engaging and educating all stakeholders in the prevention and management of school violence",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    }
+                ]
+            },
+            {
+                "title": "Crisis Response and Management",
+                "summary": "Preparation and response strategies for crisis situations, including threat assessment and intervention",
+                "lessons": [
+                    {
+                        "title": "Threat Assessment",
+                        "summary": "Understanding and assessing potential threats to school safety",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Emergency Preparedness",
+                        "summary": "Developing and implementing effective emergency response plans for school crises",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Intervention Strategies",
+                        "summary": "Implementing effective intervention strategies during crisis situations",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    }
+                ]
+            },
+            {
+                "title": "Collaboration and Community Engagement",
+                "summary": "Engaging with external stakeholders, community partnerships, and collaborative approaches to school violence prevention",
+                "lessons": [
+                    {
+                        "title": "Partnerships and Collaboration",
+                        "summary": "Establishing partnerships with external organisations and agencies to enhance school safety",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Parent and Community Involvement",
+                        "summary": "Involving parents and the community in creating a united front against school violence",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    },
+                    {
+                        "title": "Implementing Prevention Programmes",
+                        "summary": "Developing and implementing community-based prevention programmes and initiatives",
+                        "page": null,
+                        "quiz": null,
+                        "asset": null,
+                        "lessonStatus": [
+                            {
+                                "type": "Lesson",
+                                "status": "GENERATED"
+                            },
+                            {
+                                "type": "Asset",
+                                "status": "GENERATED"
+                            }
+                        ],
+                        "queryLogEntryId": null,
+                        "h5pDetails": null
+                    }
+                ]
+            }
+        ],
+        "queryLogEntryId": {
+            "timestamp": 1713527165,
+            "counter": 9619616,
+            "timeSecond": 1713527165,
+            "machineIdentifier": 2022257,
+            "processIdentifier": -21715,
+            "date": "2024-04-19T11:46:05.000+0000",
+            "time": 1713527165000
+        }
+    },
+    "i18nCourseDetails": null,
+    "voice": null,
+    "moduleCount": 5,
+    "lessonCount": 3,
+    "asset": [
+        {
+            "type": "image",
+            "path": "https://images.app.goo.gl/6ug7sP4sBBpXiSii6",
+            "queryLogEntryId": {
+                "timestamp": 1713527176,
+                "counter": 2287999,
+                "timeSecond": 1713527176,
+                "machineIdentifier": 3178393,
+                "processIdentifier": 2194,
+                "date": "2024-04-19T11:46:16.000+0000",
+                "time": 1713527176000
+            },
+            "fileName": "CourseImage_4860.png",
+            "isFailedForSafetySystem": false,
+            "isImageGenerationFailed": false,
+            "timestamp": "2024-04-19T11:46:16.479+0000"
+        }
+    ]
+}}

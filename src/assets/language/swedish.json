@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktiv tillgång",
+    "doesnotsupportaudioelement": "Din webbläsare stöder inte ljudelementet.",
+    "resetquiz": "Återställ frågesport",
+    "submit": "Inlämna",
+    "correct": "Korrekt!",
+    "incorrecttryagain": "Felaktig. Försök igen.",
+    "exit": "Utgång",
+    "exportlabel": "Export",
+    "canyouanswer": "Kan du svara på följande frågor?",
+    "question": "Fråga",
+    "youranswer": "Ditt svar",
+    "check": "Check",
+    "pdfforstudent": "PDF för studenter",
+    "pdfforstaff": "PDF för personal",
+    "htmlzip": "HTML-zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Exportera till Moodle",
+    "quiz": "Frågesport",
+    "learningOutcomes": "Läranderesultat"
+}

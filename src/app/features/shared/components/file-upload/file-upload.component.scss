@@ -1,0 +1,25 @@
+.dropzone-container {
+  height: 100px;
+}
+
+.dropzone-error {
+  border: 2px dashed #ff8300;
+  color: #ff8300;
+}
+
+.error-container {
+  font-size: 75%
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+
+  button {
+    margin-left: 10px;
+  }
+}
+
+.text {
+  margin-right: 10px;
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "ఇంటరాక్టివ్ అసెట్",
+    "doesnotsupportaudioelement": "మీ బ్రౌజర్ ఆడియో ఎలిమెంట్ కు మద్దతు ఇవ్వదు.",
+    "resetquiz": "రీసెట్ క్విజ్",
+    "submit": "సమర్పించు",
+    "correct": "అవును!",
+    "incorrecttryagain": "తప్పు. మళ్ళీ ప్రయత్నించండి.",
+    "exit": "నిష్క్రమణ",
+    "exportlabel": "ఎగుమతి",
+    "canyouanswer": "మీరు ఈ క్రింది ప్రశ్నలకు సమాధానం ఇవ్వగలరా?",
+    "question": "ప్రశ్న",
+    "youranswer": "మీ సమాధానం",
+    "check": "తనిఖీ",
+    "pdfforstudent": "విద్యార్థుల కోసం పీడీఎఫ్",
+    "pdfforstaff": "సిబ్బంది కోసం పిడిఎఫ్",
+    "htmlzip": "HTML జిప్",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "మూడ్లేకు ఎగుమతి",
+    "quiz": "క్విజ్",
+    "learningOutcomes": "అభ్యసన ఫలితాలు"
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktyvus turtas",
+    "doesnotsupportaudioelement": "Jūsų naršyklė nepalaiko garso elemento.",
+    "resetquiz": "Iš naujo nustatyti viktoriną",
+    "submit": "Pateikti",
+    "correct": "Teisingas!",
+    "incorrecttryagain": "Neteisingas. Pabandyk dar kartą.",
+    "exit": "Išeiti",
+    "exportlabel": "Eksportuoti",
+    "canyouanswer": "Ar galite atsakyti į šiuos klausimus?",
+    "question": "Klausimas",
+    "youranswer": "Jūsų atsakymas",
+    "check": "Patikrinti",
+    "pdfforstudent": "PDF studentui",
+    "pdfforstaff": "PDF skirtas darbuotojams",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Eksportuoti į Moodle",
+    "quiz": "Viktorina",
+    "learningOutcomes" : "Mokymosi rezultatai"  
+}

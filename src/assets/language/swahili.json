@@ -1,0 +1,22 @@
+{
+    "flashcard": "Kipengee Kishirikishi",
+    "doesnotsupportaudioelement": "Kivinjari chako hakitegemezi kipengele cha sauti.",
+    "resetquiz": "Weka upya Jaribio",
+    "submit": "Wasilisha",
+    "correct": "Sahihi!",
+    "incorrecttryagain": "Sio sahihi. Jaribu tena.",
+    "exit": "Toka",
+    "exportlabel": "Hamisha",
+    "canyouanswer": "Je, unaweza kujibu maswali yafuatayo?",
+    "question": "Swali",
+    "youranswer": "Majibu yako",
+    "check": "Kagua",
+    "pdfforstudent": "PDF kwa Mwanafunzi",
+    "pdfforstaff": "PDF kwa Wafanyakazi",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Usafirishaji kwa Moodle",
+    "quiz": "Jaribio",
+    "learningOutcomes" : "Matokeo ya Kujifunza"   
+}

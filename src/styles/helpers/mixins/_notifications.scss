@@ -1,0 +1,78 @@
+@import "typography";
+
+@mixin notification-message($notification-colour: $red) {
+  @include bold-19;
+  color: $notification-colour;
+
+  display: block;
+  clear: both;
+
+  margin: 0;
+  padding: 2px 0;
+}
+
+@mixin notification-summary($notification-colour: $red) {
+    
+  @include site-width-container();
+  @include contain-floats();
+  box-shadow:0px 0px 0px 4px $notification-colour inset;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+  position: relative;
+
+  div {
+    padding: $gutter-half 10px;
+  }
+
+  @include media(tablet) {
+    box-shadow:0px 0px 0px 5px $notification-colour inset;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    div {
+      padding: $gutter-two-thirds $gutter-half $gutter-half;
+    }
+  }
+
+  &:focus {
+    outline: 3px solid $focus-colour;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+@mixin notification-summary-heading() {
+  @include bold-19();
+
+  display: block;
+  margin-top: 0;
+  margin-bottom: em(10, 20);
+
+  @include media(tablet) {
+    margin-top: 0;
+    margin-bottom: em(20, 24);
+  }
+}
+
+@mixin notification-summary-list($notification-colour: $red) {
+  padding-left: 0;
+  @include bold-19();
+
+  li {
+    list-style-type: none;
+    color: $notification-colour;
+    margin-left: 0;
+
+    @include media(tablet) {
+      margin-bottom: 5px;
+    }
+  }
+
+  a {
+    color: $notification-colour;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

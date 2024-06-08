@@ -1,0 +1,348 @@
+<div class="progress-bar-container">
+  <div class="step-progress">
+    <div class="step-progress-bar">
+      <ul class="bars">
+        <li class="bar-default"></li>
+        <li id="activeProgress" class="bar-active"></li>
+      </ul>
+      <ul class="markers">
+        <li  [ngClass]="true ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+        <li  [ngClass]="stage == 'outlinegenerated' || stage == 'lessongenerated' || stage == 'outcomegenerated' || stage == 'assetgenerated' || stage == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+        <li  [ngClass]="stage == 'lessongenerated' || stage == 'outcomegenerated' || stage == 'assetgenerated' || stage == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+        <li  [ngClass]="stage == 'outcomegenerated' || stage == 'assetgenerated' || stage == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+        <li  [ngClass]="stage == 'assetgenerated' || stage == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+        <li  [ngClass]="stage == 'publishgenerated' ? ['mark-active','mark'] : ['mark-default','unmark']"></li>
+      </ul>
+    </div>
+    <div class="step-progress-states">
+      <ul class="states">
+        <li class="state">
+          <h4>Course Requested</h4>
+        </li>
+        <li class="state">
+          <h4>Outline Generated</h4>
+        </li>
+        <li class="state">
+          <h4>Lessons Generated</h4>
+        </li>
+        <li class="state">
+          <h4>Outcomes Generated</h4>
+        </li>
+        <li class="state">
+          <h4>Ready for Export</h4>
+        </li>
+        <li class="state">
+          <h4>Course Ready</h4>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<mat-card id='course_list'>
+  <mat-card-header>
+      <mat-icon>dvr</mat-icon> 
+      <span class="section-title">{{ stageTitle }}</span>
+      <div class="buttonContainer">
+        <mat-form-field *ngIf="this.stage == 'assetgenerated' || this.stage == 'publishgenerated'" class="language search_by_lr search_by_lr_sort right">
+          <mat-label style="display: none;">Select language</mat-label>
+          <mat-select placeholder="Select language" mat-select-placeholder class="heightclass" (selectionChange)="selectLanguage($event)">
+            <mat-select-trigger>
+              {{ selectedLanguage?.languageName }}
+            </mat-select-trigger>
+            <mat-option class="languageOptionSection" id="id-{{language.languageName}}" *ngFor="let language of languageList" [value]="language">
+             <mat-icon *ngIf="language.symbol">{{language.symbol}}</mat-icon>
+             <span *ngIf="!language.type">
+              <mat-icon *ngIf="language.isTranslated != 'In Progress' && language.isTranslated != 'Not Started'" class="statusIcon" [ngStyle]="{'color' : language.isTranslated == 'Generated' ? 'green': 'red'}"> {{language.isTranslated == 'Generated' ? 'check_circle' : 'error'}}</mat-icon> 
+                <p *ngIf="language.isTranslated == 'In Progress' || language.isTranslated == 'Not Started'" class="loaderStatus languageLoader"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="24px" height="24px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path></svg> {{language.languageName}} </p>
+             </span>
+             <span *ngIf="language.isTranslated != 'In Progress' && language.isTranslated != 'Not Started'" >{{language.languageName}}</span></mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- <button *ngIf="this.stage == 'assetgenerated' || this.stage == 'publishgenerated'" class="exitButton" mat-stroked-button class="right" color="primary" (click)="openTranslatePopup()"><mat-icon>g_translate</mat-icon> Translate</button> -->
+      <button *ngIf="disableRetry" mat-stroked-button color="primary" type="button" (click)="retryLessonAndAsset()">
+        <mat-icon class="material-icons">autorenew</mat-icon> Regenerate
+      </button>
+      <button [disabled]="retryLearningOutcomeFlag" *ngIf="currentStage == 'outcomefailed'" mat-stroked-button color="primary" type="button" (click)="retryLearningOutcome()">
+        <mat-icon class="material-icons">autorenew</mat-icon> Regenerate
+      </button>
+      <button  *ngIf="courseStage == 'Outline' && stage == 'outlinegenerated'" class="exitButton"  mat-stroked-button class="right" color="primary" (click)="toggleEditCourseMode()">{{editCourseMode ? 'Preview' : 'Edit'}}</button>
+      <button *ngIf="courseStage == 'Lesson' && enableEditMode" class="exitButton"  mat-stroked-button class="right" color="primary" (click)="toggleEditLessonMode()">{{editLessonMode ? 'Preview' : 'Edit'}}</button>
+      <button *ngIf="courseStage == 'Outcome' && stage == 'outcomegenerated' && showLearningOutcomes" class="exitButton"  mat-stroked-button class="right" color="primary" (click)="toggleEditLearningOutcomeMode()">{{editLearningOutcomeMode ? 'Preview' : 'Edit'}}</button>
+      <button *ngIf="isCourseApproved" mat-stroked-button color="primary" type="button" [matMenuTriggerFor]="menu"><div class="export">
+        <mat-icon>cloud_download</mat-icon> Export
+      </div></button>
+      <button  *ngIf = "!isCourseApproved && (this.stage == 'assetgenerated' || this.stage == 'publishgenerated')" class="exitButton" id="exit_button" mat-stroked-button class="right" color="primary"  (click)="approveCourse()" >Publish</button>
+      <mat-menu  class="exportOptions" #menu="matMenu" xPosition="before">
+        <button mat-menu-item *ngFor="let type of exportTypeList" (click)="selectExportType(type.description)">
+          {{type.description}}</button>
+      </mat-menu>
+      <button class="exitButton" id="exit_button" mat-stroked-button class="right" color="primary" [routerLink]="['/padhai']"> Exit </button>
+      </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="courseOutlineContainer fullScreen" *ngIf="showCourseContainer">
+      <div *ngIf="editCourseMode && !showLoader" class="editCourseContainer fullScreen">
+        <form [formGroup]="courseOutlineDetails">
+            <ng-container *ngIf="showCourseDetails" formArrayName="modules">
+              <div *ngFor="let control of courseOutlineDetails.get('modules')['controls']; let i = index">
+                <mat-accordion>
+                  <mat-expansion-panel class="matExpantionPanel" [formGroupName]="i">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        {{courseOutlineDetails.get('modules').at(i).get('title').value || ''}} 
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="formControlsSection">
+                      <mat-form-field appearance="fill">
+                        <mat-label for="m{{i}}-title">Title</mat-label>
+                        <input matInput placeholder="Module title" formControlName="title" id="m{{i}}-title" required>
+                        <mat-error >Atleast 1 character is required</mat-error>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill">
+                        <mat-label for="m{{i}}-summary">Summary</mat-label>
+                        <textarea matInput placeholder="Module summary" formControlName="summary" id="m{{i}}-summary" required></textarea>
+                        <mat-error>Atleast 1 character is required</mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="label-hr">
+                      <span>Lessons Details</span>
+                    </div>
+                    <ng-container formArrayName="lessons">
+                      <div *ngFor="let control of courseOutlineDetails.get('modules').at(i).get('lessons')['controls']; let lessonIndex = index">
+                        <div [formGroupName]="lessonIndex">
+                          <span class="sub-heading"># Lesson {{lessonIndex+1}}</span>
+                          <mat-form-field appearance="fill">
+                            <mat-label for="m{{i}}-l{{lessonIndex}}-title">Title</mat-label>
+                            <input matInput formControlName="title" id="m{{i}}-l{{lessonIndex}}-title" required>
+                            <mat-error >Atleast 1 character is required</mat-error>
+                          </mat-form-field>
+                          <mat-form-field appearance="fill">
+                            <mat-label for="m{{i}}-l{{lessonIndex}}-summary">Summary</mat-label>
+                            <textarea matInput formControlName="summary" id="m{{i}}-l{{lessonIndex}}-summary" required></textarea>
+                            <mat-error >Atleast 1 character is required</mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </ng-container>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </div>
+          </ng-container>
+        </form>
+      </div>
+      <div *ngIf="(!editCourseMode && !showLoader) || (!editCourseMode && showLoader && outlineTextExists)" class="courseOutlinePreview fullScreen">
+          <mat-accordion *ngFor="let module of courseDetails.courseOutLine.modules">
+            <mat-expansion-panel class="matExpantionPanel">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="heading">
+                  {{module.title}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="formControlsSection">
+                <h4 class="moduleSummary normalWeight">Summary : {{module.summary}}</h4>
+                <div class="lessonSection" *ngFor="let lesson of module.lessons">
+                  <h4 class="lessonTitle">{{lesson.title}}</h4>
+                  <p class="lessonSummary">Summary : {{lesson.summary}}</p>
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+      </div>
+      <div *ngIf="!showLoader && courseDetails && courseDetails.courseOutLine && courseDetails.courseOutLine.modules && this.stage == 'outlinegenerated'" class="contentGenerationSectionButtonGroup">
+        <button mat-stroked-button color="primary" class="nextStep" [disabled]="!courseOutlineDetails.valid || isLessonCompleted || disableLessonButton" (click)="saveDraft(courseOutlineDetails)" *ngIf="editCourseMode">Save as draft</button>
+        <button mat-stroked-button color="primary" class="nextStep" [disabled]="!courseOutlineDetails.valid || isLessonCompleted || disableLessonButton" (click)="saveGenerate(courseOutlineDetails)">Generate lessons</button>
+      </div>
+
+      <div class="loaderScreen" *ngIf="showLoader && stage != 'outlinefailed'">
+          <img [src]="loaderUrl" alt="loading">
+      </div>
+      <p *ngIf="showLoader && !outlineTextExists" class="statusLine">{{ courseStage == 'Outline' && stage != 'outlinefailed' ? 'Course outline generation is in progress, please wait or come back later.' : "We're running a bit behind schedule with generating outlines right now. Please give us a little more time and try again shortly."}}</p>
+    </div>
+  
+    <div class="editLessonContainer" *ngIf="showLessonContainer || showAssetContainer || showOutcomeContainer">
+      <button class="courseMenu" mat-stroked-button color="primary" type="button" [matMenuTriggerFor]="courseMenu"><div class="export">
+        <mat-icon>
+          expand_more
+        </mat-icon> Course list menu
+      </div></button>
+      <mat-menu #courseMenu="matMenu" xPosition="before">
+        <div class="matTree">
+          <div *ngIf="courseStage != 'Outline' && courseStage != 'Lesson'" class="learningOutcomeTab">
+            <span class="editedNode learningOutcomeTitle" (click)="learningOutcomes()">
+              <mat-icon *ngIf="currentStage != 'outcomeinprogress'" class="statusIcon" 
+                [ngStyle]="{'color' : currentStage == 'outcomegenerated' || courseStage == 'Asset' || courseStage == 'Publish' ? 'green': '#F08030'}"> 
+                  {{ currentStage == 'outcomegenerated' || courseStage == 'Asset' || courseStage == 'Publish' ? 'check_circle' : 'error'}}</mat-icon>
+              <p *ngIf="currentStage == 'outcomeinprogress'" class="loaderStatus">
+                <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                  <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path>
+                </svg>
+              </p>{{learningOutcomeTitle}}</span>
+          </div>
+          <mat-tree *ngIf="!editLearningOutcomeMode" [dataSource]="dataSource" [treeControl]="treeControl">
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+              <span class="editedNode" [ngClass]="{ 'active': activeTopic === node.index, 'activeRed' : checkGenerateAssetFlag && !node?.hasH5pDetails, 'editedLessonNode' : editedTopics.includes(node.name) }"
+                [ngStyle]="{'color' : checkGenerateAssetFlag && !node?.hasH5pDetails ? 'red' : activeTopic === node.index ? primaryColor : editedTopics.includes(node.name) ? '#e2a617' : '#000'}"   
+                (click)="editLesson(node)"><mat-icon *ngIf="node.status != 'IN_PROGRESS' && node.status != 'NOT_STARTED'" class="statusIcon" [ngStyle]="{'color' : node.status == 'GENERATED' ? 'green': '#F08030'}"> {{node.status == 'GENERATED' ? 'check_circle' : 'error'}}</mat-icon> 
+                <p *ngIf="node.status == 'IN_PROGRESS' || node.status == 'NOT_STARTED'" class="loaderStatus"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path></svg></p>{{node.name}}</span>
+            </mat-tree-node>
+            <mat-tree-node (click)="setActiveExpandedModule(node)" *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle>
+              <button  mat-icon-button [attr.aria-label]="'Toggle ' + node.name" >
+                <mat-icon class="mat-icon-rtl-mirror">
+                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                </mat-icon>
+              </button>
+              <span [ngClass]="{'editedLessonNode' : editedTopics.includes(node.name) }" [ngStyle]="{'color' : editedTopics.includes(node.name) ? '#e2a617' : '#000','background' : editedTopics.includes(node.name) ? '#e2a617' : '#FFF'}">{{node.name}}</span>
+            </mat-tree-node>
+          </mat-tree>
+        </div>
+      </mat-menu>
+      <div class="lessonMenusSection" id="lesson-menu">
+        <div *ngIf="courseStage != 'Outline' && courseStage != 'Lesson'" class="learningOutcomeTab">
+          <span id="outcomeTab" class="editedNode learningOutcomeTitle" (click)="learningOutcomes()">
+            <mat-icon *ngIf="currentStage != 'outcomeinprogress'" class="statusIcon" 
+              [ngStyle]="{'color' : currentStage == 'outcomegenerated' || courseStage == 'Asset' || courseStage == 'Publish' ? 'green': '#F08030'}"> 
+                {{ currentStage == 'outcomegenerated' || courseStage == 'Asset' || courseStage == 'Publish' ? 'check_circle' : 'error'}}</mat-icon>
+            <p *ngIf="currentStage == 'outcomeinprogress'" class="loaderStatus">
+              <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path>
+              </svg>
+            </p>{{learningOutcomeTitle}}</span>
+        </div>
+        <mat-tree *ngIf="!editLearningOutcomeMode" [dataSource]="dataSource" [treeControl]="treeControl">
+          <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+            <span class="editedNode" [ngClass]="{ 'active': activeTopic === node.index, 'activeRed' : checkGenerateAssetFlag && !node?.hasH5pDetails, 'editedLessonNode' : editedTopics.includes(node.name) }"
+              [ngStyle]="{'color' : checkGenerateAssetFlag && !node?.hasH5pDetails ? 'red' : activeTopic === node.index ? primaryColor : editedTopics.includes(node.name) ? '#e2a617' : '#000'}" 
+              (click)="editLesson(node)"><mat-icon *ngIf="node.status != 'IN_PROGRESS' && node.status != 'NOT_STARTED'" class="statusIcon" [ngStyle]="{'color' : node.status == 'GENERATED' ? 'green': '#F08030'}"> {{node.status == 'GENERATED' ? 'check_circle' : 'error'}}</mat-icon>
+              <p *ngIf="node.status == 'IN_PROGRESS' || node.status == 'NOT_STARTED'" class="loaderStatus"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+              <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+              <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path></svg></p>{{node.name}}</span>
+          </mat-tree-node>
+          <mat-tree-node (click)="setActiveExpandedModule(node)" *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle>
+            <button mat-icon-button [attr.aria-label]="'Toggle ' + node.name" >
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+            </button>
+            <span [ngClass]="{'editedLessonNode' : editedTopics.includes(node.name) }" [ngStyle]="{'color' : editedTopics.includes(node.name) ? '#e2a617' : '#000','background' : editedTopics.includes(node.name) ? '#e2a617' : '#FFF'}">{{node.name}}</span>
+          </mat-tree-node>
+        </mat-tree>
+      </div>
+      <div class="editLessonSection fullScreen" id="lesson-section">
+        <form *ngIf="editLessonMode && !showLoader && !showAssetContainer && !showOutcomeContainer" #lessonForm="ngForm" class="editLessonForm">
+          <!-- <mat-form-field appearance="fill">
+            <mat-label>Lesson description <span class="editedField" *ngIf="isEdited('page')"> Edited</span></mat-label>
+            <textarea matInput placeholder="Page details" [(ngModel)]="__tempLessonData__['page']" rows="12"
+            (ngModelChange)="changeDetect('page')" name="page" id="page" required></textarea>
+            <mat-error>Atleast 1 character is required</mat-error>
+          </mat-form-field> -->
+          
+          <div class="lessonDescriptionEditor">
+            <mat-label class="lessonDescriptionLabel">Lesson description * <span class="editedField" *ngIf="isEdited('page')"> Edited</span></mat-label>
+            <ckeditor name="lessonDescription" (ready)="onReady($event)" (change)="changeDetect('page')" [(ngModel)]="__tempLessonData__['page']" [config]="editorConfig" [editor]="Editor" required></ckeditor>
+            <mat-error class="lessonDescriptionError" *ngIf="!__tempLessonData__['page']">Atleast 1 character is required</mat-error>
+          </div>
+
+          <div class="label-hr" *ngIf="this.stage != 'assetgenerated' || this.stage != 'publishgenerated'">
+            <span>Interactive Asset</span>
+          </div>
+          <div class="h5pDetails" *ngIf="this.stage != 'assetgenerated' || this.stage != 'publishgenerated'">
+            <div>
+              <mat-accordion>
+                <mat-expansion-panel class="expantionPanel">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Interactive Asset
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div class="selectH5pContainer">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Select interactive asset type</mat-label>
+                      <mat-select [(ngModel)]="__tempLessonData__['h5pDetails'].h5pType" (ngModelChange)="changeDetect('h5pType');onH5pDetailsChange(activeNode)" name="h5pDetails"
+                      id="h5pDetails">
+                        <mat-option *ngFor="let type of h5pTypes" [value]="type.identifier" (click)="saveSelectedFlashcardType(type.type)">{{type.type}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+          <div class="label-hr">
+            <span>Quiz</span>
+          </div>
+          <div *ngIf="__tempLessonData__['quiz']">
+            <div class="questionContainer" *ngFor="let question of __tempLessonData__['quiz'].questions;let i = index">
+              <mat-accordion>
+                <mat-expansion-panel class="formControlsSection">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Question {{i+1}} : {{__tempLessonData__['quiz'].questions[i].questionText}}
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-form-field style="margin-top:10px !important;" appearance="fill">
+                    <mat-label for="question-{{i}}">Question {{i+1}}  <span class="editedField" *ngIf="isEdited('question',i)"> Edited</span></mat-label>
+                    <input id="question-{{i}}" matInput placeholder="question input" [(ngModel)]="__tempLessonData__['quiz'].questions[i].questionText" (ngModelChange)="changeDetect('question',i)" name="questionText{{i}}" required>
+                    <mat-error>Atleast 1 character is required</mat-error>
+                  </mat-form-field>
+                    <div class="questionOptionsInputs">
+                      <div class="optionsInputs" *ngFor="let option of __tempLessonData__['quiz'].questions[i].answers; let j = index">
+                        <span class="sub-heading"># Option {{j+1}}</span>
+                        <span *ngIf="j == 0" class="hintMessage">Please fill the correct answer in first input field.</span>
+                          <mat-form-field appearance="fill">
+                          <mat-label for="q{{i}}-option{{j}}">Option <span class="editedField" *ngIf="isEdited('text',i, j)"> Edited</span></mat-label>
+                            <input id="q{{i}}-option{{j}}" matInput placeholder="Option" [(ngModel)]="__tempLessonData__['quiz'].questions[i].answers[j].text" (ngModelChange)="changeDetect('text',i,j)" name="option{{i}}-{{j}}" required>
+                            <mat-error>Atleast 1 character is required</mat-error>
+                          </mat-form-field>
+                          <mat-form-field appearance="fill">
+                            <mat-label for="q{{i}}-feedback{{j}}">Feedback {{j+1}}  <span class="editedField" *ngIf="isEdited('feedback',i, j)"> Edited</span></mat-label>
+                            <input id="q{{i}}-feedback{{j}}" matInput placeholder="feedback {{j+1}}" [(ngModel)]="__tempLessonData__['quiz'].questions[i].answers[j].feedback" (ngModelChange)="changeDetect('feedback',i,j)" name="feedback{{i}}-{{j}}" required>                                  
+                           <mat-error>Atleast 1 character is required</mat-error>
+                          </mat-form-field>
+                            <span *ngIf="j < __tempLessonData__['quiz'].questions[i].answers.length - 1" class="divider"></span>
+                      </div>
+                    </div>
+                </mat-expansion-panel>
+              </mat-accordion> 
+            </div>
+          </div>
+        </form>
+        <div *ngIf="!editLessonMode && !showLoader && !showLearningOutcomes" class="previewLesson">
+          <app-new-preview [moduleIndex]="activeModuleIndex" [lessonIndex]="activeLessonIndex" [activeLang]="activeLangauge" [lessonDetails]="courseStage == 'Lesson' ? __tempLessonData__ : activeLessonData" [stage]="courseStage" [courseStatus]="this.stage" [courseId]="courseId" [selectedH5pType]="selectedH5pType" [currentCourseStatus]="currentStage" [activeNodeStatus]="activeNode.status" [lessonStatus]="currentLessonStatus"></app-new-preview>
+        </div>
+        <div *ngIf="!showLoader && showLearningOutcomes" class="learningOutcomeSection previewLesson">
+          <app-learning-outcomes [courseId]="courseId" [activeLanguage]="activeLangauge" [editMode]="editLearningOutcomeMode" (isOutcomeSaved)="learningOutcomeSaved()" [retryLearningOutcome]="retryLearningOutcomeFlag" (learningOutcomeStatus)="updateCourseStatus($event)" (generateAssetButtonClicked)="generateAsset($event)" [licenceExceeded]="licenceExceeded"></app-learning-outcomes>
+        </div>
+      <div *ngIf="showLoader" class="loaderContainer" [ngStyle]="{'margin-top' : showFailedStatus == true ? '5em' : '0'}">
+        <div class="loaderScreen" *ngIf="!showFailedStatus">
+          <img [src]="loaderUrl" alt="loading">
+        </div>
+        <p *ngIf="showFailedStatus === true" class="statusLine">We're running a bit behind schedule with generating {{courseStage == 'Lesson' ? 'lessons' : 'assets'}} right now. Please give us a little more time and try again shortly.</p>
+        <p *ngIf="showFailedStatus === false && this.stage != 'lessongenerated' && this.stage != 'assetgenerated' && this.stage != 'publishgenerated'" class="statusLine">{{courseStage == 'Lesson' ? 'Lesson' : 'Asset'}} generation is in progress, please wait or come back later.</p>
+        <p *ngIf="showFailedStatus == false && this.stage == 'lessongenerated' || this.stage == 'assetgenerated' || this.stage == 'publishgenerated'" class="statusLine">Please wait</p>
+      </div>
+      <div *ngIf="!showLoader && courseStage == 'Lesson' && stage == 'lessongenerated'" class="contentGenerationSectionButtonGroup martop40">
+        <button [disabled]="isCourseInvalid || disableAssetButtons" mat-stroked-button color="primary" type="button" class="nextStep" (click)="saveLessonForm()" *ngIf="editLessonMode">Save as draft</button>
+        <button [disabled]="isCourseInvalid || disableAssetButtons" mat-stroked-button color="primary" type="button" class="nextStep" (click)="generateOutcomes()">Generate Outcomes</button>
+      </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+<!-- <div *ngIf="!showLoader && courseStage == 'Outcome' && stage == 'outcomegenerated'" class="contentGenerationSectionButtonGroup martop40">
+  <button [disabled]="isCourseInvalid || disableAssetButtons" mat-stroked-button color="primary" type="button" class="nextStep" (click)="saveLessonForm()" *ngIf="editLessonMode">Save as draft</button>
+  <button [disabled]="isCourseInvalid || disableAssetButtons" mat-stroked-button color="primary" type="button" class="nextStep" (click)="generateAsset()">Generate Assets</button>
+</div> -->

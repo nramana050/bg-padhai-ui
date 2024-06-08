@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktīvs līdzeklis",
+    "doesnotsupportaudioelement": "Jūsu pārlūkprogramma neatbalsta audio elementu.",
+    "resetquiz": "Atiestatīt viktorīnu",
+    "submit": "Iesniegt",
+    "correct": "Pareizs!",
+    "incorrecttryagain": "Nepareizs. Mēģini vēlreiz.",
+    "exit": "Iziešana",
+    "exportlabel": "Eksporta",
+    "canyouanswer": "Vai varat atbildēt uz šādiem jautājumiem?",
+    "question": "Jautājums",
+    "youranswer": "Jūsu atbilde",
+    "check": "Pārbaudīt",
+    "pdfforstudent": "PDF studentiem",
+    "pdfforstaff": "PDF personālam",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Eksportēt uz Moodle",
+    "quiz": "Viktorīna",
+    "learningOutcomes" : "Mācīšanās rezultāti" 
+}

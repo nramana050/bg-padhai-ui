@@ -1,0 +1,22 @@
+{
+    "flashcard": "ទ្រព្យសកម្មអន្តរកម្ម",
+    "doesnotsupportaudioelement": "កម្មវិធី រុករក របស់ អ្នក មិន គាំទ្រ ធាតុ អូឌីយ៉ូ ទេ & # 160; ។",
+    "resetquiz": "Reset Quiz",
+    "submit": "ដាក់ស្នើ",
+    "correct": "ត្រឹមត្រូវ!",
+    "incorrecttryagain": "មិនត្រឹមត្រូវ។ ព្យាយាម​ម្តង​ទៀត.",
+    "exit": "ចេញ",
+    "exportlabel": "ការនាំចេញ",
+    "canyouanswer": "តើ អ្នក អាច ឆ្លើយ សំណួរ ខាង ក្រោម នេះ បាន ទេ?",
+    "question": "សំណួរ",
+    "youranswer": "ចម្លើយរបស់អ្នក",
+    "check": "ពិនិត្យ",
+    "pdfforstudent": "PDF សម្រាប់សិស្ស",
+    "pdfforstaff": "PDF សម្រាប់បុគ្គលិក",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "នាំចេញទៅ Moodle",
+    "quiz": "លំហាត់",
+    "learningOutcomes": "លទ្ធផលរៀន"
+}

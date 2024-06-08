@@ -1,0 +1,20 @@
+<div class="filter_comp">
+    <button mat-button mat-stroked-button color="primary">Filter
+        <span id="filter_list_icon" aria-label="show filter menu">
+            <mat-icon>arrow_drop_down</mat-icon>
+        </span>
+    </button>
+
+    <div class="filter_list">
+        <mat-list role="list">
+            <h6>Filter by</h6>
+            <mat-divider></mat-divider>
+            <h3 matSubheader>Category type</h3>
+            <mat-list-item role="listitem" *ngFor="let f of filterArray" (click)="filter(f.id)" [ngClass]="{'active': (selectedIndex === f.id)}">
+                {{f.menuName}}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <div class="clear_filter"><a color="primary" (click)="clearAllFilter()">Clear all filters</a></div>
+        </mat-list>
+    </div>
+</div>

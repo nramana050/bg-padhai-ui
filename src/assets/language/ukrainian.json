@@ -1,0 +1,22 @@
+{
+    "flashcard": "Інтерактивний об'єкт",
+    "doesnotsupportaudioelement": "Ваш браузер не підтримує аудіоелемент.",
+    "resetquiz": "Скинути тест",
+    "submit": "Представити",
+    "correct": "Правильний!",
+    "incorrecttryagain": "Неправильне. Спробуй ще раз.",
+    "exit": "Вийти",
+    "exportlabel": "Експорт",
+    "canyouanswer": "Чи можете ви відповісти на такі запитання?",
+    "question": "Питання",
+    "youranswer": "Ваша відповідь",
+    "check": "Перевіряти",
+    "pdfforstudent": "PDF для студентів",
+    "pdfforstaff": "PDF для персоналу",
+    "htmlzip": "HTML Zip",
+    "scorm": "СКОРМ",
+    "epub": "ePub",
+    "exporttomoodle": "Експорт до Moodle",
+    "quiz": "Вікторина",
+    "learningOutcomes": "Результати навчання"
+}

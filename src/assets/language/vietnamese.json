@@ -1,0 +1,22 @@
+{
+    "flashcard": "Tài sản tương tác",
+    "doesnotsupportaudioelement": "Trình duyệt của bạn không hỗ trợ phần tử âm thanh.",
+    "resetquiz": "Đặt lại bài kiểm tra",
+    "submit": "Trình",
+    "correct": "Đúng!",
+    "incorrecttryagain": "Sai. Thử lại.",
+    "exit": "Thoát",
+    "exportlabel": "Xuất khẩu",
+    "canyouanswer": "Bạn có thể trả lời các câu hỏi sau đây?",
+    "question": "Câu hỏi",
+    "youranswer": "Câu trả lời của bạn",
+    "check": "Kiểm",
+    "pdfforstudent": "PDF cho sinh viên",
+    "pdfforstaff": "PDF cho nhân viên",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Xuất sang Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "Kết quả học tập"
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "Интерактивно основно средство",
+    "doesnotsupportaudioelement": "Ваш прегледач не подржава аудио елемент.",
+    "resetquiz": "Успостави почетне вредности квиза",
+    "submit": "Прослеђивање",
+    "correct": "Исправан!",
+    "incorrecttryagain": "Нетачна. Покушај поново.",
+    "exit": "Излаз",
+    "exportlabel": "Извоз",
+    "canyouanswer": "Можете ли да одговорите на следећа питања?",
+    "question": "Питање",
+    "youranswer": "Ваш одговор",
+    "check": "Проверите",
+    "pdfforstudent": "ПДФ за студента",
+    "pdfforstaff": "ПДФ за особље",
+    "htmlzip": "ХТМЛ Зип",
+    "scorm": "СЦОРМ",
+    "epub": "еПуб",
+    "exporttomoodle": "Извези у Моодле",
+    "quiz": "Квиз",
+    "learningOutcomes": "Исходи учења"
+}

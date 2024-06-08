@@ -1,0 +1,36 @@
+<div *ngIf="indexes.length > 0 || (isDirect && errorList.length > 0)" class="error-summary" aria-labelledby="error-summary-title" role="alert"
+	tabindex="-1" data-module="error-summary" id="{{id}}">
+	<h2 class="error-summary-title" id="error-summary-title">
+		There is a problem
+	</h2>
+	<div class="error-summary-body">
+		<p *ngIf="topLabel">{{topLabel}}</p>
+		<ul class="list error-summary-list" *ngIf="topLabelLink">
+			<li>
+				<a class="topLabelLink"  href="javascript:void(0)" 
+					(click)="isDirect ? goToId(errorList[0]) : goToId(getError(indexes[0]))">{{topLabelLink}} </a>
+			</li>
+		</ul>
+
+		<ng-container *ngIf="isDirect; then direct; else evaluated"></ng-container>
+
+		<ng-template #direct>
+			<ul class="list error-summary-list">
+				<li *ngFor="let error of errorList">
+					<a href="javascript:void(0)" (click)="goToId(error)">{{error.message}}</a>
+				</li>
+			</ul>
+		</ng-template>
+
+		<ng-template #evaluated>
+			<ul class="list error-summary-list" *ngIf="!isDirect">
+				<li *ngFor="let index of indexes">
+					<a href="javascript:void(0)" (click)="goToId(getError(index))">{{getMessage(index)}} <span
+							*ngIf="!fromContext">{{getKey(index) | label | lowercase}}</span></a>
+				</li>
+			</ul>
+		</ng-template>
+
+
+	</div>
+</div>

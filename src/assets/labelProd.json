@@ -1,0 +1,426 @@
+[
+    {
+        "clientId": 4,
+        "featureDetail": [
+            {
+                "identifier": "ADMIN",
+                "pageTitle": "Admin"
+            },
+            {
+                "identifier": "CUSTOMERS",
+                "pageTitle": "Customers"
+            },
+            {
+                "identifier": "VIEW_CUSTOMER",
+                "pageTitle": "View customer"
+            },
+            {
+                "identifier": "EDIT_CUSTOMER",
+                "pageTitle": "Edit customer"
+            },
+            {
+                "identifier": "ADD_CUSTOMER",
+                "pageTitle": "Add customer"
+            },
+            {
+                "identifier": "Content_Sync_Data",
+                "pageTitle": "Content Sync Data"
+            },
+            {
+                "identifier": "Track_Lite_Sync_Data",
+                "pageTitle": "Track Lite Sync Data"
+            },
+            {
+                "identifier": "Participants",
+                "pageTitle": "Participants"
+            },
+            {
+                "identifier": "Cvs",
+                "pageTitle": "Cvs",
+                "queryParams": true
+            },
+            {
+                "identifier": "Application_set_up",
+                "pageTitle": "Application Set Up"
+            },
+            {
+                "identifier": "Cvs",
+                "pageTitle": "Cvs",
+                "queryParams": true
+            },
+            {
+                "identifier": "View_role",
+                "pageTitle": "View role"
+            },
+            {
+                "identifier": "Role",
+                "pageTitle": "Role"
+            },
+            {
+                "identifier": "RBAC_Permissions",
+                "pageTitle": "RBAC Permissions"
+            },
+            {
+                "identifier": "Role_Configuration",
+                "pageTitle": "Role Configuration"
+            },
+            {
+                "identifier": "Overview",
+                "pageTitle": "Overview"
+            },
+            {
+                "identifier": "Edit_link",
+                "pageTitle": "Edit link"
+            },
+            {
+                "identifier": "Add_link",
+                "pageTitle": "Add link"
+            },
+            {
+                "identifier": "Manage_Organisations",
+                "pageTitle": "Manage Organisations"
+            },
+            {
+                "identifier": "Edit_Organisation",
+                "pageTitle": "Edit Organisation"
+            },
+            {
+                "identifier": "Create_New_Organisation",
+                "pageTitle": "Create New Organisation"
+            },
+            {
+                "identifier": "Add_Participant",
+                "pageTitle": "Add Participant"
+            },
+            {
+                "identifier": "Edit_Participant",
+                "pageTitle": "Edit Participant"
+            },
+            {
+                "identifier": "Further_information",
+                "pageTitle": "Further information"
+            },
+            {
+                "identifier": "Enrolment",
+                "pageTitle": "Enrolment"
+            },
+            {
+                "identifier": "Edit_Enrolment",
+                "pageTitle": "Edit Enrolment"
+            },
+            {
+                "identifier": "Employment_Outcome",
+                "pageTitle": "Employment Outcome"
+            },
+            {
+                "identifier": "Outcome_List",
+                "pageTitle": "Outcome List"
+            },
+            {
+                "identifier": "Edit_Outcome",
+                "pageTitle": "Edit Outcome"
+            },
+            {
+                "identifier": "Add_Outcome",
+                "pageTitle": "Add Outcome"
+            },
+            {
+                "identifier": "Programme_Management",
+                "pageTitle": "Programme Management"
+            },
+            {
+                "identifier": "Add_programme",
+                "pageTitle": "Add programme"
+            },
+            {
+                "identifier": "Edit_programme",
+                "pageTitle": "Edit programme"
+            },
+            {
+                "identifier": "View_Programme",
+                "pageTitle": "View Programme"
+            },
+            {
+                "identifier": "Attendance",
+                "pageTitle": "Attendance"
+            },
+            {
+                "identifier": "Resource_Categories",
+                "pageTitle": "Resource Categories"
+            },
+            {
+                "identifier": "Edit_Resource_Category",
+                "pageTitle": "Edit Resource Category"
+            },
+            {
+                "identifier": "Add_Resource_Category",
+                "pageTitle": "Add Resource Category"
+            },
+            {
+                "identifier": "Resource_Keywords",
+                "pageTitle": "Resource Keywords"
+            },
+            {
+                "identifier": "Add_Resource_Keywords",
+                "pageTitle": "Add Resource Keywords"
+            },
+            {
+                "identifier": "Resource_Images",
+                "pageTitle": "Images"
+            },
+            {
+                "identifier": "Edit_Image_Keywords",
+                "pageTitle": "Edit Image Keywords"
+            },
+            {
+                "identifier": "Add_Image",
+                "pageTitle": "Add Image"
+            },
+            {
+                "identifier": "Manage_Resources",
+                "pageTitle": "Manage Resources"
+            },
+            {
+                "identifier": "Resource_Description",
+                "pageTitle": "Resource Description"
+            },
+            {
+                "identifier": "Digital_courses",
+                "pageTitle": "Digital course"
+            },
+            {
+                "identifier": "Asset_builder",
+                "pageTitle": "Asset builder"
+            },
+            {
+                "identifier": "Add_New_Asset",
+                "pageTitle": "Add New Asset"
+            },
+            {
+                "identifier": "View_Asset",
+                "pageTitle": "View Asset"
+            },
+            {
+                "identifier": "Edit_Asset",
+                "pageTitle": "Edit Asset"
+            },
+            {
+                "identifier": "Asset_Dashboard",
+                "pageTitle": "Asset Dashboard"
+            },
+            {
+                "identifier": "Jobs",
+                "pageTitle": "Jobs"
+            },
+            {
+                "identifier": "Reporting_and_Dashboards",
+                "pageTitle": "Reporting and Dashboards"
+            },
+            {
+                "identifier": "Dashboard",
+                "pageTitle": "Dashboard"
+            },
+            {
+                "identifier": "Data_Extract",
+                "pageTitle": "Data Extract"
+            },
+            {
+                "identifier": "Manage_Users",
+                "pageTitle": "Manage Users"
+            },
+            {
+                "identifier": "Create_New_User",
+                "pageTitle": "Create New User"
+            },
+            {
+                "identifier": "View_User",
+                "pageTitle": "View User"
+            },
+            {
+                "identifier": "Edit_User",
+                "pageTitle": "Edit User"
+            },
+            {
+                "identifier": "Upload",
+                "pageTitle": "Upload"
+            },
+            {
+                "identifier": "PADHAI",
+                "pageTitle": "PADHAI"
+            },
+            {
+                "identifier": "Edit_Padhai",
+                "pageTitle": "Edit_Padhai",
+                "queryParams": true
+            },
+            {
+                "identifier": "My_To_Do",
+                "pageTitle": "My_To_Do",
+                "queryParams": true
+            },
+            {
+                "identifier": "Documents",
+                "pageTitle": "Documents",
+                "queryParams": true
+            },
+            {
+                "identifier": "Job_Opportunities",
+                "pageTitle": "Job Opportunities",
+                "queryParams": true
+            },
+            {
+                "identifier": "performance_review",
+                "pageTitle": "performance review",
+                "queryParams": true
+            },
+            {
+                "identifier": "digital_course_progress",
+                "pageTitle": "digital course progress",
+                "queryParams": true
+            },
+            {
+                "identifier": "Programme_enrolment",
+                "pageTitle": "Programme enrolment",
+                "queryParams": true
+            },
+            {
+                "identifier": "programme_outcomes",
+                "pageTitle": "programme outcomes",
+                "queryParams": true
+            },
+            {
+                "identifier": "system_interactions",
+                "pageTitle": "system interactions",
+                "queryParams": true
+            },
+            {
+                "identifier": "profile",
+                "pageTitle": "profile",
+                "queryParams": true
+            },
+            {
+                "identifier": "Case_Notes",
+                "pageTitle": "Case Notes",
+                "queryParams": true
+            },
+            {
+                "identifier": "professional_document",
+                "pageTitle": "professional document",
+                "queryParams": true
+            },
+            {
+                "identifier": "Risk_Assessment",
+                "pageTitle": "Risk Assessment",
+                "queryParams": true
+            },
+            {
+                "identifier": "Referrals",
+                "pageTitle": "Referrals",
+                "queryParams": true
+            },
+            {
+                "identifier": "Resource_Details",
+                "pageTitle": "Resource Details"
+            },
+            {
+                "identifier": "Resource_Teams",
+                "pageTitle": "Resource Teams"
+            },
+            {
+                "identifier": "Resource_Upload",
+                "pageTitle": "Resource Upload"
+            },
+            {
+                "identifier": "Resource_Module",
+                "pageTitle": "Resource Module"
+            },
+            {
+                "identifier": "Resource_Image",
+                "pageTitle": "Resource Image"
+            },
+            {
+                "identifier": "Job_Details",
+                "pageTitle": "Job Details"
+            },
+            {
+                "identifier": "Add_Local_Job",
+                "pageTitle": "Add Local Job"
+            },
+            {
+                "identifier": "Edit_Job",
+                "pageTitle": "Edit Job"
+            },
+            {
+                "identifier": "Job_Adverts",
+                "pageTitle": "Job Adverts"
+            }
+        ],
+        "profileRouteDetails": [
+            {
+                "identifier": "profile_url",
+                "profileRoute": "captr-learner"
+            }
+        ]
+    },
+    {
+        "clientId": 41,
+        "profileRouteDetails": [
+            {
+                "identifier": "profile_url",
+                "profileRoute": "mentivity-learner"
+            }
+        ]
+    },
+    {
+        "clientId": 50,
+        "featureDetail": [
+            {
+                "identifier": "Participants",
+                "pageTitle": "Students"
+            },
+            {
+                "identifier": "Add_Participant",
+                "pageTitle": "Add Student"
+            },
+            {
+                "identifier": "Edit_Participant",
+                "pageTitle": "Edit Student"
+            }
+        ]
+    },
+    {
+        "clientId": 53,
+        "featureDetail": [
+            {
+                "identifier": "My_To_Do",
+                "pageTitle": "My_To_Do",
+                "queryParams": true,
+                "sutodoTabName":"Graduate to do"
+            }
+        ],
+        "profileRouteDetails": [
+            {
+                "identifier": "profile_url",
+                "profileRoute": "clink-learners"
+            }
+        ]
+    },
+    {
+        "clientId": 57,
+        "profileRouteDetails": [
+            {
+                "identifier": "profile_url",
+                "profileRoute": "person-supported"
+            }
+        ]
+    },
+        {
+        "clientId": 222,
+        "profileRouteDetails": [
+            {
+                "identifier": "profile_url",
+                "profileRoute": "rws-participant"
+            }
+        ]
+    }
+]

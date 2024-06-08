@@ -1,0 +1,22 @@
+{
+    "flashcard": "Activ interactiv",
+    "doesnotsupportaudioelement": "Browserul dvs. nu acceptă elementul audio.",
+    "resetquiz": "Resetați testul",
+    "submit": "Prezinte",
+    "correct": "Corect!",
+    "incorrecttryagain": "Incorect. Încearcă din nou.",
+    "exit": "Ieșire",
+    "exportlabel": "Export",
+    "canyouanswer": "Puteți răspunde la următoarele întrebări?",
+    "question": "Întrebare",
+    "youranswer": "Raspunsul tau",
+    "check": "Verificare",
+    "pdfforstudent": "PDF pentru studenți",
+    "pdfforstaff": "PDF pentru personal",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Export către Moodle",
+    "quiz": "Test",
+    "learningOutcomes" : "Rezultatele învățării" 
+}

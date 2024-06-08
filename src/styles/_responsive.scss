@@ -1,0 +1,619 @@
+@media screen and (max-width: 992px) {
+  .main-container {
+    left: 0px;
+  }
+  
+}
+
+@media screen and (max-width: 992px) {
+  .push-right {
+    #sidebar {
+      left: 0 !important;
+    }
+  }
+}
+
+
+.seq-theme {
+  @media (max-width: 598px) {
+    .mat-card {
+      .card-row {
+        flex-direction: column;
+      }
+
+      .card-column {
+        width: 100%;
+      }
+
+      .card-column-40 {
+        width: 90%;
+        margin-left: 0px;
+      }
+
+      .mat-row {
+        display: block;
+      }
+
+      .mat-header-row {
+        display: none !important;
+      }
+
+      .mat-cell {
+        display: flex;
+        flex: 1 1 100%;
+        width: 100%;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 45px;
+        margin: 16px 0;
+      }
+
+      .mat-cell:last-of-type {
+        flex-direction: row;
+        justify-content: flex-start;
+        min-height: 12px;
+        margin-left: -4px;
+        padding-bottom: 4px;
+      }
+
+      .mat-cell:first-of-type,
+      .mat-footer-cell:first-of-type,
+      .mat-header-cell:first-of-type {
+        padding-left: 0;
+        padding-top: 8px;
+      }
+
+      .mat-row:nth-of-type(odd) {
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .mat-footer-row::after,
+      .mat-header-row::after,
+      .mat-row::after {
+        display: none;
+      }
+
+      .mobile-label {
+        font-size: 14px;
+        color: #2b769b;
+        display: block;
+        font-weight: 600;
+      }
+    }
+
+    .label-hr span {
+      font-size: 1.2em;
+    }
+
+    .search_by {
+      .mat-form-field-infix {
+        width: calc(100% - 24px);
+      }
+    }
+
+    .mobile,
+    .on-mobile {
+      display: block !important;
+    }
+
+    .desktop,
+    .on-desktop {
+      display: none;
+    }
+    .actions-column {
+     gap: 20px;
+     @media screen and (max-width:378px) {
+      gap: 0px;
+  }
+    }
+  }
+
+  .search_by {
+    font-size: 0.65em;
+    @media screen and (max-width:368px) {
+          width: 100%;
+          font-size: 0.77em;
+      }
+  }
+}
+
+
+
+.mat-form-field-appearance-outline .mat-form-field-flex{
+  padding: .3em .75em 0 .75em !important;
+}
+.profileImgSectionMob {
+  display: none;
+}
+.hide-in-mobile {
+  display: block;
+}
+.show-in-mobile {
+  display: none;
+}
+.text-right {
+  text-align: right;
+}
+// tabs start
+.header .tabWrapper ul,
+.main-tab-container .tabWrapper ul {
+  overflow: auto;
+  white-space: nowrap;
+  height: auto !important;
+  overflow-y: hidden;
+
+  li.tabHead {
+    padding: 7px 10px !important;
+    float: none !important;
+    display: inline-block;
+
+    a {
+      float: none !important;
+    }
+  }
+}
+// tabs end
+
+#surveyEditorContainer .svd_container .svd_toolbox .svd_toolbox_item {
+  &.svd_toolbox_item_icon-bootstrap-slider {
+    position: relative;
+    span:after {
+      content: '';
+      display: block;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: url(../assets/slider.svg) no-repeat 0px 0px;
+    }
+  }
+}
+.mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+  margin: 5px 0 0;
+}
+
+#view_user_profile {
+  .mat-card-header {
+    display: block;
+  }
+}
+#view_user_profile, #edit_service_user {
+  .mat-card-header {
+    display: block;
+  }
+}
+
+#view_user_profile,
+#edit_service_user {
+  .action-buttons {
+    float: right;
+  }
+  .deactivatedDate {
+    position: absolute;
+    top: 2em;
+    left: 40%;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .main-container {
+    left: 0px;
+    margin: calc(24px + 56px) 12px 12px 12px;
+    padding: 20px 10px !important;
+  }
+  .push-right {
+    #sidebar {
+      left: 0 !important;
+    }
+  }
+  .seq-theme {
+    .mat-card {
+      padding: 15px 10px;
+      .mat-cell {
+          display: flex;
+          flex: 1 1 100%;
+          width: 100%;
+          flex-direction: column;
+          text-align: left;
+          align-items: flex-start;
+          justify-content: center;
+          min-height: auto;
+          margin: 10px 0;
+          &.mat-column-status,
+          &.mat-column-isActive,
+          &.mat-column-accountState,
+          &.mat-column-jobStatus,
+          &.mat-column-jobApplicationStatus-statusDescription,
+          &.mat-column-sessionState {
+            display: inline !important;
+            .mobile-label {
+              display: none !important;
+            }
+          }
+          .mat-icon-button {
+              height: auto;
+              line-height: 1;
+          }
+      }
+      // .card-row {
+      //   flex-direction: column;
+      // }
+
+      .card-column {
+        width: 100%;
+      }
+
+      // .card-column-third {
+      //   width: 100%;
+      // }
+
+      // .card-column-two-third {
+      //   width: 100%;
+      // }
+      // table format for  landscape
+      // .mat-row {
+      //   display: block;
+      // }
+
+      // .mat-header-row {
+      //   display: none !important;
+      // }
+
+      .mat-cell:last-of-type {
+        flex-direction: row;
+        justify-content: flex-start;
+        min-height: 12px;
+        // margin-left: -20px;
+        padding-bottom: 4px;
+      }
+
+      .mat-cell:first-of-type,
+      .mat-footer-cell:first-of-type,
+      .mat-header-cell:first-of-type {
+        padding-left: 0;
+        padding-top: 8px;
+      }
+
+      .mat-row:nth-of-type(odd) {
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .mat-footer-row::after,
+      .mat-header-row::after,
+      .mat-row::after {
+        display: none;
+      }
+
+      .mobile-label {
+        font-size: 14px;
+        color: #2b769b;
+        // display: block; --links tab to remove header roe for sm devices
+        font-weight: 600;
+        
+      }
+    }
+
+    .label-hr span {
+      font-size: 1.2em;
+    }
+
+    .search_by {
+      .mat-form-field-infix {
+        width: calc(100% - 24px);
+      }
+    }
+
+    .mobile,
+    .on-mobile {
+      display: block !important;
+    }
+
+    .desktop,
+    .on-desktop {
+      display: none;
+    }
+  }
+  .mat-cell > span.call-status-label {
+    position: relative;
+    .status {
+      position: absolute;
+      left: 5em;
+      padding: 2px 7px 3px !important;
+    }
+  }
+  .status {
+    padding: 2px 7px 3px !important;
+    @media screen and (max-width: 768px) {
+      padding: 2px 3px 3px !important;
+    }
+
+  }
+  .search_by {
+    font-size: 0.65em;
+  }
+
+  .width-40,
+  .width-15 {
+      width: 100%;
+  }
+  .contentImg {
+    width: auto !important;
+    max-width: 215px !important;
+  }
+  .keyword-list {
+    .input_chip {
+      margin: 5px !important;
+      padding: 6px 15px 8px !important;
+      span {
+        font-size: 16px !important;
+      }
+    }
+  }
+  .hide-in-mobile,
+  .hidden-sm,
+  .hidden-xs {
+    display: none;
+  }
+  .show-in-mobile {
+    display: inline-block;
+  }
+  .user-call-status {
+    position: absolute;
+    left: 2em;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  // SurveyJS start
+  #surveyEditorContainer {
+  .svd_container .svd_toolbox .svd_toolbox_item {
+    width: auto;
+  }
+  .svd_container.sv_default_css .svd_toolbox {
+    width: auto;
+    display: inline-block;
+  }
+  .svd_container .svd_content {
+    padding: 20px 10px;
+  }
+  .svd-toolbar-button__image {
+    display: none;
+  }
+  .svd_container.sv_default_css .btn {
+    padding: 0 10px;
+  }
+  .sv_main .sv_container .sv_header h3 {
+    font-size: 36px !important;
+    margin: 0;
+  }
+  .sv_main .sv_container .sv_body .sv_nav {
+    margin: 10px 0 0 0;
+  }
+  .sv_p_root .svda-question-actions {
+    top: 0;
+    left: 0;
+    .svda_question_action {
+      margin-left: 5px;
+    }
+  }
+  .svd_container.sv_default_css .svd_editors {
+    padding: 0;
+    &.svd_wide {
+      width: 85%;
+      margin: 0 0 0 10px;
+    }
+  }
+  .svd_container.sv_default_css #surveyjs .sv_row .svd_question .svda-select-items-title {
+    top: 0;
+  }
+}
+  // SurveyJS end
+
+// SRM start
+.messages-page {
+  padding: 20px 10px !important;
+  .messages-container {
+    .message-list-left {
+      width: auto !important;
+      margin-right: 10px !important;
+      .govuk-grid-row .govuk-grid-column-one-third .moj-side-navigation .moj-side-navigation__item {
+        min-height: auto !important;
+        .avatar-circle,
+        .kw-avatar-circle {
+          margin: 10px;
+          margin-top: 10px !important;
+        }
+        .message-item {
+          display: none;
+        }
+      }
+    }
+    .message-list-right {
+      .chat-wrapper .convesation-div {
+        margin-top: 0 !important;
+      }
+      .full-width {
+        padding-top: 10px !important;
+      }
+      .seq-theme .mat-form-field-appearance-fill .mat-form-field-flex {
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+      .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+        padding: 0;
+      }
+    }
+  }
+}
+// SRM end
+
+  #stepper-container .stepper .step {
+    margin-right: 0;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+    margin: 5px 0 0;
+  }
+
+  #assessments {
+    .mat-column-status {
+      position: relative;
+      .mat-icon {
+        position: absolute;
+        top: -5.5px;
+      }
+    }
+  }
+
+}
+
+
+@media all and (max-width: 767px) {
+  .profileImgSectionMob {
+    display: block;
+  }
+  .profileImgSection {
+    display: none;
+  }
+  .message-list-right {
+    overflow: initial !important;
+  }
+  .seq-theme {
+    #edit_content_image {
+      .mat-form-field-appearance-legacy {
+        .mat-form-field-underline
+        .mat-form-field-subscript-wrapper {
+          position: initial !important;
+        }
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  img.app-logo {
+      width: 130px !important;
+      max-width: initial !important;
+      margin-left: 2px !important;
+  }
+  .nav-brand{
+    padding-left: 15px !important;
+  }
+  .mat-icon-button {
+    width: 24px !important;
+    margin-right: -10px !important;
+    // gap: 0.1px;
+  }
+  .mat-toolbar-row, 
+  .mat-toolbar-single-row {
+    padding-left: 0px !important;
+  } 
+  .mat-stroked-button {
+    padding: 0 10px !important;
+  } 
+  .seq-theme .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+}
+
+@media all and (min-width: 360px) and (max-width: 760px){
+  img.app-logo {
+    width: 117px !important;
+    max-width: initial !important;
+    margin-left: 1px !important;
+  }
+  .mat-stroked-button {
+    padding: 0 07px !important;
+  }
+  .seq-theme .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+}
+
+@media all and (max-width: 767px) and (orientation: portrait) {
+  .svd_container.sv_default_css .svd_editors {
+    &.svd_wide {
+      margin: 0 !important;
+    }
+  }
+  .seq-theme {
+    .mat-card {
+      .card-column-third {
+        width: 100% !important;
+      }
+      .card-column-two-third {
+        width: 100% !important;
+      }
+    }
+  }
+
+  #view_user_profile,
+  #edit_service_user {
+    .deactivatedDate {
+      margin: 1em 0 0;
+      text-align: center;
+      position: initial;
+    }
+  }
+}
+
+@media all and (max-width: 767px) and (orientation: landscape) {
+
+}
+
+@media all and (max-width: 960px) and (orientation: landscape) {
+  .seq-theme .mat-card .card-row {
+    flex-direction: row;
+  }
+}
+
+@media all and (max-width: 668px){
+  .sessions_container{
+    transform: translate(-50%, -40%)!important;
+  }
+  .svd_container.sv_default_css {
+    .modal{
+      .modal-dialog {
+        .modal-content {
+          margin-top: 15px!important;
+          .modal-body{
+            height: 50vh!important;
+            .form-control{
+              margin-bottom: 8px;
+            }
+            .form-control.svd_custom_select{
+              margin-right: 5px;
+              select{
+                border: none;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//new gds style
+#view_user_profile, #edit_service_user, #view_user-plan-induction {
+  .mat-card-header {
+    display: block !important;
+  }
+}
+#view_user-action-plan {
+  .action-buttons {
+    float: right !important;
+  }
+  .deactivatedDate {
+    position: absolute;
+    top: 2em;
+    left: 40% !important;
+  }
+}
+
+

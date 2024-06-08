@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktiw emläk",
+    "doesnotsupportaudioelement": "Siziň brauzeriňiz audio elementini goldamaýar.",
+    "resetquiz": "Sowgady gaýtala",
+    "submit": "Tabşyr",
+    "correct": "Dogry!",
+    "incorrecttryagain": "Nädogry Ýene-de ynan.",
+    "exit": "Çyk",
+    "exportlabel": "Eksport",
+    "canyouanswer": "Siz şu aşakdaky soraglara jogap berip bilersiňizmi?",
+    "question": "Sorag",
+    "youranswer": "Siziň jogabyňyz",
+    "check": "_Barla",
+    "pdfforstudent": "Okuwçy üçin PDF",
+    "pdfforstaff": "Işgärler üçin PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SKORM",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle eksport",
+    "quiz": "Sorag",
+    "learningOutcomes": "Öwrenmegiň netijesi"
+}

@@ -1,0 +1,18 @@
+{"h5pList":[
+    {
+        "identifier": "FC",
+        "type": "Flash Cards"
+    },
+    {
+        "identifier": "DTW",
+        "type": "Drag The Word"
+    },
+    {
+        "identifier": "SCS",
+        "type": "Single Choice Set"
+    },
+    {
+        "identifier": "FITB",
+        "type": "Fill In The Blanks"
+    }
+]}

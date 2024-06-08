@@ -1,0 +1,22 @@
+{
+    "flashcard": "Actif interactif",
+    "doesnotsupportaudioelement": "Votre navigateur ne prend pas en charge l’élément audio.",
+    "resetquiz": "Réinitialiser le quiz",
+    "submit": "Soumettre",
+    "correct": "Exact!",
+    "incorrecttryagain": "C’est faux. Essaie encore.",
+    "exit": "(Il sort.)",
+    "exportlabel": "Exportation",
+    "canyouanswer": "Pouvez-vous répondre aux questions suivantes ?",
+    "question": "Question :",
+    "youranswer": "Votre réponse",
+    "check": "Vérifier",
+    "pdfforstudent": "PDF pour l’étudiant",
+    "pdfforstaff": "PDF pour le personnel",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Exporter vers Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "Résultats d’apprentissage"
+}

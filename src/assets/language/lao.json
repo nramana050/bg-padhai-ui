@@ -1,0 +1,22 @@
+{
+    "flashcard": "ຊັບສິນInteractive",
+    "doesnotsupportaudioelement": "ເວັບໄຊທ໌ຂອງທ່ານບໍ່ສະຫນັບສະຫນູນອົງປະກອບສຽງ.",
+    "resetquiz": "Reset Quiz",
+    "submit": "ຍື່ນສະເໜີ",
+    "correct": "ແມ່ນແລ້ວ!",
+    "incorrecttryagain": "ບໍ່ຖືກຕ້ອງ. ລອງໃໝ່ອີກຄັ້ງ.",
+    "exit": "ອອກ",
+    "exportlabel": "ການສົ່ງອອກ",
+    "canyouanswer": "ທ່ານສາມາດຕອບຄໍາຖາມຕໍ່ໄປນີ້ໄດ້ບໍ?",
+    "question": "ຄໍາຖາມ",
+    "youranswer": "ຄໍາຕອບຂອງທ່ານ",
+    "check": "ກວດສອບ",
+    "pdfforstudent": "PDF ສໍາລັບນັກສຶກສາ",
+    "pdfforstaff": "PDF ສໍາລັບພະນັກງານ",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "ການສົ່ງອອກສູ່ Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "ຜົນການຮຽນຮູ້"
+}

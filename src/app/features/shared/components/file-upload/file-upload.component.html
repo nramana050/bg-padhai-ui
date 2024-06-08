@@ -1,0 +1,31 @@
+<!-- <ngx-dropzone #dropzone class="dropzone-container" [multiple]="option?.multiple" [showPreviews]="option?.showPreviews"
+  [label]="option?.label || 'Drop your files here (or click)'" [disabled]="disabled"
+  [preserveFiles]="option?.preserveFiles" (filesAdded)="onFilesDropped($event)" [ngClass]="{'dropzone-error': errors?.length > 0}">
+</ngx-dropzone> -->
+
+<div class="error-container">
+  <p *ngFor="let error of errors" class="mat-error">{{error.message}}</p>
+</div>
+
+<div class="card-row">
+  <mat-list class="card-column-75" *ngIf="!option.showPreviews">
+    <mat-list-item *ngFor="let file of fileList">
+      <span class="text">{{file.name}}</span>
+      <button mat-icon-button (click)="removeFile(file)">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+  <!-- Actions -->
+  <div class="card-column-25 actions">
+    <span class="spacer"></span>
+    <span>
+      <button id="file_browse" mat-stroked-button color="primary" *ngIf="showSelector"
+        (click)="dropzone.showFileSelector()">Browse</button>
+    </span>
+    <span>
+      <button id="file_reset" mat-stroked-button color="primary" *ngIf="showReset"
+        (click)="dropzone.reset()">Reset</button>
+    </span>
+  </div>
+</div>

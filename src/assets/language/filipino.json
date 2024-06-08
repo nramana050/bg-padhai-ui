@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktibong Asset",
+    "doesnotsupportaudioelement": "Hindi sinusuportahan ng iyong browser ang elemento ng audio.",
+    "resetquiz": "I-reset ang Quiz",
+    "submit": "Isumite ang",
+    "correct": "Tama!",
+    "incorrecttryagain": "Mali. Try mo ulit.",
+    "exit": "Lumabas na",
+    "exportlabel": "I-export ang",
+    "canyouanswer": "Masasagot mo ba ang mga sumusunod na tanong?",
+    "question": "Tanong na Tanong",
+    "youranswer": "Ang Iyong Sagot",
+    "check": "Suriin ang",
+    "pdfforstudent": "PDF para sa Mag aaral",
+    "pdfforstaff": "PDF para sa mga Tauhan",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Mag export sa Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "Mga Resulta ng Pag-aaral"
+}

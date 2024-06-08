@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interactive Asset",
+    "doesnotsupportaudioelement": "Tín/tykkara browser stuðla ikki ljóðinum.",
+    "resetquiz": "Reset Quiz",
+    "submit": "Lata inn",
+    "correct": "Rætt!",
+    "incorrecttryagain": "Incorrect. Royna aftur.",
+    "exit": "Exit",
+    "exportlabel": "Export",
+    "canyouanswer": "Kanst/kunnu tú/svara teimum spurningunum?",
+    "question": "Question",
+    "youranswer": "Títt/tykkara svar.",
+    "check": "Kanna",
+    "pdfforstudent": "PDF for Student",
+    "pdfforstaff": "PDF for Staff",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Export to Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "At læra seg at læra seg."
+}

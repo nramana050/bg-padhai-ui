@@ -1,0 +1,22 @@
+{
+    "flashcard": "สินทรัพย์แบบโต้ตอบ",
+    "doesnotsupportaudioelement": "เบราว์เซอร์ของคุณไม่รองรับองค์ประกอบเสียง",
+    "resetquiz": "รีเซ็ตแบบทดสอบ",
+    "submit": "ส่ง",
+    "correct": "ถูกต้อง!",
+    "incorrecttryagain": "ผิด  ลองอีกครั้ง ",
+    "exit": "ทางออก",
+    "exportlabel": "ส่งออก",
+    "canyouanswer": "คุณสามารถตอบคําถามต่อไปนี้ได้หรือไม่?",
+    "question": "ปัญหา",
+    "youranswer": "คําตอบของคุณ",
+    "check": "ตรวจ",
+    "pdfforstudent": "PDF สําหรับนักเรียน",
+    "pdfforstaff": "PDF สําหรับพนักงาน",
+    "htmlzip": "HTML ซิป",
+    "scorm": "สกอร์ม",
+    "epub": "อีผับ",
+    "exporttomoodle": "ส่งออกไปยัง Moodle",
+    "quiz": "สอบ",
+    "learningOutcomes": "ผลการเรียนรู้"
+}

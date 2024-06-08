@@ -1,0 +1,55 @@
+<div class="mainContainer">
+  <div class="headerSection">
+    <h3 matDialogTitle id="title">Select language and voice for {{data.topic}}</h3>
+  </div>
+
+  <div class="autoScroll">
+    <form [formGroup]="languageSelection" class="selectionContainer" (ngSubmit)="addLanguage(languageSelection.value)">
+      <div class="selectionSection">
+          <mat-form-field appearance="outline">
+            <mat-label>Select language</mat-label>
+              <div class="searchSection">
+                  <input matInput placeholder="Select an option" formControlName="languageName" [matAutocomplete]="auto">
+                  <mat-icon *ngIf="languageSelection.get('languageName').value" (click)="resetLanguage()">close</mat-icon>
+              </div>
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of languageOptions | async" [value]="option.language">
+                  {{ option.language }}
+                </mat-option>
+              </mat-autocomplete>
+          </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Select voice</mat-label>
+              <mat-select placeholder="Select voice" formControlName="genderId" [disabled]="!languageSelection.get('languageName').value">
+                <mat-option value="1">Male</mat-option>
+                <mat-option value="2">Female</mat-option>
+              </mat-select>
+            </mat-form-field>
+      </div>
+      <div class="addSection">
+        <button [disabled]="!languageSelection.get('languageName').value || !languageSelection.get('genderId').value" mat-stroked-button color="primary" type="submit">Add</button>
+      </div>
+    </form>
+
+    <div *ngIf="selectedLanguages.languages.length > 0" class="languageSection margin-bottom">
+      <h4>Selected Languages: </h4>
+      <div class="selectedLanguagesSection">
+        <mat-chip-list #chipList aria-label="Language selection">
+          <mat-chip *ngFor="let lang of selectedLanguages.languages" 
+                  [removable]="true" (removed)="removeSelectedLang(lang)">
+                 {{lang.languageName}} ({{lang.genderId == 1 ? 'Male' : 'Female'}}) - {{lang.isTranslated ? lang.isTranslated : 'Not started'}} 
+            <button *ngIf="lang.isTranslated != 'Generated' && lang.isTranslated != 'In Progress' && lang.isTranslated != 'Failed'" matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button> 
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+
+  <div class="actionButtonSection">
+    <button mat-stroked-button color="primary" type="button" (click)="dialogClose()">Cancel</button>
+    <button [disabled]="(selectedLanguages.languages.length - initialSelectedLanguages.length) <= 0 || disableSubmitButton" mat-stroked-button color="primary" type="button" (click)="generateLanguages()">Submit</button>
+
+  </div>    
+</div>

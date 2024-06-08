@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktiivinen resurssi",
+    "doesnotsupportaudioelement": "Selaimesi ei tue äänielementtiä.",
+    "resetquiz": "Nollaa tietokilpailu",
+    "submit": "Alistua",
+    "correct": "Oikea!",
+    "incorrecttryagain": "Virheellinen. Yritä uudestaan.",
+    "exit": "Uloskäynti",
+    "exportlabel": "Vienti",
+    "canyouanswer": "Voitko vastata seuraaviin kysymyksiin?",
+    "question": "Kysymys",
+    "youranswer": "Sinun vastauksesi",
+    "check": "Tarkistaa",
+    "pdfforstudent": "PDF opiskelijalle",
+    "pdfforstaff": "PDF henkilökunnalle",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Vienti Moodleen",
+    "quiz": "Tietokilpailu",
+    "learningOutcomes": "Oppimistulokset"
+}

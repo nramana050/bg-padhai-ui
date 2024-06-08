@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktív eszköz",
+    "doesnotsupportaudioelement": "Az Ön böngészője nem támogatja az audio elemet.",
+    "resetquiz": "Kvíz visszaállítása",
+    "submit": "Előterjeszt",
+    "correct": "Helyes!",
+    "incorrecttryagain": "Helytelen. Próbáld újra.",
+    "exit": "Kijárat",
+    "exportlabel": "Kivitel",
+    "canyouanswer": "Meg tudod válaszolni a következő kérdéseket?",
+    "question": "Kérdés",
+    "youranswer": "Az Ön válasza",
+    "check": "Ellenőriz",
+    "pdfforstudent": "PDF diákoknak",
+    "pdfforstaff": "PDF munkatársaknak",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Exportálás a Moodle programba",
+    "quiz": "Kvíz",
+    "learningOutcomes": "Tanulási eredmények"
+}

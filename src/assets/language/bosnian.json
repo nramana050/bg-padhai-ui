@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktivno sredstvo",
+    "doesnotsupportaudioelement": "Vaš pretraživač ne podržava audio element.",
+    "resetquiz": "Vrati na Kviz za resetiranje",
+    "submit": "Pošalji",
+    "correct": "Baš tako!",
+    "incorrecttryagain": "Netačna. Pokušaj ponovo.",
+    "exit": "Izlaz",
+    "exportlabel": "Izvoz",
+    "canyouanswer": "Možete li odgovoriti na sljedeća pitanja?",
+    "question": "Pitanje",
+    "youranswer": "Tvoj odgovor",
+    "check": "Provjeriti",
+    "pdfforstudent": "PDF za studente",
+    "pdfforstaff": "PDF za osoblje",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Izvoz u Moodle",
+    "quiz": "Kviz",
+    "learningOutcomes": "Rezultati učenja"
+}

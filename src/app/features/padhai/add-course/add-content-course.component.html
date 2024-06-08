@@ -1,0 +1,116 @@
+<mat-card id="add-course">
+
+  <mat-card-header class="flex-end">
+    <button id="exit_course_button" mat-stroked-button color="primary" [routerLink]="['/padhai']">Exit</button>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="courseForm" (ngSubmit)="onSubmit(courseForm)" validate autocomplete="off">
+      <div class="card-row">
+        <!-- <div class="card-column">
+          <img src="../../../../assets/images/padhai-add-course.jpg" alt="online course illustration" class="full-width"/>
+        </div> -->
+      <div class="card-column">
+        <mat-form-field appearance="fill">
+          <mat-label>What topic do you wish to generate a course for?</mat-label>
+          <input matInput formControlName="courseTitle" id="topicName" required>
+          <!-- <mat-hint>Topic name</mat-hint> -->
+          <mat-error *ngIf="courseForm.controls.courseTitle.invalid">
+            Topic name is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Select country</mat-label>
+          <mat-select formControlName="countryId" required>
+            <mat-option *ngFor="let country of countryList" [value]="country.id">
+              {{country.description}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="courseForm.controls.countryId.invalid">
+            country is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>For what key stage would you like to generate the content?</mat-label>
+          <mat-select formControlName="keyStateId" required>
+            <mat-option *ngFor="let key of keyStageList" [value]="key.id">
+              {{key.description}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="courseForm.controls.keyStateId.invalid">
+            Key stage is required
+          </mat-error>
+        </mat-form-field>
+      
+        <div class="inputSection">
+          <mat-radio-group class="radioGroup" formControlName="voiceId" id="voice" required aria-label="Select an voice">
+            <mat-label class="inputHeading">Preferred voice</mat-label>
+            <mat-radio-button *ngFor="let option of voiceList" [value]="option.id" id="voice-{{option.id}}">{{option.genderId.gender}}</mat-radio-button>
+            <mat-error class="inputError" *ngIf="courseForm.get('voiceId').touched && courseForm.controls.voiceId.invalid">
+              Preferred voice is required 
+            </mat-error>
+          </mat-radio-group>
+        </div>
+
+        <div class="inputSection extraHeight">
+          <div class="sliderHeadingSection">
+            <mat-label for="sliderModule" class="sliderTitle" id="module-count-label">Select number of Modules</mat-label>
+            <span *ngIf="courseForm.get('moduleCount').value" class="selectedValue">{{courseForm.get('moduleCount').value}}</span>
+          </div>
+          <mat-slider
+            id="sliderModule"
+            max="10"
+            min="0"
+            step="1"
+            thumbLabel="true"
+            formControlName="moduleCount"
+            aria-labelledby="module-count-label">
+          </mat-slider>
+          <div class="rangeSection">
+            <span>0</span>
+            <span>10</span>
+          </div>
+          <mat-error class="inputError" *ngIf="courseForm.get('moduleCount').touched && courseForm.controls.moduleCount.errors?.required">
+            Number of Module is required
+          </mat-error>
+          <mat-error class="inputError" *ngIf="courseForm.get('moduleCount').touched && courseForm.controls.moduleCount.errors?.min">
+            Atleast 1 Module is required
+          </mat-error>
+        </div>
+      
+        <div class="inputSection extraHeight">
+          <div class="sliderHeadingSection">
+            <mat-label for="sliderLesson" class="sliderTitle" id="lesson-count-label" class="sliderTitle">Select number of Lessons</mat-label>
+            <span *ngIf="courseForm.get('lessonCount').value" class="selectedValue">{{courseForm.get('lessonCount').value}}</span>
+          </div>
+          <mat-slider
+            id="sliderLesson"
+            max="4"
+            min="0"
+            step="1"
+            thumbLabel="true"
+            formControlName="lessonCount"
+            aria-labelledby="lesson-count-label"
+          ></mat-slider>
+          <div class="rangeSection">
+            <span>0</span>
+            <span>4</span>
+          </div>
+          <mat-error class="inputError" *ngIf="courseForm.get('lessonCount').touched && courseForm.controls.lessonCount.errors?.required">
+            Number of Lessons is required
+          </mat-error>
+          <mat-error class="inputError" *ngIf="courseForm.get('lessonCount').touched && courseForm.controls.lessonCount.errors?.min">
+            Atleast 1 Lesson is required
+          </mat-error>
+  
+        </div>
+        <mat-card-footer>
+          <span class="spacer"></span>
+          <span>
+            <button type="submit" id="save_course_content_button" mat-flat-button color="primary"
+              [disabled]="!courseForm.valid">Start</button>
+          </span>
+        </mat-card-footer>
+      </div>
+      </div>
+    </form>
+  </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,22 @@
+{
+    "flashcard": "ഇന്ററാക്ടീവ് അസറ്റ്",
+    "doesnotsupportaudioelement": "നിങ്ങളുടെ ബ്രൗസർ ഓഡിയോ ഘടകത്തെ പിന്തുണയ്ക്കുന്നില്ല.",
+    "resetquiz": "ക്വിസ് പുനഃക്രമീകരിക്കുക",
+    "submit": "സമർപ്പിക്കുക",
+    "correct": "ശരി!",
+    "incorrecttryagain": "ശരിയല്ല. വീണ്ടും ശ്രമിക്കൂ.",
+    "exit": "എക്സിറ്റ്",
+    "exportlabel": "കയറ്റുമതി",
+    "canyouanswer": "ഇനിപ്പറയുന്ന ചോദ്യങ്ങൾക്ക് ഉത്തരം പറയാമോ?",
+    "question": "ചോദ്യം",
+    "youranswer": "നിങ്ങളുടെ ഉത്തരം",
+    "check": "പരിശോധിക്കുക",
+    "pdfforstudent": "PDF for Student",
+    "pdfforstaff": "PDF for സ്റ്റാഫ്",
+    "htmlzip": "HTML Zip",
+    "scorm": "സ്കോർം",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle ലേക്ക് കയറ്റുമതി ചെയ്യുക",
+    "quiz": "ക്വിസ്",
+    "learningOutcomes": "പഠന ഫലങ്ങൾ"
+}

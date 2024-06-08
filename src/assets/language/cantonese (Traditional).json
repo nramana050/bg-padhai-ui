@@ -1,0 +1,22 @@
+{
+    "flashcard": "互動資產",
+    "doesnotsupportaudioelement": "您的瀏覽器唔撐音頻元素。",
+    "resetquiz": "重置測驗",
+    "submit": "提交",
+    "correct": "啱!",
+    "incorrecttryagain": "不對。 試多次.",
+    "exit": "退出",
+    "exportlabel": "出口",
+    "canyouanswer": "您能回答以下問題嗎？",
+    "question": "問題",
+    "youranswer": "您的答案",
+    "check": "檢查",
+    "pdfforstudent": "學生版PDF",
+    "pdfforstaff": "面向員工嘅PDF",
+    "htmlzip": "HTML壓縮",
+    "scorm": "SCORM公司",
+    "epub": "電子出版",
+    "exporttomoodle": "導出到Moodle",
+    "quiz": "測驗",
+    "learningOutcomes": "學習成果"
+}

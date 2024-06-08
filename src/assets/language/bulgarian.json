@@ -1,0 +1,22 @@
+{
+    "flashcard": "Интерактивен актив",
+    "doesnotsupportaudioelement": "Вашият браузър не поддържа аудио елемента.",
+    "resetquiz": "Нулиране на теста",
+    "submit": "Изпрати",
+    "correct": "Точно така!",
+    "incorrecttryagain": "Неправилен. Опитайте отново.",
+    "exit": "Изход",
+    "exportlabel": "Износ",
+    "canyouanswer": "Можете ли да отговорите на следните въпроси?",
+    "question": "Въпрос",
+    "youranswer": "Вашият отговор",
+    "check": "Проверявам",
+    "pdfforstudent": "PDF за студент",
+    "pdfforstaff": "PDF за персонала",
+    "htmlzip": "HTML Zip",
+    "scorm": "СКОРМ",
+    "epub": "е-пуб",
+    "exporttomoodle": "Експортиране в Moodle",
+    "quiz": "Викторина",
+    "learningOutcomes": "Резултати от обучението"
+}

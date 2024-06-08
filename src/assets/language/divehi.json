@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interactive Asset",
+    "doesnotsupportaudioelement": "ތިބާގެ ބްރައުޒާއިން އޯޑިއޯ އެލިމެންޓަށް ތާއީދެއް ނުކުރެއެވެ.",
+    "resetquiz": "Reset Quiz",
+    "submit": "ހުށަހެޅުން",
+    "correct": "ރަނގަޅު!",
+    "incorrecttryagain": "ގޯހެވެ. އަލުން ބަލާލާ.",
+    "exit": "ނުކުތުން",
+    "exportlabel": "އެކްސްޕޯޓް ކުރުން",
+    "canyouanswer": "މިދެންނެވި ސުވާލުތަކަށް ޖަވާބު ދެވިދާނެހެއްޔެވެ؟",
+    "question": "ސުވާލު",
+    "youranswer": "ތިޔަބޭފުޅުންގެ ޖަވާބު",
+    "check": "ޗެކް ކުރޭ",
+    "pdfforstudent": "ދަރިވަރަކަށް ޕީޑީއެފް",
+    "pdfforstaff": "ޕީޑީއެފް ފޯ ސްޓާފް",
+    "htmlzip": "އެޗް.ޓީ.އެމް.އެލް ޒިޕް",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "މޫޑްލް އަށް އެކްސްޕޯޓް ކުރުން",
+    "quiz": "Quiz",
+    "learningOutcomes": "އުނގެނުމުގެ ނަތީޖާ"
+}

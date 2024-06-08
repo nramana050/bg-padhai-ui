@@ -1,0 +1,22 @@
+{
+    "flashcard": "인터랙티브 에셋",
+    "doesnotsupportaudioelement": "브라우저가 오디오 기능을 지원하지 않습니다.",
+    "resetquiz": "퀴즈 재설정",
+    "submit": "전송",
+    "correct": "맞는!",
+    "incorrecttryagain": "잘못 된. 다시 한 번 시도해 보세요.",
+    "exit": "출구",
+    "exportlabel": "수출",
+    "canyouanswer": "다음 질문들에 대답할 수 있습니까?",
+    "question": "질문",
+    "youranswer": "당신의 대답",
+    "check": "검사",
+    "pdfforstudent": "학생용 PDF",
+    "pdfforstaff": "직원용 PDF",
+    "htmlzip": "HTML 우편 번호",
+    "scorm": "스콜",
+    "epub": "e펍",
+    "exporttomoodle": "Moodle로 내보내기",
+    "quiz": "퀴즈",
+    "learningOutcomes": "학습 결과"
+}

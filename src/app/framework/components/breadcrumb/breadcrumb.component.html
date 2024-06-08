@@ -1,0 +1,22 @@
+<div class="page-nav" id="page-nav">
+   <div *ngIf="imagePath" class="breadcrumbHeaderContainer">
+      <div *ngIf="courseStatus != 'publishgenerated' && currentStatus != 'lessoninprogress' && currentStatus != 'assetinprogress'" class="imageContainer">
+         <img class="imageStyle" [src]="imagePath" alt="Selected Image">
+         <button matTooltip="Replace / Upload image" mat-icon-button class="edit-icon"  (click)="file.click()">
+           <mat-icon>edit</mat-icon>
+         </button>
+         <input aria-label="Upload-image" accept=".png, .jpg, .jpeg" type="file" id="fileInput" style="display: none" (change)="selectFile($event)" #file>
+      </div>
+      <img *ngIf="courseStatus == 'publishgenerated' || currentStatus == 'lessoninprogress' || currentStatus == 'assetinprogress'" class="staticImg" [src]="imagePath" alt="Selected Image">
+      <h1 id="padhaiBreadCrumbTitle" class="page-title" *ngIf="routeParts.length > 0">{{routeParts[routeParts.length -1]['breadcrumb']}}</h1>
+   </div>
+   <div class="failed">
+      <div *ngIf="isImageGenerationFailed && isFailedForSafetySystem">Our policies prevented PADHAI from generating the image for
+         this course. Please upload your desired image.</div>
+      <div *ngIf="isImageGenerationFailed && !isFailedForSafetySystem">We're running a bit behind schedule with generating images
+         right now. Please give us a little more time and try again shortly.</div>
+   </div>
+   <h1 id="breadCrumbHeadTitle" class="page-title" *ngIf="routeParts.length > 0 && !imagePath">{{routeParts[routeParts.length -1]['breadcrumb']}}</h1>
+   <span class="spacer"></span>
+
+</div>

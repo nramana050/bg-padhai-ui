@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interactieve troef",
+    "doesnotsupportaudioelement": "Uw browser ondersteunt het audio-element niet.",
+    "resetquiz": "Quiz resetten",
+    "submit": "Opslaan",
+    "correct": "Juist!",
+    "incorrecttryagain": "Onjuist. Probeer het opnieuw.",
+    "exit": "Uitgang",
+    "exportlabel": "Exporteren",
+    "canyouanswer": "Kunt u antwoord geven op de volgende vragen?",
+    "question": "Vraag",
+    "youranswer": "Uw antwoord",
+    "check": "Cheque",
+    "pdfforstudent": "PDF voor student",
+    "pdfforstaff": "PDF voor medewerkers",
+    "htmlzip": "HTML-rits",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Exporteren naar Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "Leerresultaten"
+}

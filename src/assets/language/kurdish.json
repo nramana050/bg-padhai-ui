@@ -1,0 +1,22 @@
+{
+    "flashcard": "فلاش کارت",
+    "doesnotsupportaudioelement": "وێبگەڕەکەت پشتگیری لە توخمی دەنگ ناکات.",
+    "resetquiz": "دووبارە ڕێکخستنەوەی کویز",
+    "submit": "ناردن",
+    "correct": "دروست!",
+    "incorrecttryagain": "ناراستە دووبارە تاقی بکەوە.",
+    "exit": "دەرچوون",
+    "exportlabel": "هەناردەکردن",
+    "canyouanswer": "دەتوانیت وەڵامی ئەم پرسیارانەی خوارەوە بدەیتەوە؟",
+    "question": "پرسیار",
+    "youranswer": "وەڵامەکەت",
+    "check": "پشکنین",
+    "pdfforstudent": "PDF بۆ خوێندکار",
+    "pdfforstaff": "PDF بۆ ستاف",
+    "htmlzip": "HTML Zip",
+    "scorm": "نمرە",
+    "epub": "ePub",
+    "exporttomoodle": "ناردن بۆ موودڵ",
+    "quiz": "تاقیکردنەوە",
+    "learningOutcomes" : "ئەنجامەکانی فێربوون"
+}

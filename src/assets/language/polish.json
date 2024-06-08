@@ -1,0 +1,22 @@
+{
+    "flashcard": "Zasób interaktywny",
+    "doesnotsupportaudioelement": "Twoja przeglądarka nie obsługuje elementu audio.",
+    "resetquiz": "Zresetuj quiz",
+    "submit": "Prześlij",
+    "correct": "Poprawny!",
+    "incorrecttryagain": "Błędny. Spróbuj ponownie.",
+    "exit": "Wyjście",
+    "exportlabel": "Eksport",
+    "canyouanswer": "Czy potrafisz odpowiedzieć na poniższe pytania?",
+    "question": "Pytanie",
+    "youranswer": "Twoja odpowiedź",
+    "check": "Sprawdzić",
+    "pdfforstudent": "PDF dla ucznia",
+    "pdfforstaff": "PDF dla pracowników",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Eksport do Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes" : "Uczenia się"
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "Интерактивный актив",
+    "doesnotsupportaudioelement": "Ваш браузер не поддерживает элемент audio.",
+    "resetquiz": "Сбросить викторину",
+    "submit": "Отправить",
+    "correct": "Правильно!",
+    "incorrecttryagain": "Неправильный. Повторить.",
+    "exit": "Выход",
+    "exportlabel": "Экспорт",
+    "canyouanswer": "Можете ли вы ответить на следующие вопросы?",
+    "question": "Вопрос",
+    "youranswer": "Ваш ответ",
+    "check": "Проверка",
+    "pdfforstudent": "PDF для студентов",
+    "pdfforstaff": "PDF для сотрудников",
+    "htmlzip": "HTML Zip",
+    "scorm": "СКОРМ",
+    "epub": "Формат ePub",
+    "exporttomoodle": "Экспорт в Moodle",
+    "quiz": "Викторина",
+    "learningOutcomes" : "Результаты обучения"
+}

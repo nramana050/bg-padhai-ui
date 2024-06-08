@@ -1,0 +1,22 @@
+{
+    "flashcard": "Risorsa interattiva",
+    "doesnotsupportaudioelement": "Il tuo browser non supporta l'elemento audio.",
+    "resetquiz": "Ripristina quiz",
+    "submit": "Invia",
+    "correct": "Corretto!",
+    "incorrecttryagain": "Scorretto. Riprova.",
+    "exit": "Uscita",
+    "exportlabel": "Esportazione",
+    "canyouanswer": "Sapreste rispondere alle seguenti domande?",
+    "question": "Domanda",
+    "youranswer": "La tua risposta",
+    "check": "Assegno",
+    "pdfforstudent": "PDF per studenti",
+    "pdfforstaff": "PDF per il personale",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Esporta in Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "Obiettivi formativi"
+}

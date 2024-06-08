@@ -1,0 +1,30 @@
+<div [style.display]="visible ? 'block' : 'none'" class="fade-in">
+    <div class="gds-modal show" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="gds-modal-dialog" role="document">
+            <div class="gds-modal-content">
+                <div class="gds-modal-header">
+                    <h1 tabindex="0" class="govuk-heading-l mt0" id="myModalLabel" autofocus="autofocus">
+                        {{header || 'Confirm'}}</h1>
+                </div>
+                <div class="gds-modal-body">
+                    <p tabindex="0" class="white-space-preline" title="{{message}}">{{message}}</p>
+                    <p tabindex="0" class="white-space-preline" *ngIf="showTimer">
+                        {{ (minutesDisplay) }}:{{ (secondsDisplay) && (secondsDisplay <=59) ? secondsDisplay : '00' }}.
+                    </p>
+                </div>
+                <div class="gds-modal-footer">
+                    <button *ngIf="hasSecondPopup" id="secondaryLast" type="button" class="button button-warning"
+                        (click)="acceptOnHavingSecondpopup()">{{acceptLabel || 'Ok'}}</button>
+                    <button *ngIf="!hasSecondPopup && !rejectVisible" id="secondaryLast" type="button" class="gds-button button-warning"
+                        (click)="accept()">{{acceptLabel || 'Ok'}}</button>
+                    <button *ngIf="!hasSecondPopup && !rejectVisible" id="last-secondary" type="button" class="gds-button button-secondary"
+                        (click)="reject()">{{rejectLabel || 'OK'}}</button>
+                    <button [style.display]="rejectVisible ? 'block' : 'none'" *ngIf="showClose" id="last-warning" type="button" class="gds-button button-warning"
+                        (click)="reject()">{{rejectLabel || 'OK'}}</button>
+                </div>
+    
+            </div>
+        </div>
+        <div class="gds-modal-backdrop fade in">
+        </div>
+    </div>

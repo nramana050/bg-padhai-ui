@@ -1,0 +1,22 @@
+{
+    "flashcard": "ইন্টারেক্টিভ সম্পদ",
+    "doesnotsupportaudioelement": "আপনার ব্রাউজার অডিও উপাদান সমর্থন করে না।",
+    "resetquiz": "ক্যুইজ রিসেট করুন",
+    "submit": "জমা",
+    "correct": "সঠিক!",
+    "incorrecttryagain": "ভুল। আবার চেষ্টা করো।",
+    "exit": "প্রস্থান",
+    "exportlabel": "রপ্তানি",
+    "canyouanswer": "আপনি কি নিচের প্রশ্নগুলোর উত্তর দিতে পারবেন?",
+    "question": "প্রশ্ন",
+    "youranswer": "আপনার উত্তর",
+    "check": "চেক",
+    "pdfforstudent": "শিক্ষার্থীর জন্য পিডিএফ",
+    "pdfforstaff": "কর্মীদের জন্য পিডিএফ",
+    "htmlzip": "এইচটিএমএল জিপ",
+    "scorm": "এসসিওআরএম",
+    "epub": "ইপাব",
+    "exporttomoodle": "মুডলে রপ্তানী করুন",
+    "quiz": "কুইজ",
+    "learningOutcomes": "শিখন ফলাফল"
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "İnteraktif Varlık",
+    "doesnotsupportaudioelement": "Tarayıcınız ses öğesini desteklemiyor.",
+    "resetquiz": "Testi Sıfırla",
+    "submit": "Gönder",
+    "correct": "Doğru!",
+    "incorrecttryagain": "Yanlış. Yeniden Deneyin.",
+    "exit": "Çıkış",
+    "exportlabel": "Ihracat",
+    "canyouanswer": "Aşağıdaki soruları cevaplayabilir misiniz?",
+    "question": "Soru",
+    "youranswer": "Cevabınız",
+    "check": "Çek",
+    "pdfforstudent": "Öğrenci için PDF",
+    "pdfforstaff": "Personel için PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM (SCORM)",
+    "epub": "Epub",
+    "exporttomoodle": "Moodle'a aktar",
+    "quiz": "Quiz",
+    "learningOutcomes": "Öğrenme Çıktıları"
+}

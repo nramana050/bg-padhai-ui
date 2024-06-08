@@ -1,0 +1,22 @@
+{
+    "flashcard": "ئۆز ئارا تەسىرلىشىدىغان مۈلۈك",
+    "doesnotsupportaudioelement": "تور كۆرگۈچىڭىز ئاۋاز ئېلېمېنتلىرىنى قوللىمايدۇ.",
+    "resetquiz": "Quiz نى قايتا بېكىتىش",
+    "submit": "تاپشۇرماق",
+    "correct": "توغرا!",
+    "incorrecttryagain": "خاتا. يەنە بىر سىناپ كۆر.",
+    "exit": "چىقىش ئېغىزى",
+    "exportlabel": "ئېكسپورت قىلىش",
+    "canyouanswer": "سىز تۆۋەندىكى سوئاللارغا جاۋاب بېرەلەمسىز؟",
+    "question": "سوئال",
+    "youranswer": "سىزنىڭ جاۋابىڭىز",
+    "check": "تەكشۈرۈش",
+    "pdfforstudent": "ئوقۇغۇچى ئۈچۈن PDF",
+    "pdfforstaff": "خىزمەتچى خادىملار ئۈچۈن PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle غا ئېكسپورت قىلىش",
+    "quiz": "Quiz",
+    "learningOutcomes": "ئۆگىنىش نەتىجىسى"
+}

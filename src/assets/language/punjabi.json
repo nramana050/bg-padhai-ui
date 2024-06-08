@@ -1,0 +1,22 @@
+{
+    "flashcard": "ਇੰਟਰਐਕਟਿਵ ਸੰਪਤੀ",
+    "doesnotsupportaudioelement": "ਤੁਹਾਡਾ ਬ੍ਰਾਊਜ਼ਰ ਆਡੀਓ ਤੱਤ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ।",
+    "resetquiz": "ਕੁਇਜ਼ ਰੀਸੈੱਟ ਕਰੋ",
+    "submit": "ਸਪੁਰਦ ਕਰੋ",
+    "correct": "ਹਾਂ!",
+    "incorrecttryagain": "ਗਲਤ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    "exit": "ਬਾਹਰ ਨਿਕਲੋ",
+    "exportlabel": "ਨਿਰਯਾਤ",
+    "canyouanswer": "ਕੀ ਤੁਸੀਂ ਹੇਠ ਲਿਖੇ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦੇ ਸਕਦੇ ਹੋ?",
+    "question": "ਸਵਾਲ",
+    "youranswer": "ਤੁਹਾਡਾ ਜਵਾਬ",
+    "check": "ਚੈੱਕ ਕਰੋ",
+    "pdfforstudent": "ਵਿਦਿਆਰਥੀ ਲਈ ਪੀਡੀਐਫ",
+    "pdfforstaff": "ਸਟਾਫ ਲਈ ਪੀਡੀਐਫ",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "ਮੂਡਲ ਨੂੰ ਨਿਰਯਾਤ ਕਰੋ",
+    "quiz": "ਕੁਇਜ਼",
+    "learningOutcomes": "ਸਿੱਖਣ ਦੇ ਨਤੀਜੇ"
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "Baliabide interaktiboa",
+    "doesnotsupportaudioelement": "Zure nabigatzailea ez da bateragarria audio-elementuarekin.",
+    "resetquiz": "Berrezartzeko galdetegia",
+    "submit": "Bidali",
+    "correct": "Zuzena!",
+    "incorrecttryagain": "Oker. Saiatu berriz.",
+    "exit": "Irteera",
+    "exportlabel": "Esportatu",
+    "canyouanswer": "Erantzun al diezaiekezu ondorengo galderei?",
+    "question": "Galdera",
+    "youranswer": "Erantzuna",
+    "check": "Egiaztatu",
+    "pdfforstudent": "Ikaslearentzako PDF",
+    "pdfforstaff": "Langileentzako PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Moodle esportatu",
+    "quiz": "Azterketa",
+    "learningOutcomes": "Ikaskuntzaren emaitzak"
+}

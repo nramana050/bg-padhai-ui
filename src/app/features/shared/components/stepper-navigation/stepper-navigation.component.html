@@ -1,0 +1,11 @@
+<div id='stepper-container' *ngIf="stepper">
+  <nav mat-tab-nav-bar class="stepper">
+    <span *ngFor="let step of stepper">
+      <a mat-tab-link class="step" *auth="step.featureId"  [routerLink]="step.state" [disabled]="step.enable" routerLinkActive="active"
+      queryParamsHandling="merge" [queryParams]="step.queryParams">
+        <div class="step-icon" *auth="step.featureId">{{ step.id }}</div>
+        <div class="step-label" *auth="step.featureId">{{ step.name | translate }}</div>
+    </a>
+    </span>
+  </nav>
+</div>

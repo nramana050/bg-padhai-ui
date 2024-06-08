@@ -1,0 +1,22 @@
+{
+    "flashcard": "متقابل شتمنۍ",
+    "doesnotsupportaudioelement": "ستاسو براوزر د اډیو عنصر ملاتړ نه کوی.",
+    "resetquiz": "ازموینه بیا وامستئ",
+    "submit": "وړاندې کړه",
+    "correct": "سمه ده!",
+    "incorrecttryagain": "په غلط ډول. بیا هڅه وکړه.",
+    "exit": "وتون",
+    "exportlabel": "بهرول",
+    "canyouanswer": "ایا تاسو کولی شئ لاندې پوښتنو ته ځواب ووایاست؟",
+    "question": "پوښتنه",
+    "youranswer": "ستاسو ځواب",
+    "check": "بیا کتنه",
+    "pdfforstudent": "د زده کونکو لپاره PDF",
+    "pdfforstaff": "د کارمندانو لپاره PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "کابل",
+    "exporttomoodle": "موډل ته صادرات",
+    "quiz": "ازموینه",
+    "learningOutcomes": "د زده کړې پایلې"
+}

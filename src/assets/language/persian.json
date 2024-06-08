@@ -1,0 +1,22 @@
+{
+    "flashcard": "دارایی تعاملی",
+    "doesnotsupportaudioelement": "مرورگر شما عنصر صوتی را پشتیبانی نمی کند.",
+    "resetquiz": "بازنشانی ازمون",
+    "submit": "ارسال",
+    "correct": "درست!",
+    "incorrecttryagain": "نادرست. دوباره امتحان کن.",
+    "exit": "خروج",
+    "exportlabel": "صادرات",
+    "canyouanswer": "ایا می توانید به سوالات زیر پاسخ دهید؟",
+    "question": "سوال",
+    "youranswer": "پاسخ شما",
+    "check": "بررسی",
+    "pdfforstudent": "PDF برای دانشجویان",
+    "pdfforstaff": "PDF برای کارکنان",
+    "htmlzip": "زیپ HTML",
+    "scorm": "اسکورم",
+    "epub": "Epub",
+    "exporttomoodle": "صادرات به مودل",
+    "quiz": "مسابقه",
+    "learningOutcomes": "نتایج یادگیری"
+}

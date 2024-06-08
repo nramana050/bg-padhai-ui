@@ -1,0 +1,22 @@
+{
+    "flashcard": "Ased Rhyngweithiol",
+    "doesnotsupportaudioelement": "Nid yw eich porwr yn cefnogi'r elfen sain.",
+    "resetquiz": "Ailosod Cwis",
+    "submit": "Cynnig",
+    "correct": "Iawn!",
+    "incorrecttryagain": "Anghywir. Trio eto.",
+    "exit": "Allanfa",
+    "exportlabel": "Allforio",
+    "canyouanswer": "Allwch chi ateb y cwestiynau canlynol?",
+    "question": "Cwestiwn",
+    "youranswer": "Eich Ateb",
+    "check": "Gwiriad",
+    "pdfforstudent": "PDF ar gyfer Myfyrwyr",
+    "pdfforstaff": "PDF ar gyfer Staff",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Allforio i Moodle",
+    "quiz": "Cwis",
+    "learningOutcomes" : "Canlyniadau Dysgu"
+}

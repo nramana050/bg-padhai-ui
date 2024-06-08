@@ -1,0 +1,22 @@
+{
+    "flashcard": "ஊடாடும் சொத்து",
+    "doesnotsupportaudioelement": "உங்கள் பிரௌசர் ஆடியோ கூறுகளை ஆதரிக்கவில்லை.",
+    "resetquiz": "வினாடி வினாவை மீட்டமை",
+    "submit": "சமர்ப்பிக்க",
+    "correct": "சரி!",
+    "incorrecttryagain": "தவறான. மீண்டும் முயற்சி செய்.",
+    "exit": "வெளியேறு",
+    "exportlabel": "ஏற்றுமதி",
+    "canyouanswer": "பின்வரும் கேள்விகளுக்கு உங்களால் பதிலளிக்க முடியுமா?",
+    "question": "கேள்வி",
+    "youranswer": "உங்கள் பதில்",
+    "check": "சரிபார்",
+    "pdfforstudent": "மாணவருக்கான PDF",
+    "pdfforstaff": "ஊழியர்களுக்கான PDF",
+    "htmlzip": "HTML ஜிப்",
+    "scorm": "SCORM",
+    "epub": "ஈபப்",
+    "exporttomoodle": "Moodleக்கு ஏற்றுமதி செய்யவும்",
+    "quiz": "வினாடி வினா",
+    "learningOutcomes": "கற்றல் விளைவுகள்"
+}

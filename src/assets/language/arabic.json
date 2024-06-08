@@ -1,0 +1,22 @@
+{
+    "flashcard": "الأصول التفاعلية",
+    "doesnotsupportaudioelement": "متصفحك لا يدعم عنصر الصوت.",
+    "resetquiz": "إعادة تعيين الاختبار",
+    "submit": "إرسال",
+    "correct": "صحيح!",
+    "incorrecttryagain": "خطأ. حاول مرة أخرى.",
+    "exit": "مخرج",
+    "exportlabel": "تصدير",
+    "canyouanswer": "هل يمكنك الإجابة على الأسئلة التالية؟",
+    "question": "سؤال",
+    "youranswer": "إجابتك",
+    "check": "فحص",
+    "pdfforstudent": "PDF للطلاب",
+    "pdfforstaff": "PDF للموظفين",
+    "htmlzip": "HTML الرمز البريدي",
+    "scorm": "سكورم",
+    "epub": "حانة إلكترونية",
+    "exporttomoodle": "تصدير إلى موودل",
+    "quiz": "مسابقه",
+    "learningOutcomes" : "مخرجات التعلم"
+}

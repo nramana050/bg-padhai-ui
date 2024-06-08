@@ -1,0 +1,55 @@
+.org-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .mat-list-option {
+    width: calc(33.33% - 12px);
+    cursor: pointer;
+    &:hover {
+      background: rgba($color: #f5f5f5, $alpha: 1);
+    }
+  }
+
+  @media (max-width: 598px) {
+    .mat-list-option {
+      width: 100%;
+    }
+  }
+
+  .chip {
+    margin: 4px 5px 8px 5px;
+  }
+
+  &:focus {
+    outline: 0px;
+  }
+}
+
+.estb-container {
+  width: 100%;
+}
+
+.orgSelectAll {
+  float: right;
+  line-height: 48px;
+}
+
+.clear-selection {
+  margin: 3px 0px;
+  height: 46px;
+}
+
+@media (max-width: 767px) {
+  .card-column-third {
+    width: 100% !important;
+  }
+  .estb-container {
+    height: 100vh;
+    overflow: scroll;
+  }
+}
+@media (max-width: 1024px) {
+  .mat-form-field {
+    width: 100% !important;
+  }
+}

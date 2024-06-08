@@ -1,0 +1,22 @@
+{
+    "flashcard": "Интерактив хөрөнгө",
+    "doesnotsupportaudioelement": "Таны хөтөч аудио элементийг дэмждэггүй.",
+    "resetquiz": "Дахин тохируулах сорил",
+    "submit": "Өгөх",
+    "correct": "Зүйтэй!",
+    "incorrecttryagain": "Буруу. Дахиад оролд.",
+    "exit": "Гарах гарц",
+    "exportlabel": "Экспорт",
+    "canyouanswer": "Та дараах асуултад хариулж чадах уу?",
+    "question": "Асуулт",
+    "youranswer": "Таны хариулт",
+    "check": "Шалгах",
+    "pdfforstudent": "Оюутанд зориулсан PDF",
+    "pdfforstaff": "Ажилтнуудад зориулсан PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "СКОРМ",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle-д экспорт хийх",
+    "quiz": "Quiz",
+    "learningOutcomes": "Суралцахуйн үр дүн"
+}

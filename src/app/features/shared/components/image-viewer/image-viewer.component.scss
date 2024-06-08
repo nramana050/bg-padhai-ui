@@ -1,0 +1,38 @@
+.relative{
+    position: relative;
+    .img-container{
+        position: relative;
+    }
+}
+.btn{
+    background-color: #fff;
+    width: 40px;
+    height: 32px;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 6px;
+}
+.zoomin{
+    position: absolute;
+    top: 16px;
+    right: 14px;
+}
+.zoomout{
+    position: absolute;
+    top: 66px;
+    right: 14px;
+}
+.rotate-right{
+    position: absolute;
+    top: 116px;
+    right: 14px;
+}
+.rotate-left{
+    position: absolute;
+    top: 166px;
+    right: 14px;
+}
+.mat-icon{
+    font-size: 30px;
+    width: 29px;
+}

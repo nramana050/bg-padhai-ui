@@ -1,0 +1,22 @@
+{
+    "flashcard": "Actiu interactiu",
+    "doesnotsupportaudioelement": "El seu navegador no suporta l'element d'àudio.",
+    "resetquiz": "Restableix el qüestionari",
+    "submit": "Entregar",
+    "correct": "Correcte!",
+    "incorrecttryagain": "Incorrecte. Prova una altra vegada.",
+    "exit": "Sortida",
+    "exportlabel": "Exportar",
+    "canyouanswer": "Pots respondre a les següents preguntes?",
+    "question": "Pregunta",
+    "youranswer": "La teva resposta",
+    "check": "Comprovar",
+    "pdfforstudent": "PDF per a estudiant",
+    "pdfforstaff": "PDF per al personal",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Exportar a Moodle",
+    "quiz": "Prova",
+    "learningOutcomes": "Resultats d'aprenentatge"
+}

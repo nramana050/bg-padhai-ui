@@ -1,0 +1,22 @@
+{
+    "flashcard": "ინტერაქტიული აქტივი",
+    "doesnotsupportaudioelement": "თქვენი ბრაუზერი არ უჭერს მხარს აუდიო ელემენტს.",
+    "resetquiz": "ვიქტორინის გადატვირთვა",
+    "submit": "ჩააბარე",
+    "correct": "სწორია!",
+    "incorrecttryagain": "არასწორი. კიდევ სცადე.",
+    "exit": "გასვლა",
+    "exportlabel": "ექსპორტი",
+    "canyouanswer": "შეგიძლიათ უპასუხოთ შემდეგ კითხვებს?",
+    "question": "კითხვა",
+    "youranswer": "შენი პასუხი",
+    "check": "შეამოწმე",
+    "pdfforstudent": "PDF სტუდენტებისთვის",
+    "pdfforstaff": "PDF პერსონალისთვის",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ელექტრონულიPub",
+    "exporttomoodle": "ექსპორტი Moodle- ში",
+    "quiz": "ვიქტორინა",
+    "learningOutcomes": "სწავლის შედეგები"
+}

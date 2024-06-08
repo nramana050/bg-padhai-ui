@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interactive Cuab tam",
+    "doesnotsupportaudioelement": "Koj browser tsis txhawb lub suab.",
+    "resetquiz": "Reset Quiz",
+    "submit": "Xa",
+    "correct": "Yog!",
+    "incorrecttryagain": "tsis muaj tseeb. Rov sim dua.",
+    "exit": "qhov tawm",
+    "exportlabel": "export",
+    "canyouanswer": "Koj puas teb cov lus nug no?",
+    "question": "Lus nug",
+    "youranswer": "Koj Teb Tias Koj Teb",
+    "check": "Kos",
+    "pdfforstudent": "PDF RAU Tus Menyuam Kawm Ntawv",
+    "pdfforstaff": "PDF rau cov neeg ua hauj lwm",
+    "htmlzip": "HTML Zip",
+    "scorm": "TWS",
+    "epub": "ePub",
+    "exporttomoodle": "Export rau Moodle",
+    "quiz": "Xeem",
+    "learningOutcomes": "Kev Kawm Txog Yam Xeeb Txawm Muaj"
+}

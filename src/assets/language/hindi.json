@@ -1,0 +1,22 @@
+{
+    "flashcard": "इंटरएक्टिव एसेट",
+    "doesnotsupportaudioelement": "आपका ब्राउज़र ऑडियो तत्व का समर्थन नहीं करता.",
+    "resetquiz": "क्विज़ रीसेट करें",
+    "submit": "जमा करें",
+    "correct": "जी हाँ!",
+    "incorrecttryagain": "ग़लत। फिर कोशिश करो।",
+    "exit": "निकासी",
+    "exportlabel": "निर्यात",
+    "canyouanswer": "क्या आप निम्नलिखित प्रश्नों के उत्तर दे सकते हैं?",
+    "question": "प्रश्न",
+    "youranswer": "आपका जवाब",
+    "check": "जाँच",
+    "pdfforstudent": "छात्र के लिए पीडीएफ",
+    "pdfforstaff": "स्टाफ के लिए पीडीएफ",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "मूडल को निर्यात करें",
+    "quiz": "प्रश्नोत्तरी",
+    "learningOutcomes" : "सीखने के परिणाम"
+}

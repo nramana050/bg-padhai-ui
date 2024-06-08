@@ -1,0 +1,22 @@
+{
+    "flashcard": "İnteraktiv Aktiv",
+    "doesnotsupportaudioelement": "Brauzeriniz audio elementi dəstəkləmir.",
+    "resetquiz": "Sorğunu Sıfırla",
+    "submit": "Göndərmək",
+    "correct": "Düzdür!",
+    "incorrecttryagain": "Səhv. Bir də cəhd edin.",
+    "exit": "Çıx",
+    "exportlabel": "İxrac",
+    "canyouanswer": "Aşağıdakı suallara cavab verə bilərsinizmi?",
+    "question": "Sual",
+    "youranswer": "Cavabınız",
+    "check": "Yoxla",
+    "pdfforstudent": "Studiya üçün PDF",
+    "pdfforstaff": "İşçilər üçün PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle-ə ixrac",
+    "quiz": "Sorğu",
+    "learningOutcomes": "Öyrənmənin nəticələri"
+}

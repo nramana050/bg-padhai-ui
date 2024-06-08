@@ -1,0 +1,10 @@
+<nav id="sidebar" role="navigation">
+    <mat-nav-list class="nav-top">
+        <a mat-list-item routerLink="/{{specialItem.state}}" *ngFor="let specialItem of primaryMenu "
+            routerLinkActive="active" id="main_menu_{{specialItem.state}}"
+            title="Go to {{ specialItem.name }}" [attr.arial-label]="specialItem.name">
+            <mat-icon class="sidenav-icon">{{specialItem.icon}}</mat-icon>
+           <span class="itemName">{{ specialItem.name }}</span>
+        </a>
+    </mat-nav-list>
+</nav>

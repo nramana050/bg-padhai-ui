@@ -1,0 +1,50 @@
+<div *ngIf="!showLoader" class="learningOutcomesContainer">
+    <div *ngIf="courseStage == 'Asset' || courseStage == 'Publish'" class="showLearningOutcomesList">
+        <div class="learningOutcomesPreview">
+            <ul class="learningOutcomesList">
+                <li *ngFor="let outcomes of learningOutcomes; let i = index"><span class="number-style">{{i + 1}}.</span> <span class="outcome-value">{{outcomes}}</span></li>
+            </ul>
+        </div>
+    </div>
+    <div *ngIf="courseStage != 'Asset' && courseStage != 'Publish'" class="learningOutcomeSection">
+        <div *ngIf="!editMode" class="learningOutcomesPreview">
+            <ul class="learningOutcomesList">
+                <li *ngFor="let outcomes of outcomes.value; let i = index "><span class="number-style">{{i + 1}}.</span> <span class="outcome-value">{{outcomes}}</span></li>
+            </ul>
+        </div>
+        <form [formGroup]="learningOutcomesForm" *ngIf="editMode" class="learningOutcomeEditSection">
+            <div formArrayName="outcomes" cdkDropList class="example-list" (cdkDropListDropped)="reOrderOutcomes($event)">
+                <div class="example-box" *ngFor="let outcome of learningOutcomesForm.get('outcomes').controls; let i = index" cdkDrag>
+                    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                    <div class="outcomeInputBox">
+                        <mat-icon cdkDragHandle>drag_indicator</mat-icon>
+                        <mat-form-field class="learningOutcomeInput" appearance="fill">
+                            <mat-label>Outcome {{i+1}}</mat-label>
+                            <textarea minlength="1" formControlName="{{i}}" matInput placeholder="Learning outcome"></textarea>
+                            <mat-error *ngIf="learningOutcomesForm.get('outcomes').at(i)?.hasError('maxlength')">
+                              Learning outcome must be less than 350 characters.
+                            </mat-error>
+                            <mat-error *ngIf="learningOutcomesForm.get('outcomes').at(i)?.errors?.required">
+                              Learning outcome is required.
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- <mat-icon class="disabledDeletebutton" *ngIf="learningOutcomesForm.get('outcomes').controls.length < 2">delete</mat-icon>
+                        <mat-icon *ngIf="learningOutcomesForm.get('outcomes').controls.length > 1" class="deleteOutcome" (click)="deleteOutcome(i)">delete</mat-icon> -->
+                        <mat-icon [ngClass]="{'disabledDeletebutton' : learningOutcomesForm.get('outcomes').controls.length < 2}" class="deleteOutcome" (click)="deleteOutcome(i)">delete</mat-icon>
+                    </div>
+                </div>
+                <div *ngIf="outcomes.length < 7" class="addLearningOutcome"><mat-icon class="addOutcomeButton" (click)="addLearningOutcome()">add</mat-icon></div>
+            </div>
+        </form>
+        <div *ngIf="!showLoader && courseStage == 'Outcome' && courseStatus == 'outcomegenerated'" class="saveButtonSection">
+            <button [disabled]="!learningOutcomesForm.valid || disableButtons" mat-stroked-button color="primary" type="button" (click)="saveLearningOutcomes()" *ngIf="editMode">Save as draft</button>
+            <button [disabled]="!learningOutcomesForm.valid || disableButtons" mat-stroked-button color="primary" type="button" (click)="generateAsset()">Generate Assets</button>
+        </div>  
+    </div>
+</div>
+<div *ngIf="showLoader" class="loadingScreen">
+    <div *ngIf="courseStatus != 'outcomefailed'" class="loaderScreen">
+        <img [src]=loaderUrl alt="loading">
+    </div>
+    <p [ngStyle]="{'margin-top' : courseStatus == 'outcomefailed' ? '2em' : '0'}" class="statusLine">{{loadingScreenMessage}}</p>
+</div>

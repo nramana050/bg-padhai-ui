@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktiv boylik",
+    "doesnotsupportaudioelement": "Brauzeringiz audio elementni qo'llab-quvvatlamaydi.",
+    "resetquiz": "Viktorinani tiklash",
+    "submit": "Topshiring",
+    "correct": "To'g'ri!",
+    "incorrecttryagain": "Notoʻgʻri. Yana urinib ko'ring.",
+    "exit": "Chiqish",
+    "exportlabel": "Eksport qilish",
+    "canyouanswer": "Quyidagi savollarga javob bera olasizmi?",
+    "question": "Savol",
+    "youranswer": "Javobingiz",
+    "check": "Tekshirish",
+    "pdfforstudent": "Abituriyent uchun PDF",
+    "pdfforstaff": "Xodimlar uchun PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SKORM",
+    "epub": "ePub",
+    "exporttomoodle": "Moodle' ga eksport qilish",
+    "quiz": "Viktorina",
+    "learningOutcomes": "O'quv natijalari"
+}

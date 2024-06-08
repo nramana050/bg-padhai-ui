@@ -1,0 +1,77 @@
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+.full-width{
+  width: 100%;
+}
+.nobg{
+  background: transparent!important;
+}
+
+@media (max-width: 960px) {
+img{
+  margin-bottom: 1.5em !important;
+}
+}
+
+mat-card-footer{
+  justify-content: flex-end;
+}
+
+.inputHeading{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.inputSection{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  height: 74px;
+}
+
+.extraHeight{
+  height: 116px;
+}
+
+.sliderTitle{
+  margin-bottom: 16px;
+}
+
+.sliderHeadingSection{
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectedValue{
+  font-weight: 600;
+  padding-right: 4px;
+}
+
+.radioGroup{
+  margin-bottom: 1em;
+
+  .mat-radio-button{
+    margin-left: 0 !important;
+  }
+}
+
+.rangeSection{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1em;
+
+  span:nth-child(1){
+    padding-left: 4px;
+  }
+  span:nth-child(2){
+    padding-right: 4px;
+  }
+}
+
+.inputError{
+  font-size: 12px;
+  margin-top: 5px;
+}

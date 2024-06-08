@@ -1,0 +1,22 @@
+{
+    "flashcard": "Aset interaktiv",
+    "doesnotsupportaudioelement": "Shfletuesi juaj nuk mbështet elementin audio.",
+    "resetquiz": "Reset Quiz",
+    "submit": "Parashtro",
+    "correct": "Po pra!",
+    "incorrecttryagain": "E pasaktë. Provo përsëri.",
+    "exit": "Dalja",
+    "exportlabel": "Eksporto",
+    "canyouanswer": "A mund t'u përgjigjesh pyetjeve të mëposhtme?",
+    "question": "Pyetje",
+    "youranswer": "Përgjigja jote",
+    "check": "Kontrollo",
+    "pdfforstudent": "PDF për Student",
+    "pdfforstaff": "PDF për stafin",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Eksport në Moodle",
+    "quiz": "Kuiz",
+    "learningOutcomes" : "Përfundimet e të mësuarit"
+}

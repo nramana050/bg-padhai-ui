@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interactive Asset",
+    "doesnotsupportaudioelement": "ଆପଣଙ୍କ ବ୍ରାଉଜର୍ ଅଡିଓ ଉପାଦାନସମର୍ଥନ କରେ ନାହିଁ।",
+    "resetquiz": "କୁଇଜ୍ ପୁନଃସେଟ୍ କରନ୍ତୁ",
+    "submit": "ଜମା କରନ୍ତୁ",
+    "correct": "ଠିକ୍‌!",
+    "incorrecttryagain": "ଭୁଲ୍ । ପୁଣିଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।",
+    "exit": "ବାହାରକୁ ବାହାରିଲେ",
+    "exportlabel": "ରପ୍ତାନି[ସମ୍ପାଦନା]",
+    "canyouanswer": "ଆପଣ ନିମ୍ନଲିଖିତ ପ୍ରଶ୍ନଗୁଡିକର ଉତ୍ତର ଦେଇପାରିବେ କି?",
+    "question": "ପ୍ରଶ୍ନ",
+    "youranswer": "ଆପଣଙ୍କ ଉତ୍ତର",
+    "check": "ଯାଞ୍ଚ କରନ୍ତୁ",
+    "pdfforstudent": "ଛାତ୍ର ପାଇଁ ପିଡିଏଫ",
+    "pdfforstaff": "କର୍ମଚାରୀଙ୍କ ପାଇଁ ପିଡିଏଫ",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Moodleକୁ ରପ୍ତାନି କରନ୍ତୁ",
+    "quiz": "କୁଇଜ୍",
+    "learningOutcomes": "ଶିକ୍ଷଣ ଫଳାଫଳ"
+}

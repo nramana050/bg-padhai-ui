@@ -1,0 +1,710 @@
+::ng-deep .mat-horizontal-stepper-header-container{
+    width: min-content !important;
+}
+
+mat-card-header{
+    padding: 0 !important;
+}
+
+.formControlsSection{
+    margin: 1em 0;
+
+    .moduleSummary{
+        font-size: 18px;
+        margin:0.5em 0 2em 0;
+    }
+
+    .lessonSection{
+        margin-bottom: 1.5em;
+        .lessonTitle{
+            margin-bottom: 0;
+        }  
+        .lessonSummary{
+            margin-top: 0.2em;
+        } 
+    }
+
+    .lessonSection:last-child{
+        margin-bottom: 0;
+        .lessonSummary{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.matExpantionPanel{
+    margin-bottom: 1em;
+}
+
+.contentGenerationSectionButtonGroup{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.editLessonContainer{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    margin-top: 20px;
+    .lessonMenusSection{
+        width: 25%;
+        border-right: 1px gray solid;
+        padding-right: 5px;
+        span{
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+    .spacer{
+        border-bottom: 1px solid gray;
+    }
+
+    .editLessonSection{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        width: 74%;
+    }
+
+    .questionOptions{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1em;
+        justify-content: start;
+        align-self: start;
+        gap: 12px;
+        height: 319.56px;
+    }
+
+    .optionContainer{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+}
+
+.editedNode{
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+
+    .statusIcon{
+        font-size: 1.5em;
+    }
+    svg path,
+    svg rect{
+    fill: #FF6700;
+    }
+
+    .loaderStatus{
+        margin: 0;
+        width: 20px;
+        margin-right: 0.5em;
+    }
+}
+.section-title{
+    flex: 1;
+    margin-left: 10px;
+    margin-top: -4px;
+    word-break: break-word;
+    font-weight: normal;
+}
+
+mat-radio-button{
+    display: flex;
+    height: 72.05px;
+}
+
+.mat-form-field{
+    margin: 0 !important;
+    width: 100%;
+    line-height: 1.1 !important;
+}
+
+
+.hintMessage{
+    font-size: 0.8em;
+    color: #a99c9c;
+    margin: 0em 0em 0.3em;
+    margin-bottom: 0.8em;
+    display: block;
+}
+
+@media screen and (max-width: 768px){
+    .mat-icon-button {
+        width: 40px !important;
+    }
+
+    .moduleTitle{
+        text-align: center;
+    }
+}
+
+.note{
+    font-weight: 500;
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+    svg path,
+    svg rect{
+      fill: #f08030;
+    }
+}
+
+.questionOptionsInputs{
+    // background-color: #0000000a;
+    // padding: 1em;
+    
+    .optionsInputs{
+        padding: 0 1em;
+    }
+}
+
+.divider{
+    width: 100%;
+    margin-bottom: 1.4em;
+    display: block;
+}
+
+.editedField{
+    color: #e2a617;
+    font-style: italic;
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+.sub-heading{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+textarea{
+    line-height: 1.64;
+}
+// .martop40 {
+//     margin-top: 40px!important;
+// }
+
+.exitButton{
+    height: fit-content;
+}
+
+.mat-expansion-panel-header{
+    padding-bottom: 0.1em !important;
+    padding-top: 0.1em !important;
+    min-height: 48px !important;
+}
+
+.courseMenu{
+    width: max-content;
+    display: none;
+}
+
+.export {
+    display: flex !important;
+    align-items: center !important;
+    grid-gap: 5px !important;
+    gap: 5px !important;
+    justify-content: center !important;
+}
+
+@media screen and (max-width: 940px){
+
+    .editLessonContainer{
+        flex-direction: column;
+    }
+
+    .mat-icon-button {
+        width: 40px !important;
+    }
+
+    .courseMenu{
+        display: block;
+    }
+
+    .lessonMenusSection{
+        display: none;
+    }
+
+    .editLessonSection{
+        width: 100% !important;
+    }
+
+    .headerTitle{
+        flex: 1;
+        word-break: break-word;
+    }
+
+    .matTree{
+        padding-right: 10px !important;
+    }
+}
+
+.courseOutlineContainer{
+    width: 100%;
+    margin: 1em 0em 0em !important;
+    
+    .editCourseContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .courseOutlinePreview{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .moduleTitle{
+            text-align: center;
+        }
+    }
+}
+
+.fullScreen{
+    width: 100%;
+    min-height: 250px !important;
+}
+
+.statusLine{
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+}
+
+.buttonContainer{
+    width: max-content;
+    display: flex;
+
+    button{
+        height: fit-content;
+    }
+} 
+
+@media screen and (max-width: 560px){
+    .buttonContainer {
+       flex-direction: column;
+       gap: 0.4em;
+    }
+}
+
+//loader css starts ------>
+
+.loaderScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    img{
+        height: 100px;
+        margin: 40px 0;
+    }
+    svg {
+        display: none;
+    }
+    
+    $bolb-color: #ff8700;
+    
+    // Loader
+    .blobs {
+        filter: url(#goo);
+        width: 100%;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 70px;
+        transform-style: preserve-3d;
+        
+        // Blob center item
+        .blob-center {
+            transform-style: preserve-3d;
+            position: absolute;
+            background: $bolb-color;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            transform-origin: left top;
+            transform: scale(.9) translate(-50%, -50%);
+            animation: blob-grow
+                linear
+                3.4s
+                infinite;
+            border-radius: 50%;
+        }
+    }
+    
+    // Blob item
+    .blob {
+        position: absolute;
+        background: $bolb-color;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        animation: blobs
+            ease-out
+            3.4s
+            infinite;
+        transform: scale(.9) translate(-50%, -50%);
+        transform-origin: center top;
+        opacity: 0;
+        
+        // Set animation delay for each of type
+        @for $i from 1 to 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * 0.2 + s;
+            }
+        }
+    }
+    
+    // Keyframes variables
+    $left: calc(-330px - 50%);
+    $right: calc(330px - 50%);
+    
+    // Keyframes
+    @keyframes blobs {
+        0% {
+            opacity: 0;
+            transform: scale(0) translate($left, -50%);
+        }
+        1% {
+            opacity: 1;
+        }
+        35%,65% {
+            opacity: 1;
+            transform: scale(.9) translate(-50%, -50%);
+        }
+        99% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0) translate($right, -50%);
+        }
+    }
+    
+    @keyframes blob-grow {
+        0%,  39% {
+            transform: scale(0) translate(-50%, -50%);
+        }
+        40%, 42% {
+            transform: scale(1, .9) translate(-50%, -50%);
+        }
+        43%, 44% {
+            transform: scale(1.2, 1.1) translate(-50%, -50%);
+        }
+        45%, 46% {
+            transform: scale(1.3, 1.2) translate(-50%, -50%);
+        }
+        47%, 48% {
+            transform: scale(1.4, 1.3) translate(-50%, -50%);
+        }
+        52%{
+            transform: scale(1.5, 1.4) translate(-50%, -50%);
+        }
+        54% {
+            transform: scale(1.7, 1.6) translate(-50%, -50%);
+        }
+        58% {
+            transform: scale(1.8, 1.7) translate(-50%, -50%);
+        }
+        68%, 70% {
+            transform: scale(1.7, 1.5) translate(-50%, -50%);
+        }
+        78% {
+            transform: scale(1.6, 1.4) translate(-50%, -50%);
+        }
+        80%, 81% {
+            transform: scale(1.5, 1.4) translate(-50%, -50%);
+        }
+        82%, 83% {
+            transform: scale(1.4, 1.3) translate(-50%, -50%);
+        }
+        84%, 85% {
+            transform: scale(1.3, 1.2) translate(-50%, -50%);
+        }
+        86%, 87% {
+            transform: scale(1.2, 1.1) translate(-50%, -50%);
+        }
+        90%, 91% {
+            transform: scale(1, .9) translate(-50%, -50%);
+        }
+        92%, 100% {
+            transform: scale(0) translate(-50%, -50%);
+        }
+    }   
+}
+
+.previewLesson{
+    margin : 0.5em 0em;
+}
+
+//progressbar css starts -------->
+.progress-bar-container {
+    padding-left: 1.5em;
+    margin-bottom: 15px;
+    ul,
+    li {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  h4 {
+    margin: 5px 0 0 0;
+    font: normal normal 700 14px/1 "Lato", sans-serif;
+  }
+  p {
+    margin: 5px 0 0 0;
+    font: normal normal 400 14px/1 "Lato", sans-serif;
+  }
+  .step-progress {
+    position: relative;
+    width: 92%;
+    margin: 10px auto;
+  }
+  .step-progress-bar {
+    position: relative;
+    width: 100%;
+  }
+  .step-progress-bar > .bars {
+    position: absolute;
+    top: calc(50% - (3px / 2));
+    left: 0;
+    width: 95%;
+    list-style: none;
+  }
+  .step-progress-bar > .bars > .bar-default,
+  .step-progress-bar > .bars > .bar-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+  }
+  .step-progress-bar > .bars > .bar-default {
+    background-color: #ddd;
+  }
+  .step-progress-bar > .bars > .bar-active {
+    background-color: green;
+    width: 27%;
+  }
+  .step-progress-bar > .markers {
+    white-space: nowrap;
+  }
+  .step-progress-bar .markers > .mark {
+    width: 28px;
+    height: 28px;
+    // border: 3px solid #ddd;
+    background-color: green;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    transform: translate(-50%, 0);
+  }
+  .step-progress-bar .markers > .unmark {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #ddd;
+    background-color: #fff;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    transform: translate(-50%, 0);
+  }
+  .mark:nth-last-child(6):first-child ~ .mark {
+    margin-left: calc((100% - (5 * 38px)) / 5);
+  }
+  .mark:nth-last-child(6):first-child ~ .unmark {
+    margin-left: calc((100% - (5 * 38px)) / 5);
+  }
+  .step-progress-bar .markers > .mark-active {
+    border-color: var(--primary-color);
+  }
+  .step-progress-bar .markers > .mark-active::after {
+    position: absolute;
+    display: block;
+    content: "✔";
+    font-size: 18px;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, 0);
+    color: #fff;
+  }
+  .step-progress-states {
+    position: relative;
+    width: 100%;
+  }
+  .step-progress-states > .states {
+    white-space: nowrap;
+  }
+  .step-progress-states > .states > .state {
+    position: relative;
+    display: inline-block;
+    width: 15.5%;
+    height: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+  }
+  .state:nth-last-child(6):first-child ~ .state {
+    margin-left: calc((100% - (5 * 16.5%)) / 5);
+  }
+  .dark {
+    color: black;
+  }
+  .light {
+    color: #e2a617;
+  }
+    @media (max-width: 767px) {
+
+        padding-left: 0 !important;
+
+        .step-progress-bar > .bars > .bar-default,
+        .step-progress-bar > .bars > .bar-active {
+            width: 92%;
+        }
+        .step-progress-states > .states > .state {
+            display: none; 
+        }
+        .step-progress {
+            width: 90%;
+            margin-left: 34px;
+        }
+    }
+  }
+
+  .language{
+    width: 130px;
+} 
+.material-icons.color_red { color: red!important; }
+
+.mat-option{
+    .mat-icon{
+        color: #222222d6;
+        margin: 0px 8px 2px -1.5px !important;
+    }
+}
+
+.languageButton{
+    width: 200px !important;
+}
+
+#id-ENGLISH{
+    border-top: 1px solid #dadada;
+}
+
+.languageLoader{
+    display: flex;
+    margin-left: -2px;
+    gap: 8px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.heading{
+    font-weight: bold;
+}
+
+.normalWeight{
+    font-weight: 400;
+}
+
+.learningOutcomeTab{
+    // padding: 15px 15px 15px 40px;
+    cursor: pointer;
+
+    span{
+        padding: 15px 15px 15px 40px;
+        background-color: transparent!important;
+        width: auto;
+      }
+      span.active {
+        position: relative;
+        background-color: var(--primary-color);
+        &::before {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          position: absolute;
+          content: "";
+          opacity: 0.15;
+          pointer-events: none;
+          background-color: var(--primary-color);
+        }
+      }
+      &:hover{
+        background-color: rgba(#000, 0.04);
+      }
+}
+
+mat-label{
+    font-size: 16px;
+}
+
+.interactiveAssetSection{
+    display: flex;
+    gap: 0.4em;
+    align-items: center;
+}
+@media screen and (max-width: 1180px){
+    .progress-bar-container {
+        .step-progress-states {
+            .states{
+                white-space: pre;
+                .state:nth-last-child(6):first-child {
+                    ~ .state{
+                        margin-left: 2.9%;
+                        h4{
+                            white-space: normal;
+                        }
+                    }
+                    h4{
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1600px){
+    .mark:nth-last-child(6):first-child ~ .mark {
+        margin-left: calc((100% - (6 * 38px)) / 5)!important;
+    }
+    .mark:nth-last-child(6):first-child ~ .unmark {
+        margin-left: calc((100% - (6 * 38px)) / 5)!important;
+    }
+
+}
+
+.lessonDescriptionEditor{
+    margin: 1em 0em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    .lessonDescriptionLabel{
+        font-size: 12px;
+        font-style: "Roboto", "Helvetica Neue", sans-serif;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .lessonDescriptionError{
+        font-size: 12px;
+        font-style: "Roboto", "Helvetica Neue", sans-serif;
+    }
+
+}

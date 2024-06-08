@@ -1,0 +1,35 @@
+<nav role="navigation" class="in-page-nav" id="in-page-nav" *ngIf="inPageNav" (click)="onSectionButtonClick()">
+
+    <button mat-flat-button class="section-button" *auth="inPageNav.featureId">
+        <mat-icon class="section-icon" aria-hidden="false" aria-label="in page menu trigger button"
+            *ngIf="inPageNav.icon" color="primary">{{inPageNav.icon}}</mat-icon>
+        <span class="section-name">{{inPageNav.sectionName}}</span>
+        <mat-icon class="arrow-icon" aria-hidden="false" aria-label="show dropdown menu">arrow_drop_down</mat-icon>
+    </button>
+
+    <div class="dropdown-container">
+
+    <div class="dropdown" *ngFor="let menu of inPageNav.menuItems">
+        <ng-container *auth="menu.featureId">
+            <button mat-flat-button class="drop-down-button" aria-haspopup="menu.submenu.length > 0"
+                *ngIf="menu.submenu.length > 0">
+                {{menu.name}}
+                <mat-icon aria-hidden="false" aria-label="show dropdown menu">arrow_drop_down</mat-icon>
+            </button>
+
+            <button mat-flat-button class="drop-down-button" aria-haspopup="menu.submenu.length > 0" *ngIf="menu.state"
+                routerLink="/{{menu.state}}" queryParamsHandling="merge" routerLinkActive="active">
+                {{menu.name}}
+            </button>
+        </ng-container>
+
+        <div class="dropdown-content" aria-label="submenu" *ngIf="menu.submenu.length > 0">
+            <ng-container *ngFor="let submenu of menu.submenu">
+                <a *auth="[submenu.featureId]" routerLink="/{{submenu.state}}" routerLinkActive="active">{{submenu.name}}</a>
+            </ng-container>
+        </div>
+
+    </div>
+</div>
+
+</nav>

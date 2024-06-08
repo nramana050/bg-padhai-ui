@@ -1,0 +1,9 @@
+<div class="card-row">
+    <div class="error-container">
+        <p *ngFor="let error of errors" class="mat-error">{{error.message}}</p>
+    </div>
+    <label class="uploader">
+        <img [src]="imageSrc" (load)="handleImageLoad()" alt="Profile pic"/>
+        <input  type="file" *ngIf="!isReadOnly"  name="file"  accept=".png, .jpg, .jpeg" (change)="handleInputChange($event)" class="hide">
+    </label>
+</div>

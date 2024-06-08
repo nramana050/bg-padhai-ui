@@ -1,0 +1,100 @@
+#stepper-container {
+
+  .mat-card-header {
+    padding: 0;
+  }
+
+  .stepper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    border: 0;
+    justify-content: space-between;
+
+    .step {
+      width: auto;
+      min-width: auto;
+      height: 36px;
+      justify-content: flex-start;
+      padding: 0 4px;
+      margin-right: 24px;
+      border-radius: 4px;
+    }
+
+    .mat-tab-links {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+
+    a {
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      opacity: 1;
+    }
+
+    .step-icon {
+      border-radius: 50%;
+      height: 26px;
+      width: 26px;
+      font-size: 14px;
+      flex-shrink: 0;
+      position: relative;
+      background: var(--primary-color);
+      color: #fafafa;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 600;
+      .style-mat-icon {
+        padding:2px 0;
+      }
+    }
+
+    a.active {
+      color: var(--secondary-color);
+      .step-icon {
+        background: var(--secondary-color);
+        color: #fafafa;
+      }
+    }
+  }
+}
+
+@media (max-width: 598px) {
+  #stepper-container {
+    .stepper {
+      .step-label {
+        display: none;
+      }
+      .step {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  #stepper-container {
+    .stepper {
+      .step {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  #stepper-container {
+    .stepper {
+      .step {
+        margin-right: 0;
+      }
+    }
+  }
+}

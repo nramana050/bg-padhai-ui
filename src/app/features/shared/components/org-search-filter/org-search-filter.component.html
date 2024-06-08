@@ -1,0 +1,66 @@
+<ng-container *ngIf="collapsible">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div class="label-hr">
+            <span>{{header}} </span>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-container *ngIf="1===1 then estbSelectionList"></ng-container>
+    </mat-expansion-panel>
+  </mat-accordion>
+</ng-container>
+
+<ng-container *ngIf="!collapsible">
+  <div class="label-hr">
+    <span>{{header}}</span>
+  </div>
+  <ng-container *ngIf="1===1 then estbSelectionList"></ng-container>
+</ng-container>
+
+
+<ng-template #estbSelectionList>
+  <div class="card-row">
+    <div class="card-column-third">
+      <mat-form-field appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput id="orgNameFilter" [formControl]="orgNameFilter">
+        <mat-icon matSuffix class="search-icon">search</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="card-column-third" *ngIf="showfilter">
+      <mat-form-field appearance="fill"> 
+    
+        <mat-label *ngIf="profileUrl != 'rws-participant'">Teams Filter</mat-label>
+        <mat-label *ngIf="profileUrl == 'rws-participant'">Programme Filter</mat-label>
+        <mat-select id="lotNameFilter" [formControl]="lotNameFilter" multiple>
+          <mat-option *ngFor="let lot of lotNames" value="{{lot.name}}">{{lot.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="card-column-third">
+      <span class="mat-form-field spacer">
+        <button *ngIf="lotNames.length>0" id="clear" class="clear-selection" mat-stroked-button color="primary" type="button"
+          (click)="lotNameFilter.setValue([])">Clear</button>
+        <mat-checkbox *ngIf="multiple" class="orgSelectAll" [(ngModel)]="selectAll" id="orgSelectAll"
+          (change)="toggleSelectAll()">Select
+          All</mat-checkbox>
+      </span>
+    </div>
+  </div>
+  <div class="card-row">
+    <div class="estb-container">
+      <mat-selection-list #orgSection *ngIf="filteredOrganizations" class="org-list"
+        (selectionChange)="onSelectedOptionsChange()">
+        <mat-list-option *ngFor="let organization of filteredOrganizations" class="chip_margin_top"
+          [selected]="organization.checked" class="chip" title="{{organization.organizationName}}"
+          value="{{organization.id}}" (click)="toggleCheckedOption(organization)">
+          <span matLine>{{organization.organizationName}}</span>
+        </mat-list-option>
+      </mat-selection-list>
+      <p *ngIf="filteredOrganizations?.length === 0">No results found</p>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,22 @@
+{
+    "flashcard": "အပြန်အလှန် ဆက်သွယ်ရေး အစုရှယ်ယာ",
+    "doesnotsupportaudioelement": "ခင်ဗျားရဲ့ ဘရောက်ဇာက အသံဒြပ်စင်ကို မထောက်ပံ့ဘူး။",
+    "resetquiz": "Quiset Quiz",
+    "submit": "တင်သွင်းပါ",
+    "correct": "မှန်တယ်!",
+    "incorrecttryagain": "မမှန်ပါဘူး။ ထပ်ကြိုးစားပါ.",
+    "exit": "ထွက်ခွာပါ",
+    "exportlabel": "ပို့ကုန်",
+    "canyouanswer": "အောက်ပါမေးခွန်းတွေကို သင်ဖြေနိုင်မလား။",
+    "question": "မေးခွန်း",
+    "youranswer": "သင့်အဖြေ",
+    "check": "စစ်ဆေးပါ",
+    "pdfforstudent": "ကျောင်းသားအတွက် PDF",
+    "pdfforstaff": "ဝန်ထမ်းအတွက် PDF",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCCM",
+    "epub": "ePub",
+    "exporttomoodle": "မူဒယ်သို့ တင်ပို့",
+    "quiz": "ကွိဇ်",
+    "learningOutcomes": "ရလဒ်များကို သင်ယူခြင်း"
+}

@@ -1,0 +1,180 @@
+.nav-brand {
+  width: 234px;
+  text-align: left;
+  height: 50px;
+  line-height: 44px;
+  padding-left: 8px;
+}
+
+img.app-logo {
+  width: 200px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+  border: 0;
+  font-size: 0;
+
+}
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.branding {
+  padding: 4px;
+}
+
+.topnav-icon {
+  text-decoration: none;
+  display: flex;
+  color: #fff;
+}
+
+.fix-nav {
+  background: #fafafa;
+}
+
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+.page_title {
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.visible-md {
+  display: none;
+}
+
+.top-nav-info {
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+.colorClass {
+  color: var(--secondary-color)
+}
+
+.posRel {
+  position: relative;
+}
+
+.alertSize {
+  position: absolute;
+  top: -10px;
+  right: -11px;
+  font-size: 22px;
+}
+
+#toggle_desktop_menu{
+  display: block;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .visible-md {
+    display: block;
+  }
+
+  #toggle_desktop_menu{
+    display: none;
+  }
+
+  .nav-brand {
+    width: 90px;
+    padding-left: 16px;
+    // height: auto;  ---img goes up
+    text-align: left;
+  }
+
+  // #top-nav.hide {
+  //   .top-nav-info, .nav-brand {
+  //     display: none;
+  //   }
+  // }
+}
+
+@media screen and (max-width: 768px) {
+  .visible-sm {
+    display: block;
+  }
+
+  .top-nav-info {
+    display: none;
+  }
+
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 56px;
+  min-height: auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#top-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 800;
+  opacity: 1;
+  box-shadow: 3px 2px 10px #999;
+}
+::ng-deep .custom {
+  margin-top: 12px ;
+  padding: 5px 10px;
+    height: auto;
+    width: 270px;
+    overflow-x: hidden!important;
+ }
+
+// #top-nav.hide {
+//   border-bottom: 4px solid rgba(#ee8804, 0.8);
+// }
+
+.mat-icon-button.active {
+  color:#aa08de;
+}
+
+.display-none {
+  display: none;
+}
+
+.mat-icon-button {
+  min-width: 50px !important;
+}
+
+.text{
+  text-decoration: none;
+}

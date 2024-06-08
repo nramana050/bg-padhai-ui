@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('/assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('/assets/fonts/opensans-bold-webfont.woff') format('woff'),
+         url('/assets/fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('/assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/opensans-regular-webfont.woff') format('woff'),
+         url('/assets/fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'helvetica';
+    src: url('../../../fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'helvetica_bold';
+    src: url('../../../fonts/Helvetica-Bold-Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+$site-width: 1020px;
+
+$tablet-breakpoint: 839px !default;
+$desktop-breakpoint: 1025px !default;
+
+$full-width: 100%;
+$one-quarter: $full-width / 4;
+$one-third: $full-width / 3;
+$half: $full-width / 2;
+$two-thirds: ($full-width) - ($one-third);
+$three-quarters: ($full-width) - ($one-quarter);
+
+$gutter: 30px;
+$gutter-one-quarter: $gutter / 4;
+$gutter-one-third: $gutter / 3;
+$gutter-half: $gutter / 2;
+$gutter-two-thirds: $gutter - $gutter-one-third;
+
+$helvetica-regular: "Helvetica", "Arial", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande", sans-serif;
+$is-print: false !default;
+$base-font-size: 16;

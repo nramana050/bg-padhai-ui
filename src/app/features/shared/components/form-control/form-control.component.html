@@ -1,0 +1,10 @@
+<div id="id-section-{{controlName}}" class="gds-form-group border-box"
+  [ngClass]="{'form-group-error': errorMessage !== null && formSubmitted === true}">
+  <label *ngIf="label" class="form-label-b19" for="id-{{controlName}}"> {{label}} <span>{{optional}}</span></label>
+  <label *ngIf="sublabel" class="sublabel-font" for="id-sublabel{{controlName}}"> {{sublabel}} <span>{{optional}}</span></label>
+  <div *ngIf="hint" id="id-section-help-{{controlName}}" class="form-hint">{{hint}}</div>
+  <div *ngIf="insetText" id="id-section-insetText-{{controlName}}" class="form-inset-text">{{insetText}}</div>
+  <div *ngIf="errorMessage !== null && formSubmitted === true" id="id-section-error-{{controlName}}" data-validation-error=""
+    class="form-error error-message">{{errorMessage}} <span *ngIf="!fromContext">{{label | lowercase}}</span></div>
+  <ng-content></ng-content>
+</div>

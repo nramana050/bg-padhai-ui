@@ -1,0 +1,22 @@
+{
+    "flashcard": "Διαδραστικό στοιχείο",
+    "doesnotsupportaudioelement": "Το πρόγραμμα περιήγησής σας δεν υποστηρίζει το στοιχείο ήχου.",
+    "resetquiz": "Επαναφορά κουίζ",
+    "submit": "Υποβάλλω",
+    "correct": "Διορθώνω!",
+    "incorrecttryagain": "Ανακριβής. Δοκίμασε ξανά.",
+    "exit": "Έξοδος",
+    "exportlabel": "Εξαγωγή",
+    "canyouanswer": "Μπορείτε να απαντήσετε στις ακόλουθες ερωτήσεις;",
+    "question": "Ερώτηση",
+    "youranswer": "Η απάντησή σας",
+    "check": "Επιταγή",
+    "pdfforstudent": "PDF για Φοιτητές",
+    "pdfforstaff": "PDF για προσωπικό",
+    "htmlzip": "HTML Zip",
+    "scorm": "ΣΚΟΡΜ",
+    "epub": "ePub",
+    "exporttomoodle": "Εξαγωγή στο Moodle",
+    "quiz": "Σειρά απο ερωτήσεις",
+    "learningOutcomes" : "Μαθησιακά Αποτελέσματα"
+}

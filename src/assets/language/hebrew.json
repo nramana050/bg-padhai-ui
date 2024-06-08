@@ -1,0 +1,22 @@
+{
+    "flashcard": "נכס אינטראקטיבי",
+    "doesnotsupportaudioelement": "הדפדפן שלך אינו תומך ברכיב השמע.",
+    "resetquiz": "חידון איפוס",
+    "submit": "שלח",
+    "correct": "נכון!",
+    "incorrecttryagain": "שגוי. נסה שוב.",
+    "exit": "יציאה",
+    "exportlabel": "ייצא",
+    "canyouanswer": "האם תוכל לענות על השאלות הבאות?",
+    "question": "שאלה",
+    "youranswer": "התשובה שלך",
+    "check": "חשבון",
+    "pdfforstudent": "PDF לסטודנט",
+    "pdfforstaff": "PDF לצוות",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "ייצוא ל-Moodle",
+    "quiz": "חידון",
+    "learningOutcomes": "תוצאות למידה"
+}

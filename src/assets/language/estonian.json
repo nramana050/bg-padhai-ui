@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktiivne vara",
+    "doesnotsupportaudioelement": "Teie brauser ei toeta helielementi.",
+    "resetquiz": "Lähtesta viktoriin",
+    "submit": "Esitada",
+    "correct": "Õige!",
+    "incorrecttryagain": "Vale. Proovi uuesti.",
+    "exit": "Väljapääs",
+    "exportlabel": "Eksportima",
+    "canyouanswer": "Kas oskate vastata järgmistele küsimustele?",
+    "question": "Küsimus",
+    "youranswer": "Teie vastus",
+    "check": "Kontrollima",
+    "pdfforstudent": "PDF õpilasele",
+    "pdfforstaff": "PDF töötajatele",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epubi",
+    "exporttomoodle": "Ekspordi Moodle'i",
+    "quiz": "Viktoriin",
+    "learningOutcomes": "Õpiväljundid"
+}

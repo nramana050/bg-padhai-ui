@@ -1,0 +1,22 @@
+{
+    "flashcard": "Gagnvirk eign",
+    "doesnotsupportaudioelement": "Vafrinn þinn styður ekki hljóðeininguna.",
+    "resetquiz": "Endurstilla spurningakeppni",
+    "submit": "Leggja inn",
+    "correct": "Rétt!",
+    "incorrecttryagain": "Rangur. Reyndu aftur.",
+    "exit": "Útgangur",
+    "exportlabel": "Útflutningur",
+    "canyouanswer": "Getur þú svarað eftirfarandi spurningum?",
+    "question": "Spurning",
+    "youranswer": "Svar þitt",
+    "check": "Athuga",
+    "pdfforstudent": "PDF fyrir námsmann",
+    "pdfforstaff": "PDF fyrir starfsfólk",
+    "htmlzip": "HTML Zip",
+    "scorm": "SPORÐDREKI",
+    "epub": "ePub",
+    "exporttomoodle": "Flytja út í Moodle",
+    "quiz": "Spurningakeppni",
+    "learningOutcomes": "Námsárangur"
+}

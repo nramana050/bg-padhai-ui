@@ -1,0 +1,22 @@
+{
+    "flashcard": "Activo interactivo",
+    "doesnotsupportaudioelement": "Su navegador no es compatible con el elemento de audio.",
+    "resetquiz": "Cuestionario de restablecimiento",
+    "submit": "Enviar",
+    "correct": "¡Correcto!",
+    "incorrecttryagain": "Incorrecto. Vuelve a intentarlo.",
+    "exit": "Salida",
+    "exportlabel": "Exportar",
+    "canyouanswer": "¿Puedes responder a las siguientes preguntas?",
+    "question": "Pregunta",
+    "youranswer": "Su respuesta",
+    "check": "Comprobar",
+    "pdfforstudent": "PDF para el estudiante",
+    "pdfforstaff": "PDF para el personal",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Exportar a Moodle",
+    "quiz": "Examen",
+    "learningOutcomes" : "Resultados de aprendizaje"  
+}

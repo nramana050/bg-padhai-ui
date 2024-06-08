@@ -1,0 +1,82 @@
+<mat-table id="course_Request_table" #table [dataSource]="dataSource" matSort matSortActive="createdDate">
+    <ng-container matColumnDef="topic">
+        <mat-header-cell *matHeaderCellDef id="topic_button" class="topic width-40">
+            Topic
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" class="topic width-40"> <span class="mobile-label">Topic: </span>
+            {{element.topic}}
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="courseLevel">
+        <mat-header-cell *matHeaderCellDef id="user_name_button" class="CourseLevel width-10">
+            Course Level
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" class="CourseLevel width-10"> <span class="mobile-label">Course
+                Level: </span>
+            {{element.courseLevel}}
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="language">
+        <mat-header-cell *matHeaderCellDef id="language_button" class="Language width-10">
+            Language
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" class="language width-10"> <span class="mobile-label">Language:
+            </span>
+            {{element.language}}
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="preferredVoice">
+        <mat-header-cell class="width-10" *matHeaderCellDef id="created_by_button"> Preferred
+            Voice
+        </mat-header-cell>
+        <mat-cell class="width-10" *matCellDef="let element"> <span class="mobile-label">Preferred Voice:
+            </span>{{element.voice}}
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="createdDate">
+        <mat-header-cell class="width-10" *matHeaderCellDef id="date_created_button" mat-sort-header> Created
+            Date
+        </mat-header-cell>
+        <mat-cell class="width-10" *matCellDef="let element"> <span class="mobile-label">Created Date:
+            </span>{{element.createdDate | date:'dd MMM yyyy'}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="createdBy">
+        <mat-header-cell class="width-10" *matHeaderCellDef id="created_by_button"> Created By
+        </mat-header-cell>
+        <mat-cell class="width-10" *matCellDef="let element"> <span class="mobile-label">Created By:
+            </span>{{element.createdBy}}
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+        <mat-header-cell class="width-10" *matHeaderCellDef id="status_button"> Status
+        </mat-header-cell>
+        <mat-cell class="width-10" *matCellDef="let element">
+    <span class="mobile-label">Status: </span>{{element | statusFilter }}
+    </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <mat-header-cell class="actions-column" *matHeaderCellDef>Action</mat-header-cell>
+        <mat-cell class="actions-column" *matCellDef="let element"> <span class="mobile-label"></span>
+            <button id="preview_course_list_button_{{element.id}}"  disabled="{{element | disableFilter : 'preview'}}"
+                mat-icon-button color="primary" attr.aria-label="Preview {{element.fullName}}" 
+                (click)="previewCourse(element)">
+                <mat-icon matTooltip="Preview" >visibility</mat-icon>
+            </button>
+            <button id="edit_course_list_button_{{element.id}}" disabled="{{element | disableFilter : 'edit'}}"
+            mat-icon-button color="primary" attr.aria-label="Edit {{element.fullName}}" 
+            (click)="goToEdit(element)">
+                <mat-icon matTooltip="Edit">create</mat-icon>
+            </button>
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

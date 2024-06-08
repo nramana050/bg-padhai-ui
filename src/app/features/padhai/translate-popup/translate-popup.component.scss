@@ -1,0 +1,108 @@
+.mainContainer{
+
+    .headerSection{
+        display: flex;
+        align-items: start;
+        h3 {color: #e6650f; font-size: 1.6em; font-weight: 100;text-align: start;}
+    }
+    .selectionContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .selectionSection{
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+    
+            .searchSection{
+                display: flex;
+                justify-content: space-between;
+                height: 18px !important;
+    
+                mat-icon{
+                    cursor: pointer;
+                    height: 18px !important;
+                    width: 18px !important;
+                }
+
+                
+                .material-icons{
+                    font-size: 18px !important;
+                }
+            }
+        }
+
+        .addSection{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+    .languageSection{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        h4{
+            margin: 0;
+        }
+        .selectedLanguagesSection{
+            width: 100%;
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+
+            .languageChipSection{
+                display: flex;
+                flex-direction: column;
+                gap: 0.2em;
+            }
+        }
+    }
+
+    .actionButtonSection{
+        margin-top: 1em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+    }
+}
+
+mat-icon{
+    cursor: pointer;
+    height: 18px !important;
+    width: 18px !important;
+}
+
+.material-icons{
+    font-size: 18px !important;
+}
+
+.autoScroll{
+    max-height: 350px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 12px;
+}
+
+mat-chip{
+    height: auto !important;
+}
+@media screen and (max-width: 768px){
+   .selectionSection{
+    flex-direction: column;
+    gap: 0 !important;
+   }
+
+   
+.autoScroll{
+    max-height: 300px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+}
+
+.margin-bottom{
+    margin-bottom: 1em;
+}

@@ -1,0 +1,22 @@
+{
+    "flashcard": "Sócmhainn Idirghníomhach",
+    "doesnotsupportaudioelement": "Ní thacaíonn do bhrabhsálaí leis an eilimint fuaime.",
+    "resetquiz": "Athshocraigh Tráth na gCeist",
+    "submit": "Cuir isteach",
+    "correct": "Ceart!",
+    "incorrecttryagain": "Mícheart. Bain triail as arís.",
+    "exit": "Scoir",
+    "exportlabel": "Easpórtáil",
+    "canyouanswer": "An féidir leat na ceisteanna seo a leanas a fhreagairt?",
+    "question": "Ceist",
+    "youranswer": "Do Fhreagra",
+    "check": "Seiceáil",
+    "pdfforstudent": "PDF do Mhic Léinn",
+    "pdfforstaff": "PDF don Fhoireann",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePubName",
+    "exporttomoodle": "Easpórtáil go Moodle",
+    "quiz": "Tráth na gCeist",
+    "learningOutcomes": "Torthaí Foghlama"
+}

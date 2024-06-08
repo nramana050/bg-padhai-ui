@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interaktivt aktiv",
+    "doesnotsupportaudioelement": "Din browser understøtter ikke lydelementet.",
+    "resetquiz": "Nulstil quiz",
+    "submit": "Indsende",
+    "correct": "Rigtig!",
+    "incorrecttryagain": "Ukorrekt. Prøv igen.",
+    "exit": "Udgang",
+    "exportlabel": "Eksport",
+    "canyouanswer": "Kan du besvare følgende spørgsmål?",
+    "question": "Spørgsmål",
+    "youranswer": "Dit svar",
+    "check": "Kontrollere",
+    "pdfforstudent": "PDF til studerende",
+    "pdfforstaff": "PDF til medarbejdere",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "Epub",
+    "exporttomoodle": "Eksportér til Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "Læringsresultater"
+}

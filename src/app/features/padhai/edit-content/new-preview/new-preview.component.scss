@@ -1,0 +1,414 @@
+::ng-deep .mat-horizontal-stepper-header-container{
+    width: min-content !important;
+}
+
+mat-card-header{
+    padding: 0 !important;
+    margin-bottom: 0.8em !important;
+    .activeLesson{
+        font-size: 1em;
+        font-weight: 100;
+        margin: 0;
+        color: #000;
+        font-family: "Roboto", "Helvetica Neue", sans-serif;
+    }
+}           
+
+.formControlsSection{
+    margin: 1em 0em;
+}
+
+.contentGenerationSectionButtonGroup{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.editLessonContainer{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+
+    .lessonMenusSection{
+        width: 26%;
+        border-right: 1px gray solid;
+        padding-right: 5px;
+        span{
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+
+    .spacer{
+        border-bottom: 1px solid gray;
+    }
+
+    .editLessonSection{
+        width: 71%;
+    }
+
+    .questionOptions{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1em;
+        justify-content: start;
+        align-self: start;
+        gap: 12px;
+        height: 319.56px;
+    }
+
+    .optionContainer{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+}
+
+
+mat-radio-button{
+    display: flex;
+    margin: 1em 12px !important;
+}
+
+.mat-form-field{
+    margin: 0 !important;
+    line-height: 1.1 !important;
+}
+
+
+.hintMessage{
+    font-size: 0.8em;
+    color: #a99c9c;
+    margin: 0em 0em 0.3em;
+    margin-bottom: 0.8em;
+    display: block;
+}
+
+
+.note{
+    font-weight: 500;
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+    svg path,
+    svg rect{
+      fill: #f08030;
+    }
+}
+
+.questionOptionsInputs{
+    // background-color: #0000000a;
+    // padding: 1em;
+    
+    .optionsInputs{
+        padding: 0 1em;
+    }
+}
+
+.divider{
+    width: 100%;
+    margin-bottom: 1.4em;
+    display: block;
+}
+
+.editedField{
+    color: #e2a617;
+    font-style: italic;
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+
+.lessonHeading{
+    width: 100%;
+    // text-align: center;
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 0;
+    color: #000;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.heroImage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 250px;
+    padding: 1.5em 0em;
+
+    img{
+        object-fit: contain;
+        width: 100%;
+    }
+}
+.audioDesc{
+    font-weight: 100;
+    color: #000;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+
+}
+
+audio{
+    margin-top: 0.5em;
+    width: 100%; 
+}
+
+.expantionPanel{
+    margin-bottom: 1em;
+}
+
+.quizContainer{
+    width: 100%;
+
+    .headerTitle{
+        font-weight: 400;
+        color: #000;
+        font-family: "Roboto", "Helvetica Neue", sans-serif;
+        margin-top: 0em;
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+    .questionSection{
+        margin: 1.2em 0em 2.5em;
+
+        .question{
+            color: #000;
+            font-family: "Roboto", "Helvetica Neue", sans-serif;
+            margin-top: 0em;
+            font-size: 1.1em;
+        }
+
+        .submitAnswer{
+            margin-left: 12px;
+        }
+    }
+}
+
+.lessonDescriptionSection{
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0.5em 0em;
+}
+
+.export{
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+
+.feedback{
+    margin-left: 12px;
+    color: #FFF;
+    border-radius: 4px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.correct{
+    background-color: #0b6426c7;
+}
+
+.incorrect{
+    background-color: #c21b1bc7;
+}
+
+.quizHeader{
+    display: flex;
+    justify-content: space-between;
+
+    .resetQuiz{
+        height: 35px;
+    }
+}
+
+.matHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .activeLesson{
+        word-break: break-word;
+    }
+    .buttonContainer{
+        width: max-content;
+        display: flex;
+
+        button{
+            height: fit-content;
+        }
+    }                     
+}
+
+.courseMenu{
+    width: max-content;
+    display: none;
+}
+
+@media screen and (max-width: 940px){
+
+    .editLessonContainer{
+        flex-direction: column;
+    }
+
+    .mat-icon-button {
+        width: 40px !important;
+    }
+
+    .courseMenu{
+        display: block;
+    }
+
+    .lessonMenusSection{
+        display: none;
+    }
+
+    .editLessonSection{
+        width: 100% !important;
+    }
+
+    .headerTitle{
+        flex: 1;
+        word-break: break-word;
+    }
+
+    .matTree{
+        padding-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .buttonContainer {
+       flex-direction: column;
+       gap: 0.4em;
+    }
+}
+
+svg path,
+svg rect{
+fill: #FF6700;
+}
+
+.emptyAssetSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .audioContainer{
+        width: 100%;
+        margin-top: 8px;
+        background-color: #f1f3f4;
+        height: 54px;
+        border-radius: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .heroImageBlank{
+        margin: 24px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 250px;
+        background-color: #f1f3f4;
+        padding: 1.5em 0em;
+    }
+}
+
+.blankH5pSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4em;
+    // max-height: 250px;
+    padding: 1.5em 0em 0.5em 0em;
+
+    .imageSelection{
+        position: relative; 
+        text-align: center;
+        img{
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            transition: filter 0.4s ease-in-out;
+        }
+    
+        .edit-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color : #FFF;
+            transition: opacity 0.4s ease-in-out;
+          }
+    }
+    
+}
+
+.imageSelection:hover img {
+    filter: brightness(50%) blur(1px); 
+  }
+  
+  .imageContainer .imageSelection:hover .edit-icon {
+    opacity: 1;
+  }
+
+  .imageStyle{
+    max-height: 250px;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .failed {
+      color: #f08030;
+      text-align: center;
+  }
+
+  .autoHeight{
+    height: auto !important;
+    padding: 10px 6px;
+  }
+
+.showInteractiveAssetSection{
+    height: 51px;
+    display: flex;
+    gap: 0.3em;
+    border-radius: 5px;
+    padding: 0 24px;
+    margin-bottom: 1em;
+    align-items: center;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    font-size: 15px;
+
+    p{
+        margin: 0;
+    }
+
+    span{
+        font-weight: bold;
+    }
+}
+
+.lessonContainer{
+    display: flex;
+    flex-direction: column;
+}

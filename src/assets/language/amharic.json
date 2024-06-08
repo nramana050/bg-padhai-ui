@@ -1,0 +1,23 @@
+{
+    "flashcard": "እርስ በርስ የሚተያይዙ ሀብቶች",
+    "doesnotsupportaudioelement": "የእርስዎ ድር ጣቢያ የድምጽ ንጥቁን አይደግፍም.",
+    "resetquiz": "ጥያቄን እንደገና አስቀምጥ",
+    "submit": "አስረክብ",
+    "correct": "ትክክል!",
+    "incorrecttryagain": "ስህተት ነው። ድጋሚ ሞክር.",
+    "exit": "መውጫ",
+    "exportlabel": "ኤክስፖርት",
+    "canyouanswer": "ለሚከተሉት ጥያቄዎች መልስ መስጠት ትችላለህ?",
+    "question": "ጥያቄ",
+    "youranswer": "መልስህ",
+    "check": "ፈትሹ",
+    "pdfforstudent": "PDF ለተማሪ",
+    "pdfforstaff": "PDF ለሠራተኞች",
+    "htmlzip": "HTML ዚፕ",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "ወደ ሙድል ኤክስፖርት ማድረግ",
+    "quiz": "ጥያቄ",
+    "learningOutcomes" : "ውጤቱ ምን እንደሆነ መማር"
+
+}

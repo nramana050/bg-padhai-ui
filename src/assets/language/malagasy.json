@@ -1,0 +1,22 @@
+{
+    "flashcard": "Interactive Asset",
+    "doesnotsupportaudioelement": "Ny navigateur dia tsy manohana ny singa audio.",
+    "resetquiz": "Avereno ny Quiz",
+    "submit": "Submit",
+    "correct": "Marina izany!",
+    "incorrecttryagain": "Tsy mety. Andramo indray.",
+    "exit": "Fivoahana",
+    "exportlabel": "Fanondranana",
+    "canyouanswer": "Afaka mamaly ireto fanontaniana manaraka ireto ve ianao?",
+    "question": "fanontaniana",
+    "youranswer": "Ny valinteninao",
+    "check": "Jereo",
+    "pdfforstudent": "PDF ho an'ny mpianatra",
+    "pdfforstaff": "PDF ho an'ny mpiasa",
+    "htmlzip": "HTML Zip",
+    "scorm": "SCORM",
+    "epub": "ePub",
+    "exporttomoodle": "Fandefasana any amin'ny Moodle",
+    "quiz": "Quiz",
+    "learningOutcomes": "Fianarana vokatra"
+}

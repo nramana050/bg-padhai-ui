@@ -1,0 +1,11 @@
+<app-sidebar class="side-bar" id="sidebar"></app-sidebar>
+<main id="main-container" class="main-container seq-theme" role="main">
+<ng-http-loader *ngIf="showLoader" backgroundColor="#2B769B" spinner="sk-double-bounce"
+[filteredUrlPatterns]="['/sequation-user-api/checkHeartbeat', '/sequation-user-api/refreshToken']">
+<img src="../../assets/Reed.png" alt="loading">
+</ng-http-loader>
+    <app-topnav id="navbar"></app-topnav>
+    <app-breadcrumb></app-breadcrumb>
+    <app-in-page-nav id="in-page-navbar"></app-in-page-nav>
+    <router-outlet></router-outlet>
+</main>
