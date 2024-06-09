@@ -2,7 +2,7 @@ import { ApplicationConstant } from "src/app/framework/constants/app-constant";
 
 export const environment = {
   production: false,
-  apiURL: 'https://www.baigan.net',
+  apiURL: 'https://baigan.net',
   logo: `./assets/logo/Captr_Logo_kw.png`,
   appTitle: window.location.host.split('-')[0].toUpperCase(),
   appInsights: {

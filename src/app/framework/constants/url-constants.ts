@@ -6,5 +6,5 @@ export const BaseUrl = {
     azureBlobStorage: environment.azureBlobStorage,
     // CLIENT_URL: window.location.host,
     PADHAI: environment.apiURL + '/padhai-java-api',
-    // PADHAI: 'http://localhost:8080/padhai-java-api',    
+    // PADHAI: 'https://baigan.net/padhai-java-api',    
 };
