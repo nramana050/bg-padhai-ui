@@ -109,7 +109,6 @@ mat-card-header{
 }
 .section-title{
     flex: 1;
-    margin-left: 10px;
     margin-top: -4px;
     word-break: break-word;
     font-weight: normal;
@@ -630,6 +629,7 @@ textarea{
         padding: 15px 15px 15px 40px;
         background-color: transparent!important;
         width: auto;
+        font-size: 14px;
       }
       span.active {
         position: relative;
@@ -680,15 +680,6 @@ mat-label{
         }
     }
 }
-@media screen and (min-width: 1600px){
-    .mark:nth-last-child(6):first-child ~ .mark {
-        margin-left: calc((100% - (6 * 38px)) / 5)!important;
-    }
-    .mark:nth-last-child(6):first-child ~ .unmark {
-        margin-left: calc((100% - (6 * 38px)) / 5)!important;
-    }
-
-}
 
 .lessonDescriptionEditor{
     margin: 1em 0em;
@@ -707,4 +698,122 @@ mat-label{
         font-style: "Roboto", "Helvetica Neue", sans-serif;
     }
 
+}
+
+.buttonContainer button{
+    min-width: max-content !important;
+    padding: 0 15px !important;
+
+}
+
+@media screen and (max-width: 560px){
+  
+    .buttonContainer{
+        width: 50%;
+        align-items: flex-end;
+    }
+}
+.assetSelectionContainer{
+    
+    margin-top: 0.5em !important;
+
+    .moduleAssetSelectionSection{
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        align-items: start;
+        border-radius: 6px;
+        padding: 20px;
+
+        .headerSection{
+            font-size: 1.4em;
+            color: var(--primary-color);
+            margin-left: 26px;
+        }
+
+        mat-card{
+            padding: 15px 26px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        mat-card:last-child{
+            margin-bottom: 0;
+        }
+
+        .assetSelectionSection{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .lessonHeaderBlock{
+                font-size: 1.1em;
+            }
+
+            .assetSelectionBlock{
+                display: flex;
+                width: 100%;
+
+                .optionAssetName{
+                    margin-left: 0.6em;
+                }
+        
+                .assetOption{
+                    display: flex;
+                    align-items: center;
+
+                    mat-radio-button{
+                        margin: 0;
+                        height: auto;
+                    }
+
+                }
+
+                .divide{
+                    height: 100%;
+                    margin: 0 2.5em;
+                    border-right: 1px solid black;
+                }
+
+                .lastDivideBlockHide {
+                    display: none;
+                  }
+
+
+            }
+        }
+
+
+    }
+
+    @media screen and (max-width: 720px){
+
+        .assetSelectionSection{
+            width: -webkit-fill-available;
+        }
+
+        .assetSelectionBlock{
+            flex-direction: column;
+            gap: 1em !important;
+
+            .optionAssetName{
+                width: 105px;
+            }
+        }
+
+    }
+}
+
+.doneStatusIcon path {
+    fill: #178A00 !important;
+  }
+  .doneStatusIcon ellipse,
+  .doneStatusIcon circle {
+    stroke: #178A00 !important;
+  }
+
+.style0{
+    height: 26px;
+    padding: 0 !important;
+    width: auto !important;
 }

@@ -4,32 +4,12 @@
     .learningOutcomesList{
             display: flex;
             flex-direction: column;
+            gap: 1em;
             margin: 1em 2em 0em 1em;
-            border: 1px solid #ddd;
-            border-bottom: none;
-            padding: 0!important;
-            list-style-type: none;
+
             li{
                 white-space: pre-wrap;
                 // text-align: justify;
-                position: relative;
-                border-bottom: 1px solid #ddd;
-            }
-            .number-style, .outcome-value{
-                padding: 25px 25px;
-                display: block;
-                float: left;
-            }
-            .number-style{
-                width: 70px;
-                text-align: center;
-                padding: 0;
-                vertical-align: top;
-                padding-top: 25px;
-            }
-            .outcome-value {
-                width: calc(100% - 122px);
-                border-left: 1px solid #ddd;
             }
     }
 
@@ -60,11 +40,6 @@
         display: flex;
         justify-content: flex-end;
         gap: 1em;
-    }
-    .lessonHeading {
-        margin-top: 0;
-        font-size: 1.2em;
-        margin-left: 20px;
     }
 }
 

@@ -10,8 +10,6 @@ import { CommunicationService } from '../../../framework/service/communication.s
 import { FileUploadService } from '../../shared/components/file-upload/file-upload.service';
 import { HttpClient } from '@angular/common/http';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-// import * as courseStatus from '../courseStatus.json';
-// import * as getLesson from '../getLesson.json';
 
 
 @Component({
@@ -84,24 +82,24 @@ export class LearningOutcomesComponent implements OnInit, OnChanges {
     });
     if(this.learningOutcomes && this.learningOutcomes.length > 0){
       for (const outcome of this.learningOutcomes) {
-        this.outcomes.push(this._fb.control(outcome,[Validators.required,Validators.maxLength(350)]));
+        this.outcomes.push(this._fb.control(outcome,[Validators.required]));
       }
     }else{
-      this.outcomes.push(this._fb.control("",[Validators.required,Validators.maxLength(350)]));
+      this.outcomes.push(this._fb.control("",[Validators.required]));
     }
     this.showLoader = false;
   }
 
   getCourseStatus(){
-    this.padhaiService.getCourseStatus(this.courseId).subscribe(statusData=>{ 
-      // const status = courseStatus;
-      // const statusData = status.courseStatus;     
-      if(statusData){
-        if(statusData.outcomeStatus) this.courseStatus = (statusData?.courseStatus.replace(/\s/g, '') + statusData?.outcomeStatus.replace(/\s/g, '')).toLowerCase();
-        this.courseStage = statusData.courseStatus;
-        this.performActionOnOutcomeStatus();
-      }
-    })
+    if(window.location.href.includes("/edit-content/")){
+      this.padhaiService.getCourseStatus(this.courseId).subscribe(statusData=>{      
+        if(statusData){
+          if(statusData.outcomeStatus) this.courseStatus = (statusData?.courseStatus.replace(/\s/g, '') + statusData?.outcomeStatus.replace(/\s/g, '')).toLowerCase();
+          this.courseStage = statusData.courseStatus;
+          this.performActionOnOutcomeStatus();
+        }
+      })
+    }
   }
 
  async performActionOnOutcomeStatus(){
@@ -137,8 +135,6 @@ export class LearningOutcomesComponent implements OnInit, OnChanges {
   getCourseData(){
     return new Promise(resolve=>{
       this.padhaiService.getLessonRequest(this.courseId, this.activeLanguage || 'ENGLISH').subscribe(courseData=>{
-        // const res = getLesson;
-        // const courseData = res.lessonDetails;
         this.courseDetails = courseData;
         this.learningOutcomes = courseData?.outcomeDetails.outcomes || [];
         resolve("");
@@ -168,7 +164,7 @@ export class LearningOutcomesComponent implements OnInit, OnChanges {
   }
 
   addLearningOutcome(){
-    if(this.outcomes.length< 7) this.outcomes.push(this._fb.control("",[Validators.required,Validators.maxLength(350)]));
+    if(this.outcomes.length< 7) this.outcomes.push(this._fb.control("",[Validators.required]));
   }
 
   saveLearningOutcomes(){

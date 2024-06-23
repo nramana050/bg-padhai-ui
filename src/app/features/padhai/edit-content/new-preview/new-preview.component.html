@@ -1,103 +1,101 @@
 <div class="editLessonSection">
 
-    <h4 class="lessonHeading">{{lessonData.title}}</h4>
-    <div class="lessonContainer">
-      <div *ngIf="stage == 'Asset' || stage == 'Publish'" class="imageSection">
-        <div *ngIf="imageAsset" class="imageContainer">
-          <div *ngIf="currentCourseStatus != 'assetinprogress' && courseStatus != 'publishgenerated'" class="imageSelection">
-            <img class="imageStyle" [src]="imageAsset" alt="">
-            <button matTooltip="Replace / Upload image" mat-icon-button class="edit-icon" (click)="openFileInput()">
-              <mat-icon>edit</mat-icon>
-            </button>
-            <input aria-label="upload-image" accept=".png, .jpg, .jpeg" type="file" id="heroImage" style="display: none" (change)="handleFileInput($event)">
-          </div>
-          <img *ngIf="courseStatus == 'publishgenerated' || currentCourseStatus == 'assetinprogress'" class="imageStyle" [src]="imageAsset" alt="">
-          <div *ngIf="isFailedForGeneration" class="failed autoHeight">
-            <div *ngIf="isFailedForSafety">Our policies prevented PADHAI from generating the image for
-              this lesson. Please upload your desired image.</div>
-            <div *ngIf="!isFailedForSafety">We're running a bit behind schedule with generating images
-              right now. Please give us a little more time and try again shortly.</div>
-          </div>
+  <h4 class="lessonHeading">{{lessonData.title}}</h4>
+  <div class="lessonContainer">
+    <div *ngIf="stage == 'Asset' || stage == 'Publish'" class="imageSection">
+      <div *ngIf="imageAsset" class="imageContainer">
+        <div *ngIf="currentCourseStatus != 'assetinprogress' && courseStatus != 'publishgenerated'" class="imageSelection">
+          <img class="imageStyle" [src]="imageAsset" alt="">
+          <button matTooltip="Replace / Upload image" mat-icon-button class="edit-icon" (click)="openFileInput()">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <input aria-label="upload-image" accept=".png, .jpg, .jpeg" type="file" id="heroImage" style="display: none" (change)="handleFileInput($event)">
         </div>
-        <div *ngIf="!imageAsset && lessonStatus == 'IN_PROGRESS'" class="emptyAssetSection">
-          <div class="heroImageBlank">
-            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-              <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
-              <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path>
-            </svg>
-          </div>
+        <img *ngIf="courseStatus == 'publishgenerated' || currentCourseStatus == 'assetinprogress'" class="imageStyle" [src]="imageAsset" alt="">
+        <div *ngIf="isFailedForGeneration" class="failed autoHeight">
+          <div *ngIf="isFailedForSafety">Our policies prevented PADHAI from generating the image for
+            this lesson. Please upload your desired image.</div>
+          <div *ngIf="!isFailedForSafety">We're running a bit behind schedule with generating images
+            right now. Please give us a little more time and try again shortly.</div>
         </div>
       </div>
-      <div *ngIf="stage == 'Asset' || stage == 'Publish'" class="audioSection">
-        <div *ngIf="audioAsset" class="audioContainer">
-          <audio [src]="audioAsset" controls>{{ doesnotsupportaudioelement }}</audio>
-        </div>
-        <div *ngIf="!audioAsset && lessonStatus == 'IN_PROGRESS'" class="emptyAssetSection">
-          <div class="audioContainer">
-            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-              <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
-              <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path>
-            </svg>
-          </div>
-        </div>
-        <div *ngIf="!audioAsset && lessonStatus == 'FAILED'" class="failed emptyAssetSection">
-          <div class="audioContainer autoHeight">The request for audio generation cannot be processed at the moment. Please try regenerating after some time.</div>
+      <div *ngIf="!imageAsset && lessonStatus == 'IN_PROGRESS'" class="emptyAssetSection">
+        <div class="heroImageBlank">
+          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path>
+          </svg>
         </div>
       </div>
-
-        <div class="lessonDescriptionContainwer">
-          <!-- <pre class="lessonDescriptionSection">{{lessonData.page}}</pre> -->
-          <div class="lessonDescriptionSection" [innerHTML]="sanitizedHtml"></div>
+    </div>
+    <div *ngIf="stage == 'Asset' || stage == 'Publish'" class="audioSection">
+      <div *ngIf="audioAsset" class="audioContainer">
+        <audio [src]="audioAsset" controls>{{ doesnotsupportaudioelement }}</audio>
+      </div>
+      <div *ngIf="!audioAsset && lessonStatus == 'IN_PROGRESS'" class="emptyAssetSection">
+        <div class="audioContainer">
+          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path>
+          </svg>
         </div>
-        <div class="quizAndH5p">
-          <mat-accordion *ngIf="stage == 'Asset' || stage == 'Publish'">
-            <mat-expansion-panel class="expantionPanel">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                    {{ flashcard }}
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <div *ngIf="assetH5p" id="h5p-container"></div>
-              <div *ngIf="!assetH5p && lessonStatus == 'IN_PROGRESS'" class="blankH5pSection">
+      </div>
+      <div *ngIf="!audioAsset && lessonStatus == 'FAILED'" class="failed emptyAssetSection">
+        <div class="audioContainer autoHeight">The request for audio generation cannot be processed at the moment. Please try regenerating after some time.</div>
+      </div>
+    </div>
+      <div class="lessonDescriptionContainwer">
+        <!-- <pre class="lessonDescriptionSection">{{lessonData.page}}</pre> -->
+        <div class="lessonDescriptionSection" [innerHTML]="sanitizedHtml"></div>
+      </div>
+      <div class="quizAndH5p">
+        <mat-accordion *ngIf="stage == 'Asset' || stage == 'Publish'">
+          <mat-expansion-panel class="expantionPanel">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                  {{ flashcard }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="selectH5pContainer" id="h5p-container">
+              <span *ngIf="assetH5p" id="h5p-container"></span>
+              <span *ngIf="!assetH5p && lessonStatus == 'IN_PROGRESS'" class="blankH5pSection">
                   <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="26px" height="26px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                     <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
                     <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path>
                   </svg>
-              </div>
-              <div *ngIf="!assetH5p && lessonStatus == 'FAILED'" class="failed emptyAssetSection">
-                <div>The request for Interactive asset generation cannot be processed at the moment. Please try regenerating after some time.</div>
-              </div>
-            </mat-expansion-panel>     
-          </mat-accordion>
-          <div *ngIf="stage == 'Lesson'" class="showInteractiveAssetSection">
-            <p>Interactive Asset</p> : <span>{{ lessonData?.h5pDetails?.h5pTypeName || selectedH5pType || 'Not Selected' }}</span>
-          </div>
-          <mat-accordion>
-            <mat-expansion-panel class="expantionPanel">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  {{lessonData.title}} {{quiz}}
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-                    <div class="quizContainer">
-                      <div class="quizHeader">
-                        <p class="headerTitle">{{canyouanswer}}</p>
-                        <button  class="resetQuiz" mat-stroked-button color="primary" type="button" (click)="resetQuiz()">{{ resetquiz }}</button>
-                      </div>
-                        <div class="questionSection" *ngFor="let question of lessonData.quiz.questions;let i = index">
-                            <p class="question">Q {{i+1}}. {{question.questionText}}</p>
-                            <mat-radio-group required name="optionGroup-{{i}}" [(ngModel)]="questionAnswer[i].answer">
-                                  <mat-radio-button (click)="setFeedbackText(option, i)" *ngFor="let option of question.answers;let j = index" value="{{option.text}}" labelPosition="after" id="option-{{i}}-{{j}}" >{{option.text}}</mat-radio-button>
-                            </mat-radio-group>
-                            <button class="submitAnswer" [disabled]="!questionAnswer[i].answer" mat-stroked-button color="primary" type="button" (click)="checkAnswer(i)">{{submit}}</button>
-                            <p *ngIf="isAnswerCorrect[i] != null" class="feedback" [ngClass]="isAnswerCorrect[i] ? 'correct': 'incorrect'">{{feedbackText[i]}}</p>
-                        </div>
+              </span>
+            </div>
+            <div *ngIf="!assetH5p && lessonStatus == 'FAILED'" class="failed emptyAssetSection">
+              <div>The request for Interactive asset generation cannot be processed at the moment. Please try regenerating after some time.</div>
+            </div>
+          </mat-expansion-panel>     
+        </mat-accordion>
+        <mat-accordion>
+          <mat-expansion-panel class="expantionPanel">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{lessonData.title}} {{quiz}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+                  <div class="quizContainer">
+                    <div class="quizHeader">
+                      <p class="headerTitle">{{canyouanswer}}</p>
+                      <button  class="resetQuiz" mat-stroked-button color="primary" type="button" (click)="resetQuiz()">{{ resetquiz }}</button>
                     </div>
-            </mat-expansion-panel>
-          </mat-accordion>      
-        </div>
-    </div>
+                      <div class="questionSection" *ngFor="let question of lessonData.quiz.questions;let i = index">
+                          <p class="question">Q {{i+1}}. {{question.questionText}}</p>
+                          <mat-radio-group required name="optionGroup-{{i}}" [(ngModel)]="questionAnswer[i].answer">
+                                <mat-radio-button (click)="setFeedbackText(option, i)" *ngFor="let option of question.answers;let j = index" value="{{option.text}}" labelPosition="after" id="option-{{i}}-{{j}}" >{{option.text}}</mat-radio-button>
+                          </mat-radio-group>
+                          <button class="submitAnswer" [disabled]="!questionAnswer[i].answer" mat-stroked-button color="primary" type="button" (click)="checkAnswer(i)">{{submit}}</button>
+                          <p *ngIf="isAnswerCorrect[i] != null" class="feedback" [ngClass]="isAnswerCorrect[i] ? 'correct': 'incorrect'">{{feedbackText[i]}}</p>
+                      </div>
+                  </div>
+          </mat-expansion-panel>
+        </mat-accordion>      
+      </div>
+  </div>
 </div>

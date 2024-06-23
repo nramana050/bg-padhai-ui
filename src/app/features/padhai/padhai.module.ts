@@ -13,6 +13,7 @@ import { TranslatePopupComponent } from './translate-popup/translate-popup.compo
 import { NewPreviewComponent } from './edit-content/new-preview/new-preview.component';
 import { LearningOutcomesComponent } from './learning-outcomes/learning-outcomes.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { StepperBarComponent } from './stepper-bar/stepper-bar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     PreviewCourseComponent,
     NewPreviewComponent,
     TranslatePopupComponent,
-    LearningOutcomesComponent
+    LearningOutcomesComponent,
+    StepperBarComponent
   ],
   
   imports: [ 

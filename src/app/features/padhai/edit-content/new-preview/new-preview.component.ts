@@ -2,13 +2,13 @@ import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/cor
 import { environment } from 'src/environments/environment';
 import { H5P as H5PStandalone } from 'h5p-standalone';
 import { HttpClient } from '@angular/common/http';
-import { AppInsightsService } from '../../../../framework/service/app-insights.service';
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { SnackBarService } from 'src/app/framework/service/snack-bar.service';
 import { BaseUrl } from 'src/app/framework/constants/url-constants';
 import { FileUploadService } from 'src/app/features/shared/components/file-upload/file-upload.service';
 import { CommunicationService } from 'src/app/framework/service/communication.service';
+import { AppInsightsService } from '../../../../framework/service/app-insights.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ConvertOmbedToIframe } from './convertOmbedTagsTOIframe';
 
@@ -23,21 +23,18 @@ export class NewPreviewComponent implements OnInit, OnChanges {
   @Input() stage:any;
   @Input() courseStatus:any;
   @Input() courseId : any;
-  @Input() activeNodeStatus:any;
-  @Input() activeLang: any;
   @Input() moduleIndex : any;
   @Input() lessonIndex : any;
-  @Input() selectedH5pType : any;
+  @Input() activeNodeStatus:any;
+  @Input() activeLang: any;
   @Input() currentCourseStatus : any;
   @Input() lessonStatus : any;
 
   lessonData : any;
 
   assetH5p = '';
-  // h5pLibrariesPath = `${environment.cdnUrl}/padhai/h5p_libraries`;
-  // frameBundlePath = `${environment.cdnUrl}/padhai/h5p_libraries/main/frame.bundle.min.js`;
-  h5pLibrariesPath = `https://baigandev.blob.core.windows.net/padhai/h5p_libraries`;
-  frameBundlePath = `https://baigandev.blob.core.windows.net/padhai/h5p_libraries/main/frame.bundle.min.js`;
+  h5pLibrariesPath = `${environment.cdnUrl}/padhai/h5p_libraries`;
+  frameBundlePath = `${environment.cdnUrl}/padhai/h5p_libraries/main/frame.bundle.min.js`;
 
   imageAsset : any;
   isFailedForSafety:boolean = false;
@@ -56,17 +53,18 @@ export class NewPreviewComponent implements OnInit, OnChanges {
   incorrecttryagain;
   canyouanswer;
   quiz;
-  feedbackText = [null,null,null,null];
   expectedAssetTypeList: string[] = ['image', 'audio', 'H5p'];
   actualAssetList = [];
   missingAssetList = [];
+  feedbackText = [null,null,null,null];
   sanitizedHtml: any;
-  constructor( private readonly http: HttpClient ,
-    private readonly appInsightsService: AppInsightsService,
+
+  constructor( private readonly http: HttpClient,
     private readonly snackBarService: SnackBarService,
     private readonly fileUploadService: FileUploadService,
     private readonly communicationService : CommunicationService,
-    private sanitizer: DomSanitizer 
+    private readonly appInsightsService: AppInsightsService,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
@@ -76,6 +74,7 @@ export class NewPreviewComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+
     this.currentCourseStatus = this.currentCourseStatus.replace(/\s/g, '');
     if(this.courseStatus == 'assetgenerated' || this.courseStatus == 'lessongenerated'){
       this.prepareLessonData();
@@ -96,77 +95,29 @@ export class NewPreviewComponent implements OnInit, OnChanges {
     return this.http.get(`assets/language/${languageCode.toLowerCase()}.json?buildId=${environment.buildId}`);   
   }
 
-
- async prepareLessonData(){
-  this.lessonData = JSON.parse(JSON.stringify(this.lessonDetails));
-  // this.sanitizedHtml = this.sanitizer.bypassSecurityTrustHtml(this.lessonData.page);
-  this.convertOmbedIntoIframe();
-   await this.setCorrectAnswerFlag();
+  async prepareLessonData(){
+    this.lessonData = JSON.parse(JSON.stringify(this.lessonDetails));
+    this.convertOmbedIntoIframe();
+    await this.setCorrectAnswerFlag();
     this.resetQuiz();
     this.prepareAssetsData();
   }
 
- async convertOmbedIntoIframe() {
+  async convertOmbedIntoIframe() {
 
     let convertedHTML = await ConvertOmbedToIframe.convertToIframe(this.lessonData.page);
     this.sanitizedHtml = this.sanitizer.bypassSecurityTrustHtml(convertedHTML);
-
-    // if(this.lessonData.page.includes('oembed')){
-    //   let html = this.lessonData.page;
-    //   html = html as HTMLElement;
-    //   let container = document.createElement("div");
-    //   container.innerHTML = html.trim();
-    //   let oembedElements = container.querySelectorAll('oembed');
-  
-    //   oembedElements.forEach(async (oembedElement: HTMLElement) => {
-    //       const url = oembedElement.getAttribute('url');
-    //       if (!url) return;
-    //       let fetchUrl: string;
-    //       if (url.includes('youtube.com')) {
-    //           fetchUrl = 'https://www.youtube.com/oembed?url=';
-    //       } else if (url.includes('dailymotion.com')) {
-    //           fetchUrl = 'https://www.dailymotion.com/services/oembed?url=';
-    //       } else if (url.includes('vimeo.com')) {
-    //           fetchUrl = 'https://vimeo.com/api/oembed.json?url=';
-    //       }
-  
-    //      await fetch(fetchUrl + encodeURIComponent(url))
-    //           .then(response => response.json())
-    //           .then(data => {
-    //             if (data.html) {
-    //               var iframeContainer = document.createElement("div");
-    //               Object.assign(iframeContainer.style, {
-    //                 position: 'relative',
-    //                 paddingBottom: '50%',
-    //                 height: '0'
-    //               });
-    //               iframeContainer.innerHTML = data.html.trim();
-    //               var iframe = iframeContainer.querySelector("iframe");
-    //               if (iframe) {
-    //                 iframe.setAttribute("width", "100%");
-    //                 iframe.setAttribute("style", "position: absolute; width: 100%; height: 100%; top: 0; left: 0;");
-    //                 oembedElement.parentNode.replaceChild(iframeContainer, oembedElement);
-    //                 } else {
-    //                     console.error("No iframe found in the oEmbed response.");
-    //                 }
-    //               } else {
-    //                   console.error("No HTML content found in the oEmbed response.");
-    //               }
-    //           })
-    //           .catch(error => console.error("Error fetching oEmbed:", error));
-  
-    //           this.sanitizedHtml = this.sanitizer.bypassSecurityTrustHtml(container.innerHTML);
-    //   });
-    // }else{
-    //   this.sanitizedHtml = this.sanitizer.bypassSecurityTrustHtml(this.lessonData.page);
-    // }
   }
 
-  prepareAssetsData(){
+  async prepareAssetsData(){
+
+    if(this.currentCourseStatus == 'assetgenerated' && this.lessonData.asset.length == 0){
+      return;
+    }
+  
     this.audioAsset = null;
     this.imageAsset = null;
     this.assetH5p = "";
-    this.actualAssetList= [];
     if(this.lessonData.asset && this.lessonData.asset != null){
       let len = this.lessonData.asset.length;
       for (let i = 0; i < len; i+=1) {
@@ -195,16 +146,16 @@ export class NewPreviewComponent implements OnInit, OnChanges {
           case 'H5p':
             this.assetH5p = "";
             this.lessonData.asset[i].path = this.lessonData.asset[i]?.path && !this.lessonData.asset[i].path.includes(environment.cdnUrl) ? environment.cdnUrl + this.lessonData.asset[i].path.substring(0, this.lessonData.asset[i].path.lastIndexOf("/")) : environment.cdnUrl + this.lessonData.asset[i].path;
-            this.assetH5p=this.lessonData.asset[i];
-            this.renderH5pContent();
+            this.assetH5p = await this.lessonData.asset[i]; 
+            if(this.assetH5p != ""){
+              this.renderH5pContent(this.assetH5p);
+            }           
             break;
         } 
       }
-    }
-    if(this.lessonStatus != 'IN_PROGRESS' && this.stage === 'Asset' ){
-      this.isFailedForSafety=false;
-      this.isFailedForGeneration=false;
-      this.verifyAllAssets(this.actualAssetList);
+      if(this.lessonStatus != 'IN_PROGRESS'){
+        this.verifyAllAssets(this.actualAssetList);
+      }
     }
   }
 
@@ -216,13 +167,12 @@ export class NewPreviewComponent implements OnInit, OnChanges {
     })
   }
 
-  renderH5pContent(){
-    setTimeout(() => {
+  async renderH5pContent(assetH5p){
       const el = document.getElementById('h5p-container');
       if(el){
         el.innerHTML = '';
         const options = {
-          h5pJsonPath:  `${this.assetH5p['path']}`,
+          h5pJsonPath:  `${assetH5p['path']}`,
           librariesPath : `${this.h5pLibrariesPath}`,
           frameJs: `/assets/player/frame.bundle.js`,
           frameCss: '/assets/player/styles/h5p.css',
@@ -230,14 +180,20 @@ export class NewPreviewComponent implements OnInit, OnChanges {
             state: '{"answers":"essential"}'
           }],
           xAPIObjectIRI:true
-        };
-        new H5PStandalone(el, options).then((e : any)=>{
+        };        
+        try {       
+          await new H5PStandalone(el, options);
+          // await h5pStandalone.init(); 
           let H5P = window["H5P"];
-          H5P.externalDispatcher.on("xAPI", (event : any) => {
+          H5P.externalDispatcher.on("xAPI", (event: any) => {
           });
-        })
+        } catch (error) {
+          setTimeout(() => this.renderH5pContent(assetH5p), 1000); // Retry with delay
+          console.error('Error while rendering H5P content:', error);
+        }
+      } else {
+        setTimeout(() => this.renderH5pContent(assetH5p), 1000); // Retry with delay
       }
-    }, 1000);
   }
 
   checkAnswer(questionIndex){
@@ -266,7 +222,6 @@ export class NewPreviewComponent implements OnInit, OnChanges {
     this.shuffleQuizOptions();
   }
 
-
   shuffleQuizOptions(){
     this.lessonData.quiz.questions.forEach(question => {
       for (let i = question.answers.length - 1; i > 0; i--) {
@@ -285,6 +240,7 @@ export class NewPreviewComponent implements OnInit, OnChanges {
     const image = document.getElementById('heroImage') as HTMLInputElement;
     image.click();
   }
+
   handleFileInput(event: any) {
     const file = event.target.files[0];
     if(this.validFileType(file)){
@@ -298,6 +254,7 @@ export class NewPreviewComponent implements OnInit, OnChanges {
       this.snackBarService.error("Invalid file extension.");
     }
   }
+
   validFileSize(file) {
       const maxFileSize= 500000;
       if(file.size > maxFileSize){
@@ -314,7 +271,7 @@ export class NewPreviewComponent implements OnInit, OnChanges {
         }
       }
       return false;
-    }
+  }
 
   uploadImage(file : File){
     const formData = new FormData();
@@ -342,9 +299,9 @@ export class NewPreviewComponent implements OnInit, OnChanges {
      let errMessage = JSON.parse(error);
      this.snackBarService.error(errMessage.applicationMessage);
    });
-   }
+  }
 
-   getMissingAssetList(assetList): string[] {
+  getMissingAssetList(assetList): string[] {
     return this.expectedAssetTypeList.filter(value => !assetList.includes(value));
   }
 

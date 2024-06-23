@@ -30,7 +30,6 @@ export enum exportTypeEnum {
   HTML_ZIP = "HTML_ZIP",
   EPUB = "EPUB",
   MOODLE = "MOODLE"
-
 }
 
 @Component({
@@ -57,9 +56,9 @@ export class PreviewCourseComponent implements  OnInit, OnDestroy {
   assetH5p;
   showH5p = false;
   isExportDisable = false;
+  isDarkModeOn;
   exportTypeList: any;
   export;
-  isDarkModeOn;
   languageList :any;
   defaultLanguage:string = "ENGLISH";
   defaultLangOption:string="ENGLISH";
@@ -199,6 +198,7 @@ export class PreviewCourseComponent implements  OnInit, OnDestroy {
   }
 
   checkAnswer(questionIndex){
+
     if(this.activeLessonOriginalFormat.quiz.questions[questionIndex].answers[0].text === this.questionAnswer[questionIndex].answer){
         this.isAnswerCorrect[questionIndex] = true;
     }else{
@@ -213,6 +213,9 @@ export class PreviewCourseComponent implements  OnInit, OnDestroy {
     this.shuffleQuizOptions();
   }
 
+
+
+
   changeLanguage(event:any){
     this.getLessonDetails(event.value);
   }
@@ -226,4 +229,5 @@ export class PreviewCourseComponent implements  OnInit, OnDestroy {
     })
 
   }
+
 }
